@@ -33,6 +33,7 @@
 						        'container_class'   => false,
 						        'menu_class'        => 'menu',
 						        'fallback_cb'       => 'wp_bootstrap_navwalker::fallback'
+					        	'walker'            => new web_framework_medium_rare_bootstrap_navwalker()
 					        )
 					    );  
 					} else {

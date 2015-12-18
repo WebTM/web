@@ -12,8 +12,19 @@ if ( ! function_exists( 'ui_setup' ) ) :
 function ui_setup() {
 
 	require get_template_directory() . '/admin/init.php';
+	require_once get_template_directory() . '/admin/page_builder_init.php';
+	/**
+	 * Grab all VC Functions
+	 */
+	require_once('admin/vc_functions.php');
+
+	/**
+	 * Grab all VC Base layouts
+	 */
+	require_once('admin/vc_layouts.php');
 
 	load_theme_textdomain( 'ui', get_template_directory() . '/languages' );
+
 	
 	// Remove from head some links.
 	
@@ -51,9 +62,8 @@ function ui_setup() {
 endif; // ui_setup
 add_action( 'after_setup_theme', 'ui_setup' );
 
-
 if( function_exists('vc_set_as_theme') )
-	require_once( "vc_init.php" );
+	require_once get_template_directory() . '/admin/vc_init.php';
 
 
 /**

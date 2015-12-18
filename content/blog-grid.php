@@ -1,7 +1,7 @@
 <section class="dark-wrapper">
 	<div class="container">
 		<div class="row">
-		
+		12
 			<?php 
 				global $wp_query;
 				
@@ -10,7 +10,7 @@
 					/**
 					 * Get blog posts by blog layout.
 					 */
-					get_template_part('loop/content', 'post-grid');
+					get_template_part('inc/content', 'post-grid');
 					
 					if( ($wp_query->current_post + 1) % 3 == 0 && !( ($wp_query->current_post + 1) == $wp_query->post_count ) )
 						echo '</div><div class="row">';
@@ -21,7 +21,7 @@
 					/**
 					 * Display no posts message if none are found.
 					 */
-					get_template_part('loop/content','none');
+					get_template_part('inc/content','none');
 					
 				endif;
 			?>
