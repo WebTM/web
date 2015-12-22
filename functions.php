@@ -13,6 +13,8 @@ function ui_setup() {
 
 	require get_template_directory() . '/admin/init.php';
 	require_once get_template_directory() . '/admin/page_builder_init.php';
+
+
 	/**
 	 * Grab all VC Functions
 	 */
@@ -94,3 +96,10 @@ function ui_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'ui_scripts' );
+
+
+require_once get_template_directory() . '/admin/page_builder_init.php';
+
+
+if( function_exists('vc_set_as_theme') )
+	require_once get_template_directory() . '/admin/vc_init.php';
