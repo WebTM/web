@@ -13,17 +13,17 @@ if(!( function_exists('web_custom_metaboxes') )){
 		$footer_options = web_get_footer_options();
 		$post_layout_options = web_get_post_layouts();
 		
-		$header_overrides['none'] = 'Do Not Override Header Option On This Page';
+		$header_overrides['none'] = 'Не переопределять Хедер на этой странице'; // Do Not Override Header Option On This Page
 		foreach( $header_options as $key => $value ){
 			$header_overrides[$key] = 'Override (переопределить) Header: ' . $value; 	
 		}
 		
-		$footer_overrides['none'] = 'Do Not Override Footer Option On This Page';
+		$footer_overrides['none'] = 'Не переопределять подвал на этой странице'; // Do Not Override Footer Option On This Page
 		foreach( $footer_options as $key => $value ){
 			$footer_overrides[$key] = 'Override (переопределить) Footer: ' . $value; 	
 		}
 		
-		$post_layout_overrides['none'] = 'Do Not Override Post Layout Option On This Post';
+		$post_layout_overrides['none'] = 'Не переопределять макет на этой странице'; // Do Not Override Post Layout Option On This Post
 		foreach( $post_layout_options as $key => $value ){
 			$post_layout_overrides[$key] = 'Override (переопределить) Post Layout: ' . $value; 	
 		}
