@@ -60,7 +60,6 @@ if(!( function_exists('web_get_blog_layouts') )){
 	}
 }
 
-
 /**
  * Init theme options
  * Certain theme options need to be written to the database as soon as the theme is installed.
@@ -126,7 +125,6 @@ if(!( function_exists('web_init_theme_options') )){
 		add_action( 'init', 'web_init_theme_options', 1 );
 	}
 }
-
 
 /**
  * Medium rare nav walker.
@@ -344,7 +342,6 @@ if(!( class_exists('web_framework_medium_rare_bootstrap_navwalker') )){
 	}
 }
 
-
 /**
  * Register Menu Locations For The Theme
  * 
@@ -363,4 +360,95 @@ if(!( function_exists('web_register_nav_menus') )){
 		);
 	}
 	add_action( 'init', 'web_register_nav_menus' );
+}
+
+if(!( function_exists('web_get_social_icons') )){
+	function web_get_social_icons(){
+		$icons = array(
+			"none" => "None",
+			"social_facebook" => "facebook",
+			"social_twitter" => "twitter",
+			"social_pinterest" => "pinterest",
+			"social_googleplus" => "googleplus",
+			"social_tumblr" => "tumblr",
+			"social_tumbleupon" => "tumbleupon",
+			"social_wordpress" => "wordpress",
+			"social_instagram" => "instagram",
+			"social_dribbble" => "dribbble",
+			"social_vimeo" => "vimeo",
+			"social_linkedin" => "linkedin",
+			"social_rss" => "rss",
+			"social_deviantart" => "deviantart",
+			"social_share" => "share",
+			"social_myspace" => "myspace",
+			"social_skype" => "skype",
+			"social_youtube" => "youtube",
+			"social_picassa" => "picassa",
+			"social_googledrive" => "googledrive",
+			"social_flickr" => "flickr",
+			"social_blogger" => "blogger",
+			"social_spotify" => "spotify",
+			"social_delicious" => "delicious",
+			"social_facebook_circle" => "facebook_circle",
+			"social_twitter_circle" => "twitter_circle",
+			"social_pinterest_circle" => "pinterest_circle",
+			"social_googleplus_circle" => "googleplus_circle",
+			"social_tumblr_circle" => "tumblr_circle",
+			"social_stumbleupon_circle" => "stumbleupon_circle",
+			"social_wordpress_circle" => "wordpress_circle",
+			"social_instagram_circle" => "instagram_circle",
+			"social_dribbble_circle" => "dribbble_circle",
+			"social_vimeo_circle" => "vimeo_circle",
+			"social_linkedin_circle" => "linkedin_circle",
+			"social_rss_circle" => "rss_circle",
+			"social_deviantart_circle" => "deviantart_circle",
+			"social_share_circle" => "share_circle",
+			"social_myspace_circle" => "myspace_circle",
+			"social_skype_circle" => "skype_circle",
+			"social_youtube_circle" => "youtube_circle",
+			"social_picassa_circle" => "picassa_circle",
+			"social_googledrive_alt2" => "googledrive_alt2",
+			"social_flickr_circle" => "flickr_circle",
+			"social_blogger_circle" => "blogger_circle",
+			"social_spotify_circle" => "spotify_circle",
+			"social_delicious_circle" => "delicious_circle",
+			"social_facebook_square" => "facebook_square",
+			"social_twitter_square" => "twitter_square",
+			"social_pinterest_square" => "pinterest_square",
+			"social_googleplus_square" => "googleplus_square",
+			"social_tumblr_square" => "tumblr_square",
+			"social_stumbleupon_square" => "stumbleupon_square",
+			"social_wordpress_square" => "wordpress_square",
+			"social_instagram_square" => "instagram_square",
+			"social_dribbble_square" => "dribbble_square",
+			"social_vimeo_square" => "vimeo_square",
+			"social_linkedin_square" => "linkedin_square",
+			"social_rss_square" => "rss_square",
+			"social_deviantart_square" => "deviantart_square",
+			"social_share_square" => "share_square",
+			"social_myspace_square" => "myspace_square",
+			"social_skype_square" => "skype_square",
+			"social_youtube_square" => "youtube_square",
+			"social_picassa_square" => "picassa_square",
+			"social_googledrive_square" => "googledrive_square",
+			"social_flickr_square" => "flickr_square",
+			"social_blogger_square" => "blogger_square",
+			"social_spotify_square" => "spotify_square",
+			"social_delicious_square" => "delicious_square",
+		);
+		return $icons;
+	}	
+}
+
+if(!( function_exists('web_get_footer_options') )){
+	function web_get_footer_options(){
+		$options = array(
+			'blank' => 'No Footer',
+			'social' => 'Simple Social Footer',
+			'columns' => 'Footer With Widgets',
+			'social-short' => 'Short Social Footer',
+			'contact' => 'Call to Action Footer'
+		);
+		return $options;	
+	}
 }

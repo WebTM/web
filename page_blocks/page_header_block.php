@@ -127,7 +127,7 @@ class AQ_Page_Header_Block extends AQ_Block {
 		if(!( isset($blog_posts) ))
 			$blog_posts = false;
 		
-		include( locate_template('page-header/content-header-' . $layout . '.php') );
+		include( locate_template('header/content-header-' . $layout . '.php') );
 		
 	}//end block
 	

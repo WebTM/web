@@ -47,15 +47,15 @@ add_filter( 'less_vars', 'web_less_vars', 10, 2 );
 /**
  * Add body class so we know when we're using a page template from the page builder.
  */
-if(!( function_exists('web_pivot_body_class') )){ 
-    function web_pivot_body_class($c){
+if(!( function_exists('web_body_class') )){ 
+    function web_body_class($c){
         global $post;
         if( isset($post->post_content) && has_shortcode( $post->post_content, 'vc_row' ) ) {
             $c[] = 'visual-composer-active';
         }
         return $c;
     }
-    add_filter( 'body_class', 'web_pivot_body_class' );
+    add_filter( 'body_class', 'web_body_class' );
 }
 
 
