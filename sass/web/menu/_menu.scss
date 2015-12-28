@@ -19,3 +19,13 @@ nav{
 .nav-menu{ padding-top: 24px; }
 .nav-menu{ padding-top: 40px; padding-right: 40px; }
 .nav-menu .social-icons{ float: right; }
+
+.menu{ padding: 0; margin: 0; display: inline-block; position: relative; top: 2px; }
+.menu li{ float: left; margin-right: 56px; position: relative; }
+.menu li:last-child{ margin-right: 0px; }
+.menu li a{ .alt-font; color: @color-text; .transition-500; padding-bottom: 40px; display: inline-block; line-height: 14px; }
+.menu li a:hover{ color: @color-heading; }
+
+@media all and (max-width: 1050px){
+	.menu li{ margin-right: 32px; }
+}
