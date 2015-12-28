@@ -13,6 +13,11 @@
 </head>
 
 <body>
+<?php 
+	get_template_part('menu/nav','start'); 
+	get_template_part('menu/menu', web_get_header_layout()); 
+	get_template_part('menu/nav','end');
+		
+?>
 <div id="page">
 	<div id="content">
-	<?php get_template_part('header/content-header', web_get_header_layout()); ?>

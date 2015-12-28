@@ -24,7 +24,7 @@ if(!( function_exists('web_get_header_options') )){
 			'blank' => 'No Header or Nav',
 			'top' => 'Top Bar Header',
 			'overlay' => 'Overlay Bar Header',
-			'offscreen' => 'Offscreen Header',
+			'offscreen' => 'Выезжающее меню',
 			'fullscreen' => 'Fullscreen Header',
 			'contained' => 'Contained Header',
 			'center' => 'Center Header',
@@ -128,11 +128,8 @@ if(!( function_exists('web_init_theme_options') )){
 
 /**
  * Medium rare nav walker.
- * 
  * This nav walker is for themes by tommusrhodus and medium rare.
  * 
- * @since 1.0.0
- * @author tommusrhodus
  */
 if(!( class_exists('web_framework_medium_rare_bootstrap_navwalker') )){
 	class web_framework_medium_rare_bootstrap_navwalker extends Walker_Nav_Menu {
@@ -344,18 +341,15 @@ if(!( class_exists('web_framework_medium_rare_bootstrap_navwalker') )){
 
 /**
  * Register Menu Locations For The Theme
- * 
- * @since 1.0.0
- * @author tommusrhodus
  */
 if(!( function_exists('web_register_nav_menus') )){
 	function web_register_nav_menus() {
 		register_nav_menus( 
 			array(
-				'primary' => __( 'Standard Navigation', 'pivot' ),
-				'offscreen' => __( 'Offscreen Navigation', 'pivot' ),
-				'fullscreen' => __( 'Fullscreen Navigation', 'pivot' ),
-				'footer' => __( 'Footer Navigation', 'pivot' )
+				'primary' => __( 'Стандартное меню', 'web' ),
+				'offscreen' => __( 'Выезжающее меню', 'web' ),
+				'fullscreen' => __( 'Fullscreen меню', 'web' ),
+				'footer' => __( 'Footer меню', 'web' )
 			) 
 		);
 	}

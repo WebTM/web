@@ -15,12 +15,12 @@ if(!( function_exists('web_custom_metaboxes') )){
 		
 		$header_overrides['none'] = 'Не переопределять Хедер на этой странице'; // Do Not Override Header Option On This Page
 		foreach( $header_options as $key => $value ){
-			$header_overrides[$key] = 'Override (переопределить) Header: ' . $value; 	
+			$header_overrides[$key] = 'Переопределить меню: ' . $value; 	
 		}
 		
 		$footer_overrides['none'] = 'Не переопределять подвал на этой странице'; // Do Not Override Footer Option On This Page
 		foreach( $footer_options as $key => $value ){
-			$footer_overrides[$key] = 'Override (переопределить) Footer: ' . $value; 	
+			$footer_overrides[$key] = 'Переопределить меню в подвале: ' . $value; 	
 		}
 		
 		$post_layout_overrides['none'] = 'Не переопределять макет на этой странице'; // Do Not Override Post Layout Option On This Post
@@ -75,14 +75,14 @@ if(!( function_exists('web_custom_metaboxes') )){
 		 */
 		$meta_boxes[] = array(
 			'id' => 'post_header_metabox',
-			'title' => __('Page Overrides', 'web'),
+			'title' => __('Переопределение страницы', 'web'),
 			'object_types' => array('page', 'team', 'post', 'portfolio'), // post type
 			'context' => 'normal',
 			'priority' => 'low',
 			'show_names' => true, // Show field names on the left
 			'fields' => array(
 				array(
-					'name'         => __( 'Override Header?', 'web' ),
+					'name'         => __( 'Изменить меню?', 'web' ),
 					'desc'         => __( 'Header Layout is set in "appearance" -> "customise". To override this for this page only, use this control.', 'web' ),
 					'id'           => $prefix . 'header_override',
 					'type'         => 'select',
@@ -90,7 +90,7 @@ if(!( function_exists('web_custom_metaboxes') )){
 					'std'          => 'none'
 				),
 				array(
-					'name'         => __( 'Override Footer?', 'web' ),
+					'name'         => __( 'Изменить меню в подвале?', 'web' ),
 					'desc'         => __( 'Footer Layout is set in "appearance" -> "customise". To override this for this page only, use this control.', 'web' ),
 					'id'           => $prefix . 'footer_override',
 					'type'         => 'select',
@@ -237,23 +237,6 @@ if(!( function_exists('web_custom_metaboxes') )){
 				    ),
 				),
 			)
-		);
-		
-		$meta_boxes[] = array(
-			'id' => 'clients_metabox',
-			'title' => __('Client URL', 'web'),
-			'object_types' => array('client'), // post type
-			'context' => 'normal',
-			'priority' => 'high',
-			'show_names' => true, // Show field names on the left
-			'fields' => array(
-				array(
-					'name' => __('URL for this client (optional)', 'web'),
-					'desc' => __("Enter a URL for this client, if left blank, client logo will open into a lightbox.", 'web'),
-					'id'   => $prefix . 'client_url',
-					'type' => 'text',
-				),
-			),
 		);
 		
 		return $meta_boxes;
