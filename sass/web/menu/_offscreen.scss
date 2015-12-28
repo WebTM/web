@@ -1,6 +1,16 @@
-.offscreen-menu .logo{ padding-bottom: 32px; }
-.offscreen-toggle i{ font-size: 36px; cursor: pointer; }
-.nav-sticky .offscreen-toggle i{ color: $color-heading !important; }
+.offscreen-menu .container{ 
+	@extend .transition-300; 
+	@include translateX($x-amount: 0px); }
+
+.offscreen-menu .container.reveal-nav{ 
+	@include translateX($x-amount: -300px); }
+
+.offscreen-toggle i{ 
+	font-size: 36px; 
+	cursor: pointer; }
+
+.nav-sticky .offscreen-toggle i{ 
+	color: $color-heading !important; }
 
 .offscreen-container{ 
 	position: fixed; 
@@ -14,3 +24,20 @@
 	@include translateX($x-amount: 300px); 
 	padding: 40px;  }
 
+.offscreen-container.reveal-nav{ 
+	@include translateX($x-amount: 0px); }
+.offscreen-menu .container.reveal-nav{ 
+	@include translateX($x-amount: -300px); }
+
+.offscreen-container .logo{ bottom: 0px !important; }
+.offscreen-container .menu{ display: block; }
+.offscreen-container .menu li{ float: none; margin-bottom: 16px; }
+.offscreen-container .menu li a{ padding-bottom: 0px !important; color: #aaa !important; }
+.offscreen-container .menu li a:hover{ color: #fff !important; }
+.offscreen-container .social-icons{ position: absolute; bottom: 40px; }
+.offscreen-container .social-icons li a{ color: #fff !important; } 
+
+
+ul .menu-offscreen-menu {
+	list-style: none;
+}

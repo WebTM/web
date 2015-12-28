@@ -1,11 +1,21 @@
+nav{ 
+	max-height: 80px; 
+	overflow: hidden; 	
+	@extend .transition-500; }
+
 .top-bar{ 
 	position: absolute; 
 	background: #fff; 
 	width: 100%; 
-	z-index: 10; 
 	@extend .transition-500; 
 	line-height: 0; 
 	top: 0; }
 
+.top-bar.nav-sticky .nav-menu{ padding-top: 32px;  }
+
 .overlay-bar{ background: none; }
 .overlay-bar .has-dropdown:after{ color: #fff; }
+
+.nav-menu{ padding-top: 24px; }
+.nav-menu{ padding-top: 40px; padding-right: 40px; }
+.nav-menu .social-icons{ float: right; }
