@@ -1,23 +1,27 @@
+$short-transition: 300ms;
+$medium-transition: 500ms;
+$long-transition: 2000ms;
+
 /*--------------------------------------------------------------
 ## Template Mixins
 --------------------------------------------------------------*/
 
 .transition-500{
-	-webkit-transition: all @medium-transition ease;
-	-moz-transition: all @medium-transition ease;
-	transition: all @medium-transition ease;
+	-webkit-transition: all $medium-transition ease;
+	-moz-transition: all $medium-transition ease;
+	transition: all $medium-transition ease;
 }
 
 .transition-2000{
-	-webkit-transition: all @long-transition ease;
-	-moz-transition: all @long-transition ease;
-	transition: all @long-transition ease;
+	-webkit-transition: all $long-transition ease;
+	-moz-transition: all $long-transition ease;
+	transition: all $long-transition ease;
 }
 
 .transition-300{
-	-webkit-transition: all @short-transition ease;
-	-moz-transition: all @short-transition ease;
-	transition: all @short-transition ease;
+	-webkit-transition: all $short-transition ease;
+	-moz-transition: all $short-transition ease;
+	transition: all $short-transition ease;
 }
 
 .cover-div{
@@ -27,42 +31,42 @@
 	top: 0px;
 }
 
-.translateY(@y-amount){
-	-webkit-transform: translate3d(0,@y-amount,0);
-	-moz-transform: translate3d(0,@y-amount,0);
-	transform: translate3d(0,@y-amount,0);
+@mixin translateY($y-amount){
+	-webkit-transform: translate3d(0,$y-amount,0);
+	-moz-transform: translate3d(0,$y-amount,0);
+	transform: translate3d(0,$y-amount,0);
 }
 
-.translateX(@x-amount){
-	-webkit-transform: translate3d(@x-amount,0,0);
-	-moz-transform: translate3d(@x-amount,0,0);
-	transform: translate3d(@x-amount,0,0);
+@mixin translateX($x-amount){
+	-webkit-transform: translate3d($x-amount,0,0);
+	-moz-transform: translate3d($x-amount,0,0);
+	transform: translate3d($x-amount,0,0);
 }
 
-.transitionZoom(@zoom-amount){
-	-webkit-transform: scale(@zoom-amount, @zoom-amount);
-	-ms-transform: scale(@zoom-amount, @zoom-amount);
-	transform: scale(@zoom-amount, @zoom-amount);
+@mixin transitionZoom($zoom-amount){
+	-webkit-transform: scale($zoom-amount, $zoom-amount);
+	-ms-transform: scale($zoom-amount, $zoom-amount);
+	transform: scale($zoom-amount, $zoom-amount);
 }
 
-.overlay-params(@opacity-strength, @background-color){
-	.cover-div; 
+@mixin overlay-params($opacity-strength, $background-color){
+	@extend .cover-div;
 	content: '';  
-	opacity: @opacity-strength; 
+	opacity: $opacity-strength; 
 	z-index: 2;
-	background-color: @background-color;
+	background-color: $background-color;
 }
 
 .blank-input{
 	background: none;
 	border: none;
 	box-shadow: none;
-	.font-body;
+	@extend .font-body;
 }
 
-.placeholder(@color: #fff) {
-	input::-webkit-input-placeholder { color: @color; font-size: 24px; font-weight: 300; position: relative; top: 5px; }
-	input:-moz-placeholder { color: @color; }
-	textarea::-webkit-input-placeholder { color: @color; }
-	textarea:-moz-placeholder { color: @color; }
+@mixin placeholder($color: #fff) {
+	input::-webkit-input-placeholder { color: $color; font-size: 24px; font-weight: 300; position: relative; top: 5px; }
+	input:-moz-placeholder { color: $color; }
+	textarea::-webkit-input-placeholder { color: $color; }
+	textarea:-moz-placeholder { color: $color; }
 }

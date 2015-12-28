@@ -1,0 +1,16 @@
+.offscreen-menu .logo{ padding-bottom: 32px; }
+.offscreen-toggle i{ font-size: 36px; cursor: pointer; }
+.nav-sticky .offscreen-toggle i{ color: $color-heading !important; }
+
+.offscreen-container{ 
+	position: fixed; 
+	width: 300px; 
+	background: $color-heading; 
+	right: 0px; 
+	height: 100%; 
+	top: 0px; 
+	z-index: 99999; 
+	@extend .transition-300; 
+	@include translateX($x-amount: 300px); 
+	padding: 40px;  }
+
