@@ -1,9 +1,7 @@
 <?php 
 	$directory = trailingslashit(get_template_directory_uri()); 
-	
 	$address = get_option('header_address', '300 Collins St Melbourne');
 	$email = get_option('header_email', 'hello@pivot.net');
-	
 	$protocols = array('http', 'https', 'ftp', 'ftps', 'mailto', 'news', 'irc', 'gopher', 'nntp', 'feed', 'telnet', 'skype');
 ?>
 
@@ -18,7 +16,7 @@
 		</div>
 	</div>
 	<div class="offscreen-container">
-		<?php
+	<div><?php bloginfo( 'name' ); ?></div>		<?php
 			if( $light )
 				echo '<img class="logo" alt="Logo" src="'. $light .'">';
 

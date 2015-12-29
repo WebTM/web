@@ -6,6 +6,18 @@ $color-heading: #333333;
 .pull-right {
     float: right!important;
 }
+::-moz-selection {
+    background-color: #897391;
+    color: #fff;
+    text-shadow: 0 0 0 transparent
+}
+
+::selection {
+    background-color: #897391;
+    color: #fff;
+    text-shadow: 0 0 0 transparent
+}
+
 
 /*--------------------------------------------------------------
 ## Template Mixins

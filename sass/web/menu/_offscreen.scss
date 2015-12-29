@@ -1,17 +1,15 @@
 .offscreen-menu .container{ 
 	@extend .transition-300; 
 	@include translateX($x-amount: 0px); }
-
 .offscreen-menu .container.reveal-nav{ 
-	@include translateX($x-amount: -300px); }
-
-.offscreen-toggle i{ 
+	@include translateX($x-amount: -300px); 
+	}
+.offscreen-toggle i { 
 	font-size: 36px; 
 	cursor: pointer; }
-
-.nav-sticky .offscreen-toggle i{ 
-	color: $color-heading !important; }
-
+.nav-sticky .offscreen-toggle i { 
+	color: $color-heading !important; 
+	}
 .offscreen-container{ 
 	position: fixed; 
 	width: 300px; 
@@ -22,22 +20,15 @@
 	z-index: 99999; 
 	@extend .transition-300; 
 	@include translateX($x-amount: 300px); 
-	padding: 40px;  }
-
-.offscreen-container.reveal-nav{ 
-	@include translateX($x-amount: 0px); }
-.offscreen-menu .container.reveal-nav{ 
-	@include translateX($x-amount: -300px); }
-
+	padding: 20px;  }
+.offscreen-container.reveal-nav { @include translateX($x-amount: 0px); }
 .offscreen-container .logo{ bottom: 0px !important; }
-.offscreen-container .menu{ display: block; }
-.offscreen-container .menu li{ float: none; margin-bottom: 16px; }
-.offscreen-container .menu li a{ padding-bottom: 0px !important; color: #aaa !important; }
+.offscreen-container .menu{ padding: 20px; margin: 0; display: inline-block; position: relative; top: 2px; }
+.offscreen-container .menu li{ list-style: none; float: none; margin-bottom: 16px; }
+.offscreen-container .menu li a{ line-height: 25px; text-decoration: none; font-size: 11px; font-weight: bold; text-transform: uppercase; padding-bottom: 0px !important; color: #aaa !important; }
 .offscreen-container .menu li a:hover{ color: #fff !important; }
 .offscreen-container .social-icons{ position: absolute; bottom: 40px; }
 .offscreen-container .social-icons li a{ color: #fff !important; } 
-
-
 ul .menu-offscreen-menu {
 	list-style: none;
 }
