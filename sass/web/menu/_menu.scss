@@ -16,19 +16,13 @@ nav{
 .overlay-bar{ background: none; }
 .overlay-bar .has-dropdown:after{ color: #fff; }
 
-.nav-menu{ padding-top: 24px; }
 .nav-menu{ padding-top: 40px; padding-right: 40px; }
-.nav-menu .social-icons{ float: right; }
-
-.menu{ padding: 0; margin: 0; display: inline-block; position: relative; top: 2px; }
-.menu li{ float: left; margin-right: 56px; position: relative; }
-.menu li:last-child{ margin-right: 0px; }
-.menu li a{ color: $color-heading; @extend .transition-500; padding-bottom: 40px; display: inline-block; line-height: 14px; }
-.menu li a:hover{ color: $color-heading; }
 
 
 @media all and (max-width: 1050px){
-	.menu li{ margin-right: 32px; }
+	.menu li{ 
+		margin-right: 32px; 
+		}
 }
 @media all and (max-width: 768px){
 	.offscreen-menu{ overflow: visible !important; position: relative !important; }
@@ -37,8 +31,3 @@ nav{
 		top: 0 !important;
 	}
 }
-
-.social-icons{ list-style: none; overflow: hidden; display: inline-block; }
-.social-icons li{ float: left; margin-right: 24px; font-size: 24px; }
-.social-icons li:last-child{ margin-right: 0px; }
-.social-icons li a{ color: $color__text-main; }

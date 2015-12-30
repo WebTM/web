@@ -10,7 +10,7 @@
 .nav-sticky .offscreen-toggle i { 
 	color: $color-heading !important; 
 	}
-.offscreen-container{ 
+.offscreen-container { 
 	position: fixed; 
 	width: 300px; 
 	background: $color-heading; 
@@ -20,15 +20,49 @@
 	z-index: 99999; 
 	@extend .transition-300; 
 	@include translateX($x-amount: 300px); 
-	padding: 20px;  }
+	padding: 20px;  
+	.logo{ bottom: 0px !important; }
+	.menu{ 	padding: 20px; 
+			margin: 0; 
+			display: inline-block; 
+			position: relative; 
+			top: 2px; 
+		 	li{ list-style: none; 
+		 		float: none; 
+		 		margin-bottom: 16px; 
+				a { line-height: 25px; 
+					text-decoration: none; 
+					font-size: 11px; 
+					font-weight: bold; 
+					@extend .transition-500;
+					text-transform: uppercase; 
+					padding-bottom: 0px !important; 
+					color: #aaa !important; 
+					&:hover { 
+						color: #fff !important;; 
+					}
+				}
+		 	}}
+	.social-icons { 
+		list-style: none; 
+		overflow: hidden; 
+		display: inline-block;
+		position: absolute; 
+		bottom: 40px; 
+		li {
+			float: left; 
+			margin-right: 24px; 
+			font-size: 24px;
+			&:last-child{ 
+				margin-right: 0px; 
+			}
+ 			a {
+ 				color: #fff !important; 
+ 			} 
+ 		}	}
+}
 .offscreen-container.reveal-nav { @include translateX($x-amount: 0px); }
-.offscreen-container .logo{ bottom: 0px !important; }
-.offscreen-container .menu{ padding: 20px; margin: 0; display: inline-block; position: relative; top: 2px; }
-.offscreen-container .menu li{ list-style: none; float: none; margin-bottom: 16px; }
-.offscreen-container .menu li a{ line-height: 25px; text-decoration: none; font-size: 11px; font-weight: bold; text-transform: uppercase; padding-bottom: 0px !important; color: #aaa !important; }
-.offscreen-container .menu li a:hover{ color: #fff !important; }
-.offscreen-container .social-icons{ position: absolute; bottom: 40px; }
-.offscreen-container .social-icons li a{ color: #fff !important; } 
+
 ul .menu-offscreen-menu {
 	list-style: none;
 }

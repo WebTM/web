@@ -1,22 +1,29 @@
 <?php 
 	$directory = trailingslashit(get_template_directory_uri()); 
+	
+	$light = get_option('light_logo', $directory . 'style/img/logo-light.png');
+	$dark = get_option('dark_logo', $directory . 'style/img/logo-dark.png');
+	
 	$address = get_option('header_address', '300 Collins St Melbourne');
 	$email = get_option('header_email', 'hello@pivot.net');
+	
 	$protocols = array('http', 'https', 'ftp', 'ftps', 'mailto', 'news', 'irc', 'gopher', 'nntp', 'feed', 'telnet', 'skype');
 ?>
 
 <nav class="top-bar overlay-bar offscreen-menu">
-	<div class="fullscreen-nav fade-fullscreen-nav container">
-		<div class="row nav-menu clearfix">	
-			<div class="pull-right">
-				<div class="offscreen-toggle">			
+	<div class="container">
+		<div class="row nav-menu clearfix">
+			<div class="text-right pull-right">
+				<div class="offscreen-toggle">
 					<i class="icon icon_menu text-white"></i>
 				</div>
 			</div>
-		</div>
-	</div>
+		</div><!--end of row-->
+		
+	</div><!--end of container-->
+	
 	<div class="offscreen-container">
-	<div><?php bloginfo( 'name' ); ?></div>		<?php
+		<?php
 			if( $light )
 				echo '<img class="logo" alt="Logo" src="'. $light .'">';
 
