@@ -7,6 +7,7 @@ nav{
 	position: absolute; 
 	background: #fff; 
 	width: 100%; 
+	z-index: 10;
 	@extend .transition-500; 
 	line-height: 0; 
 	top: 0; }
