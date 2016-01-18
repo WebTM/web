@@ -13,7 +13,7 @@
 			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'ui' ), 'ui', '<a href="http://webtm" rel="designer">bege</a>' ); ?>
 		</div>
 	</footer>
-</div>
+
 
 
 </body>

@@ -1,0 +1,8 @@
+.main-container{	
+	@extend .transition-500;
+	@include translateX($x-amount: 0px);
+	overflow: hidden; }
+
+.main-container.reveal-nav { 
+	@include translateX($x-amount: -300px); 
+	}

@@ -15,10 +15,6 @@
 
 <body>
 <?php 
-	get_template_part('menu/menu','nav-start'); 
-	get_template_part('menu/menu', web_get_header_layout()); 
-	get_template_part('menu/menu','nav-start'); 
-		
+	get_template_part('menu/menu', web_get_header_layout()); 		
 ?>
-<div id="page">
-	<div id="content">
+<div class="main-container">
