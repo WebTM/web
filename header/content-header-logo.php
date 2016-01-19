@@ -7,16 +7,12 @@
 
 <header class="page-header ebor-pad-me">
 
-	<div class="background-image-holder parallax-background">
-		<?php echo wp_get_attachment_image($attachments[0], 'full', false, array('class' => 'background-image')); ?>
-	</div>
-	
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12 text-center">
 				<?php 
-					if( isset( $attachments[1] ) )
-						echo wp_get_attachment_image($attachments[1], 'full', false, array('class' => 'logo'));
+					if( isset( $attachments[0] ) )
+						echo wp_get_attachment_image($attachments[0], 'full', false, array('class' => 'logo'));
 						
 					if( $small )
 						echo '<span class="text-white alt-font">'. htmlspecialchars_decode($small) .'</span>';
