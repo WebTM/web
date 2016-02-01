@@ -1,0 +1,12 @@
+header{ position: relative; overflow: hidden; }
+header .container{ position: relative; z-index: 3; }
+header .logo{ max-width: 200px; display: inline-block; margin-bottom: 24px; }
+header .btn{ margin-right: 16px; }
+header .btn:last-child{ margin-right: 0px; }
+
+.page-header{ margin: 0px; padding: 0px; padding: 160px 0px; border-bottom: none; }
+.page-header h1{ font-size: 40px; margin-bottom: 24px; }
+.page-header p.lead{ font-size: 18px; }
+.page-header:before{ .overlay-params(@opacity-strength: 0.3, @background-color: @color-heading); }
+
+.page-header .background-image-holder{ height: 150%; top: -20%; }

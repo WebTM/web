@@ -1,3 +1,11 @@
+.overlay:before{  
+	@include overlay-params($opacity-strength: 0.9, $background-color: $color-primary); 
+	left: 0; }
+
+.overlay .container{ 
+	position: relative; 
+	z-index: 3; }
+
 .main-container{	
 	@extend .transition-500;
 	@include translateX($x-amount: 0px);
