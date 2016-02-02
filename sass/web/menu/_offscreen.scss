@@ -58,11 +58,8 @@
 			}
  			a {
  				color: #fff !important; 
- 			} 
- 		}	}
-}
+ 			}}}}
 .offscreen-container.reveal-nav { @include translateX($x-amount: 0px); }
-
 ul .menu-offscreen-menu {
 	list-style: none;
-}
+	}
