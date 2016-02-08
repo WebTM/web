@@ -1,4 +1,37 @@
+//
+// Template Variables
+// --------------------------------------------------
+
 $short-transition: 300ms;
 $medium-transition: 500ms;
 $long-transition: 2000ms;
+
+// Colors
+
 $color-heading: #333333;
+.text-white { color: #fff; }
+
+// fonts
+
+
+@include font-face(webpro, '../../style/fonts/web-pro', 300, normal);
+@include font-face(webpro-reg, '../../style/fonts/webpro-regular', 300, normal);
+@include font-face(ProximaNovaT-Thin, '../../style/fonts/ProximaNovaT-Thin', 300, normal);
+@include font-face(MonoCondensed-Bold, '../../style/fonts/MonoCondensed-Bold', 300, normal);
+@include font-face(PTSerif-Regular, '../../style/fonts/PTSerif-Regular', 300, normal);
+@include font-face(PTSansPro-Caption, '../../style/fonts/PTSansPro-Caption', 300, normal);
+@include font-face(ProximaNova-Regular, '../../style/fonts/ProximaNova-Regular', 300, normal);
+@include font-face(ProximaNova-Extrabld, '../../style/fonts/Futura', 300, normal);
+@include font-face(Gothic725BlkBT, '../../style/fonts/Gothic725BlkBT', 300, normal);
+
+@mixin webpro {  font-family: 'webpro', arial, sans-serif;}
+@mixin webpro-reg {  font-family: 'webpro-reg', arial, sans-serif;}
+@mixin ProximaNovaT-Thin {  font-family: 'ProximaNovaT-Thin', arial, sans-serif;}
+@mixin MonoCondensed-Bold {  font-family: 'MonoCondensed-Bold', arial, sans-serif;}
+@mixin PTSerif-Regular {  font-family: 'PTSerif-Regular', arial, sans-serif;}
+@mixin PTSansPro-Caption {  font-family: 'PTSansPro-Caption', arial, sans-serif;}
+@mixin ProximaNova-Regular {  font-family: 'ProximaNova-Regular', arial, sans-serif;}
+@mixin ProximaNova-Extrabld {  font-family: 'ProximaNova-Extrabld', arial, sans-serif;}
+@mixin Gothic725BlkBT {  font-family: 'Gothic725BlkBT', arial, sans-serif;}
+
+

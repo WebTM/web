@@ -1,14 +1,25 @@
-header{ position: relative; overflow: hidden; }
-header .container{ position: relative; z-index: 3; }
-header .logo{ max-width: 200px; display: inline-block; margin-bottom: 24px; }
-header .btn{ margin-right: 16px; }
-header .btn:last-child{ margin-right: 0px; }
+header{ position: relative; overflow: hidden; 
+	.container { 
+	@include webpro-reg;
+	position: relative; z-index: 3; }
+	.logo{ 
+	max-width: 200px; display: inline-block; margin-bottom: 24px; }
+	.btn{ margin-right: 16px; 
+		&:last-child{ margin-right: 0px; }
+	}}
 
-.page-header{ margin: 0px; padding: 0px; padding: 160px 0px; border-bottom: none; }
-.page-header h1{ font-size: 40px; margin-bottom: 24px; }
-.page-header p.lead{ font-size: 18px; }
-.page-header:before{ 
-	@include overlay-params($opacity-strength: 0.3, $background-color: $color-primary);
-	}
 
-.page-header .background-image-holder{ height: 150%; top: -20%; }
+.page-header{ margin: 0px; padding: 0px; padding: 160px 0px; border-bottom: none; 
+	span.text-white { 
+	display: block;}
+	h1{ 
+	font-size: 40px; margin-bottom: 24px; }
+	br{ 
+	display: none; }
+	p.lead{ 
+	font-size: 18px; }
+	&:before{ 
+		@include overlay-params($opacity-strength: 0.3, $background-color: $color-primary);}
+	.background-image-holder{ 
+	height: 150%; top: -20%; }
+}
