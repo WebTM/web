@@ -14,7 +14,5 @@
 </head>
 
 <body>
-<?php 
-	get_template_part('menu/menu', web_get_header_layout()); 		
-?>
-<div class="main-container">
+	<?php get_template_part('menu/menu', web_get_header_layout()); ?>
+	<div class="main-container">

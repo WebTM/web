@@ -8,13 +8,7 @@
 
 	</div>
 
-	<footer>
-		<div class="site-info">
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'ui' ), 'ui', '<a href="http://webtm" rel="designer">bege</a>' ); ?>
-		</div>
-	</footer>
-
-
+	<?php get_template_part('footer/footer', web_get_footer_layout()); ?>
 
 </body>
 </html>

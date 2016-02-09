@@ -16,12 +16,14 @@ if( class_exists('Web_Options') ){
 	/**
 	 * Variables
 	 */
-	$theme = wp_get_theme();
-	$theme_name = $theme->get( 'Name' );
-	$directory = trailingslashit(get_template_directory_uri());
-	$header_layouts = web_get_header_options();
-	$post_layouts = web_get_post_layouts();
-	$blog_layouts = web_get_blog_layouts();
+	$theme 			= 		wp_get_theme();
+	$theme_name 	= 		$theme->get( 'Name' );
+	$directory 		= 		trailingslashit(get_template_directory_uri());
+	$header_layouts = 		web_get_header_options();
+	$footer_layouts = 		web_get_footer_options();
+	$post_layouts 	= 		web_get_post_layouts();
+	$blog_layouts 	=	 	web_get_blog_layouts();
+	
 	$footer_default = 'Copyright 2014 TommusRhodus';
 	$subtitle_default = 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta.';
 
