@@ -1,4 +1,4 @@
-<footer class="bg-primary short-2">
+<footer class="short-2">
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">
