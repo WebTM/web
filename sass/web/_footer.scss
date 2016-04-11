@@ -1,0 +1,19 @@
+footer {
+    background: #DBDBD4 none repeat scroll 0 0; 
+    color: #252525;
+    font-size: 14px;
+    line-height: 25px;
+    padding: 145px 0 0;
+    position: relative;
+}
+
+.footer::after {
+    background: #e6b903 none repeat scroll 0 0;
+    content: "";
+    height: 75px;
+    left: 50%;
+    position: absolute;
+    top: 0;
+    width: 1px;
+    z-index: 1;
+}

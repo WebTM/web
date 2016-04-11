@@ -19,10 +19,9 @@
 					}
 				?>
 			</div>
-		</div><!--end for row-->
-	</div><!--end of container-->
-	
-	<?php if( get_option('cta_footer_url', home_url()) ) : ?>
+            
+            
+           	<?php if( get_option('cta_footer_url', home_url()) ) : ?>
 		<div class="contact-action">
 			<div class="align-vertical">
 				<a href="<?php echo esc_url( get_option('cta_footer_url', home_url()) ); ?>" class="text-white">
@@ -34,4 +33,6 @@
 	<div class="site-info">
 			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'ui' ), 'ui', '<a href="http://webtm" rel="designer">bege</a>' ); ?>
 	</div>
+		</div><!--end for row-->
+	</div><!--end of container-->
 </footer>
