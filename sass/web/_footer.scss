@@ -3,7 +3,7 @@ footer {
     color: #DBDBD4;
     font-size: 14px;
     line-height: 25px;
-    padding: 129px 0 0;
+    padding: 160px 0 30px;
     position: relative;
     
     .bg-left, .bg-right {
@@ -28,23 +28,13 @@ footer {
         z-index: 8;
     }
     .contact-action, .site-info, .menu-socials {
-          position: relative;  
-    }
-    .contact-action {
-    bottom: 20px; 
-    z-index: 20;
-    }
-    .site-info {
-    bottom: 20px; 
-    z-index: 20;
+          position: relative; 
+          z-index: 20; 
     }
     .menu-socials {
-    bottom: 20px;
     left: 5%;
     text-align: center;
     width: 90%;
-    z-index: 20;
-
      a {
         color: #7d7d7d;
         display: inline-block;
