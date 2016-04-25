@@ -3,6 +3,8 @@ footer {
     color: #DBDBD4;
     font-size: 14px;
     line-height: 25px;
+    height:auto !important;
+    min-height:100%;
     padding: 160px 0 30px;
     position: relative;
     
@@ -27,7 +29,7 @@ footer {
         width: 100%;
         z-index: 8;
     }
-    .contact-action, .site-info, .menu-socials {
+    .menu-socials {
           position: relative; 
           z-index: 20; 
     }
