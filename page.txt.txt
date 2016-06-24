@@ -1,1 +1,13 @@
-[vc_row full_width="stretch_row_content_no_spaces" content_placement="middle" parallax="content-moving-fade" css=".vc_custom_1454931115331{background-color: #22a7f0 !important;background-position: center;background-repeat: no-repeat !important;background-size: cover !important;}"][vc_column][web_page_header layout="logo" image="1039" small="Small Text" big="Создание сайтов" sub="Весь комплекс услуг: от карандашного наброска, разработки прототипа и дизайн-макета будущего сайта до верстки, интеграции на WordPress, последующего продвижения и сопровождения проекта."]Shortcodes, buttons etc.[/web_page_header][/vc_column][/vc_row]
+[vc_row full_width="stretch_row_content_no_spaces" content_placement="middle" parallax="content-moving-fade" css=".vc_custom_1454931115331{background-color: #22a7f0 !important;background-position: center;background-repeat: no-repeat !important;background-size: cover !important;}"][vc_column][web_page_header layout="logo" image="1039" small="Small Text" big="пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ" sub="пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ: пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ-пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ WordPress, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ."]Shortcodes, buttons etc.[/web_page_header][/vc_column][/vc_row]
+
+
+
+
+
+http://grooni.com/
+http://demo.theme-sky.com/gon/homepage/special-collection/  
+http://demo.theme-sky.com/gon/homepage/home-catalog/?color=orange
+http://themeforest.net/item/salient-responsive-multipurpose-theme/full_screen_preview/4363266
+http://themenectar.com/demo/salient-blog/mauris-pharetra-interdum-lorem-2/
+http://themenectar.com/demo/salient-one-page/
+http://createdigital.me/
