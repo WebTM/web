@@ -64,10 +64,6 @@ function ui_setup() {
 endif; // ui_setup
 add_action( 'after_setup_theme', 'ui_setup' );
 
-if( function_exists('vc_set_as_theme') )
-	require_once get_template_directory() . '/admin/vc_init.php';
-
-
 /**
  * Register widget area.
  */
