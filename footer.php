@@ -9,8 +9,8 @@
 	</div>
 
 
-<?php wp_footer(); ?>
-
+	<?php get_template_part('footer/footer', web_get_footer_layout()); ?>
+	<?php wp_footer(); ?>
 
 </body>
 </html>
