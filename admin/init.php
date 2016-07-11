@@ -13,10 +13,7 @@ require_once ( 'theme_filters.php' );
  * https://github.com/WebDevStudios/CMB2/wiki/Basic-Usage
  */
 require_once ( 'theme_metaboxes.php' );
-
-
 require_once ( 'web_options.php' );
-
 
 if( is_admin() ){
 	require_once ( 'theme_options.php' );

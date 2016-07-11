@@ -9,7 +9,7 @@
 	</div>
 
 
-	<?php get_template_part('footer/footer', web_get_footer_layout()); ?>
+	<?php get_template_part('template_parts/content-footer', web_get_footer_layout()); ?>
 	<?php wp_footer(); ?>
 
 </body>

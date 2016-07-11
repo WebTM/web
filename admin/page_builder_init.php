@@ -15,6 +15,10 @@ if(class_exists('AQ_Page_Builder')) {
 		require_once get_template_directory() . '/page_blocks/page_header_block.php';
 		aq_register_block('AQ_Page_Header_Block');
 	}
+	if(!( class_exists('AQ_Section_Block') )){
+		require_once get_template_directory() . '/page_blocks/page_section_block.php';
+		aq_register_block('AQ_Section_Block');
+	}
 
 	/**
 	 * Wrapper function overrides
