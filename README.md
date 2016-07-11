@@ -4,10 +4,7 @@ start theme
 ------------------------
 Map
 ------------------------
-<<<<<<< HEAD
 
-/admin/             - Theme options, functions
--------------------------------------
 /vc_blocks/         - Shortcodes
 vc_@page_block
 -------------------------------------
@@ -26,28 +23,16 @@ content-footer-
 /admin/page_builder_init.php 		- Links to /page_blocks/
 /admin/vc_init.php        			- Links to /vc_blocks/ 
 -------------------------------------
-=======
-/admin/             - Theme options, functions <br>
-/vc_blocks/         - Shortcodes  <br>
-/page_blocks/       - Admin options blocks  <br>
-/template_parts/    - Front-end blocks (layouts)  <br>
-/sass/              - SASS styles  <br>
-/style/             - Compiled styles, js, img.  <br>
-vc_init.php         - Links to /vc_blocks/ <br>
-
->>>>>>> origin/master
 
 
 ------------------------
 Todo
 ------------------------
-<<<<<<< HEAD
-
-------------------
-// Menu(toggle-right)
-
-
+=======
+Menu(toggle-right) <br>
+http://run.plnkr.co/plunks/sA6H7U/
 ------------------------
+
 http://grooni.com/
 http://demo.theme-sky.com/gon/homepage/special-collection/  
 http://demo.theme-sky.com/gon/homepage/home-catalog/?color=orange
@@ -59,10 +44,3 @@ http://createdigital.me/
 
 
 
-
-
-=======
-Menu(toggle-right) <br>
->>>>>>> origin/master
-http://run.plnkr.co/plunks/sA6H7U/
- <br>
