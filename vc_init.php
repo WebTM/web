@@ -1,8 +1,7 @@
 <?php 
 
 /**
- * Page builder blocks below here
- * Whoop-dee-doo
+ * Page builder blocks
  */
 
 //Grab Page Header Shortcode
