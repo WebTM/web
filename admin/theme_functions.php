@@ -57,6 +57,9 @@ if(!( function_exists('web_init_theme_options') )){
 		update_option('web_framework_options', $framework_args);
 	}
 	
+	
+	
+	
 	/**
 	 * Only call this action when we first activate the theme.
 	 */
@@ -64,6 +67,14 @@ if(!( function_exists('web_init_theme_options') )){
 		add_action( 'init', 'web_init_theme_options', 1 );
 	}
 }
+
+
+function web_admin_load_scripts(){
+	$directory = trailingslashit(get_template_directory_uri());
+	wp_enqueue_style( 'web-theme-admin-css', $directory . 'admin/theme-admin.css' );
+}
+add_action('admin_enqueue_scripts', 'web_admin_load_scripts', 200);
+
 /**
  * Medium rare nav walker.
  * This nav walker is for themes by tommusrhodus and medium rare.
@@ -376,7 +387,6 @@ if(!( function_exists('web_get_footer_options') )){
 		return $options;	
 	}
 }
-
 
 
 

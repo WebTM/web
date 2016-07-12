@@ -19,7 +19,15 @@ if(class_exists('AQ_Page_Builder')) {
 		require_once get_template_directory() . '/page_blocks/page_section_block.php';
 		aq_register_block('AQ_Section_Block');
 	}
-
+	if(!( class_exists('AQ_Text_Block') )){
+		require_once get_template_directory() . '/page_blocks/text_block.php';
+		aq_register_block('AQ_Text_Block');
+	}
+	if(!( class_exists('AQ_Portfolio_Block') )){
+		require_once get_template_directory() . '/page_blocks/portfolio_block.php';
+		aq_register_block('AQ_Portfolio_Block'); 
+	}
+	
 	/**
 	 * Wrapper function overrides
 	 * @doNotModify Unless you know exactly what you're doing, modification of these will break the theme layout. You have been warned.

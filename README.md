@@ -25,22 +25,4 @@ content-footer-
 -------------------------------------
 
 
-------------------------
-Todo
-------------------------
-=======
-Menu(toggle-right) <br>
-http://run.plnkr.co/plunks/sA6H7U/
-------------------------
-
-http://grooni.com/
-http://demo.theme-sky.com/gon/homepage/special-collection/  
-http://demo.theme-sky.com/gon/homepage/home-catalog/?color=orange
-http://themeforest.net/item/salient-responsive-multipurpose-theme/full_screen_preview/4363266
-http://themenectar.com/demo/salient-blog/mauris-pharetra-interdum-lorem-2/
-http://themenectar.com/demo/salient-one-page/
-http://createdigital.me/
-
-
-
 

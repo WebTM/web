@@ -11,3 +11,49 @@
 .main-container.reveal-nav { 
 	@include translateX($x-amount: -300px); 
 	}
+
+	
+
+//
+// <section> Standards
+// --------------------------------------------------
+
+
+section{ padding-top: $standard-space/2; padding-bottom: $standard-space; position: relative; overflow: hidden; }
+section.pad-large{ padding-top: $standard-space*2; padding-bottom: $standard-space*2; }
+section.full{ padding-top: 0; padding-bottom: 0; }
+
+.no-pad{ padding: 0px; }
+.no-pad-top{ padding-top: 0px !important; }
+.no-pad-left{ padding-left: 0px; }
+.no-pad-right{ padding-right: 0px; }
+.no-pad-bottom{ padding-bottom: 0px; }
+
+.space-top-small{ margin-top: $standard-space/4 !important; }
+.space-bottom-medium{ margin-bottom: $standard-space/2 !important; }
+.space-bottom-large{ margin-bottom: $standard-space !important; }
+.space-bottom-xlarge{ margin-bottom: $standard-space*2 !important; }
+
+.no-margin{ margin: 0; }
+.no-margin-bottom{ margin-bottom: 0px !important; }
+	
+	
+//
+// Feature Sections
+// --------------------------------------------------
+
+.feature{ overflow: hidden; }
+.feature h1{ font-size: 28px; color: $color-primary; @include ProximaNovaT-Thin;}
+.feature i{ color: $color-primary; }
+.feature-icon-large i{ 
+		display: block; 
+		height: 104px; 
+		width: 104px; 
+		border: 2px solid $color-primary; 
+		border-radius: 50%;
+		text-align: center; 
+		color: $color-primary; 
+		font-size: 32px; 
+		padding-top: 31px; 
+		margin-bottom: 32px; 
+}

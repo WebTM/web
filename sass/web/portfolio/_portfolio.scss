@@ -1,0 +1,72 @@
+//
+// Galleries & Portfolio Sections
+// --------------------------------------------------
+
+.projects-gallery p.lead{ margin-bottom: 64px !important; }
+.projects-wrapper{ text-align: center; }
+.filters{ padding: 0px; list-style: none; overflow: hidden; display: inline-block; margin-bottom: 32px; }
+.filters li{ float: left; margin-right: 16px; @include webpro-reg; color: $color-secondary-2; cursor: pointer; }
+.filters li:last-child{ margin-right: 0px; }
+.filters li.active{ border-bottom: 2px solid $color-secondary-2; }
+
+.project{ height: 345px; }
+.project.col-md-4{ width: 33%; }
+.project.col-md-4:nth-child(3n - 1){ width: 34%; }
+.project.col-md-4 .background-image-holder{ width: 103%; }
+
+.column-projects .project.col-md-4{ width: 33.33333%; overflow: hidden; }
+.column-projects .project.col-md-4 .background-image-holder{ width: 100% !important; }
+.column-projects .project{ overflow: hidden; }
+
+@media screen and (max-width: 990px){
+	.project.col-md-4{ width: 50%; }
+	.project.col-md-4:nth-child(3n - 1){ width: 50%; }
+	.project.col-md-4 .background-image-holder{ width: 100%; }
+	.column-projects .project.col-md-4{ width: 50%; }
+}
+
+@media screen and (max-width: 767px){
+	.project.col-md-4{ width: 100%; }
+	.project.col-md-4:nth-child(3n - 1){ width: 100%; }
+	.column-projects .project.col-md-4{ width: 100%; }
+	.product-right .product-image{ width: 75%; right: 12.5% !important; }
+}
+
+.project .image-holder{ overflow: hidden; position: relative; }
+.project img{ width: 100%; }
+.project .hover-state{@extend .cover-div; background-color: fade($color-secondary-1, 90%); text-align: center; @extend .transition-500; opacity: 0; padding-right: 15px; }
+.project:hover .hover-state{ opacity: 1; }
+.project .hover-state h1{ margin-bottom: 8px; font-size: 24px; }
+.project .hover-state h3{ font-size: 18px; margin-bottom: 8px; }
+.project .hover-state p{ margin-bottom: 24px; }
+.project .hover-state .btn-white:hover{ color: $color-secondary-1; }
+
+.hover-state .align-vertical{
+	@include translateY($y-amount: 200px); 
+	@extend .transition-500; opacity: 0; 
+	}
+.project:hover .align-vertical {
+	@include translateY($y-amount: 0px); opacity: 1; }
+
+.column-projects{ margin-bottom: 80px; }
+.column-projects .project{ height: 300px; margin-bottom: 15px; }
+.column-projects .project .hover-state h3{ margin-bottom: 24px; }
+
+.image-gallery{ margin-top: 64px; }
+.image-gallery .image-holder{ margin-bottom: 30px; height: 375px; overflow: hidden; position: relative; }
+.image-slider .flex-direction-nav{ display: none; }
+
+
+@media (min-width: @screen-sm-min) {
+    .image-gallery .image-holder{ height: 245px; }
+  }
+  
+@media (min-width: @screen-md-min) {
+    .image-gallery .image-holder{ height: 375px; }
+  }
+  
+.image-slider{ position: relative; margin-bottom: 32px; }
+.image-slider .flex-direction-nav a.flex-prev:before{ left: 0px; }
+.image-slider .flex-control-nav{ bottom: -48px; }
+.image-slider .flex-control-nav li a{ background: rgba(0,0,0,0.3); }
+.image-slider .flex-control-nav li a.flex-active{ background: rgba(0,0,0,0.8); }

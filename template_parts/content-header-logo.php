@@ -11,7 +11,7 @@
 			<div class="col-lg-12">
 				<?php 
 					if( isset( $attachments[0] ) )
-						echo wp_get_attachment_image($attachments[0], 'full', false, array('class' => 'logo'));
+						// echo wp_get_attachment_image($attachments[0], 'full', false, array('class' => 'logo'));
 						
 					if( $small )
 						echo '<span class="alt-font">'. htmlspecialchars_decode($small) .'</span>';

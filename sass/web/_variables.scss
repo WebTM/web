@@ -9,9 +9,10 @@ $long-transition: 2000ms;
 // Colors
 
 $color-heading: #333333;
+$color-primary: #000;
 .text-white { color: #fff; }
 
-// fonts
+// Fonts
 
 
 @include font-face(webpro, '../../style/fonts/web-pro', 300, normal);
@@ -33,5 +34,15 @@ $color-heading: #333333;
 @mixin ProximaNova-Regular {  font-family: 'ProximaNova-Regular', arial, sans-serif;}
 @mixin ProximaNova-Extrabld {  font-family: 'ProximaNova-Extrabld', arial, sans-serif;}
 @mixin Gothic725BlkBT {  font-family: 'Gothic725BlkBT', arial, sans-serif;}
+
+.font-body{ font-family: $MonoCondensed-Bold; }
+.font-heading{ font-family: $webpro-reg; }
+.alt-font{ font-family: $webpro; font-weight: bold; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; }
+
+// Spacing
+
+$standard-space: 64px;
+.no-align-mobile{ padding-top: 0px !important; margin-top: 24px; }
+
 
 
