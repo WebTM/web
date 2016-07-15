@@ -43,7 +43,7 @@ section.full{ padding-top: 0; padding-bottom: 0; }
 // --------------------------------------------------
 
 .feature{ overflow: hidden; }
-.feature h1{ font-size: 28px; color: $color-primary; @include ProximaNovaT-Thin;}
+.feature h1{ font-size: 28px; color: $color-primary; @include fira-sans;}
 .feature i{ color: $color-primary; }
 .feature-icon-large i{ 
 		display: block; 
