@@ -5,7 +5,6 @@
 ?>
 
 <header class="page-header">
-
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
@@ -27,8 +26,7 @@
 				?>
 			</div>
 		</div>
-	</div>
-	
+	</div>	
 </header>
 
 <?php endif;
