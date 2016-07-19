@@ -1,3 +1,4 @@
+<!--header start-->
 <?php
 	//images
 	$attachments = explode(',', $image);
@@ -28,5 +29,5 @@
 		</div>
 	</div>	
 </header>
-
+<!--header end-->
 <?php endif;

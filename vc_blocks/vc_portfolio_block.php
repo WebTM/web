@@ -63,15 +63,16 @@ function web_portfolio_shortcode( $atts ) {
 				
 					<?php 
 						if ( $block_query->have_posts() ) : while ( $block_query->have_posts() ) : $block_query->the_post();
-							
+							echo "1231";
 							/**
 							 * Get blog posts by blog layout.
 							 */
+							 
 							get_template_part('template_parts/content', 'portfolio-fullwidth');
 						
 						endwhile;	
 						else : 
-							
+
 							/**
 							 * Display no posts message if none are found.
 							 */

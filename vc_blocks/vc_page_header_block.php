@@ -26,8 +26,9 @@ function web_page_header_shortcode( $atts, $content = null ) {
 	
 	ob_start();
 	?>
+	
 	<div class="aq-block-aq_page_header_block">
-	<?php include( locate_template('template_parts/content-header-' . $layout . '.php') ); ?>
+		<?php include( locate_template('template_parts/content-header-' . $layout . '.php') ); ?>
 	</div>
 	<?php
 	$output = ob_get_contents();

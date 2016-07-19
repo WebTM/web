@@ -27,6 +27,15 @@ if( class_exists('Web_Options') ){
 	$footer_default = 'Copyright 2014 TommusRhodus';
 	$subtitle_default = 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta.';
 
+	$pagination_sizes = array(
+		'pagination-sm' => 'Small',
+		'pagination-md' => 'Medium',
+		'pagination-lg' => 'Large',	
+	);
+    
+	$fonts_description = 'Fonts: ' . $theme_name . ' uses Google Fonts, <a href="https://www.google.com/fonts" target="_blank">all of which are viewable here</a>. Unlike some themes, ' . $theme_name . ' does not load all of these fonts into these options, in avoiding this ' . $theme_name . ' can work faster and more reliably.<br /><br />
+	
+	To customize the fonts on your website use the URL above and the inputs below accordingly. Full details of this process (and the default values) can be found in the theme documentation!';
 
 	/**
 	 * Panels
@@ -158,13 +167,6 @@ if( class_exists('Web_Options') ){
 	$web_options->add_setting('checkbox', 'header_login', 'Show Login Button?', 'subheader_settings_section', 1, 30);
 	$web_options->add_setting('checkbox', 'header_signup', 'Show Signup Button?', 'subheader_settings_section', 1, 30);
 	
-	//Header Icons
-	$web_options->add_setting('checkbox', 'cart_icon', 'Show Shopping Cart Icon?', 'header_social_settings_section', 1, 10);
-	for( $i = 1; $i < 4; $i++ ){
-		$web_options->add_setting('select', 'header_social_icon_' . $i, 'Header Social Icon ' . $i, 'header_social_settings_section', 'none', 20 + $i + $i, $social_options);
-		$web_options->add_setting('input', 'header_social_url_' . $i, 'Header Social URL ' . $i, 'header_social_settings_section', '', 21 + $i + $i);
-	}
-	
 	//Header Layout Option
 	$web_options->add_setting('select', 'footer_layout', 'Global Footer Layout', 'footer_layout_section', 'columns', 5, $footer_layouts);
 	
@@ -174,13 +176,7 @@ if( class_exists('Web_Options') ){
 	$web_options->add_setting('input', 'cta_footer_text', 'Button Text', 'cta_footer_settings_section', 'Get in touch with us', 20);
 	$web_options->add_setting('input', 'social_footer_title', 'Footer Title', 'social_footer_settings_section', 'Get In Touch', 10);
 	$web_options->add_setting('input', 'social_footer_subtitle', 'Footer Subtitle', 'social_footer_settings_section', 'hello@email.com', 20);
-	
-	//Footer Icons
-	for( $i = 1; $i < 7; $i++ ){
-		$web_options->add_setting('select', 'footer_social_icon_' . $i, 'Footer Social Icon ' . $i, 'footer_social_settings_section', 'none', 20 + $i + $i, $social_options);
-		$web_options->add_setting('input', 'footer_social_url_' . $i, 'Footer Social URL ' . $i, 'footer_social_settings_section', '', 21 + $i + $i);
-	}
-	
+		
 	//One Page Options
 	$web_options->add_setting('range', 'header_offset', 'Header Offset for Scroll (96 Default)', 'one_page_section', '96', 30, array('min' => '0', 'max' => '200', 'step' => '1'));
 	
