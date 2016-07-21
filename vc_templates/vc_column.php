@@ -13,7 +13,7 @@ extract( shortcode_atts( array(
 
 $el_class = $this->getExtraClass( $el_class );
 $width = wpb_translateColumnWidthToSpan( $width );
-$width = vc_column_offset_class_merge( $offset, $width );
+//$width = vc_column_offset_class_merge( $offset, $width );
 $el_class .= '';
 $style = $this->buildStyle( $font_color );
 $css_class = apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, $width . $el_class, $this->settings['base'], $atts );
