@@ -1,0 +1,25 @@
+<?php
+/**
+ * @var $this WPBakeryShortCode_VC_Column
+ */
+$output = $font_color = $el_class = $width = $offset = '';
+extract( shortcode_atts( array(
+	'font_color' => '',
+	'el_class' => '',
+	'width' => '1/1',
+	'css' => '',
+	'offset' => ''
+), $atts ) );
+
+$el_class = $this->getExtraClass( $el_class );
+$width = wpb_translateColumnWidthToSpan( $width );
+$width = vc_column_offset_class_merge( $offset, $width );
+$el_class .= '';
+$style = $this->buildStyle( $font_color );
+$css_class = apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, $width . $el_class, $this->settings['base'], $atts );
+$output .= '<div class="' . $css_class . ' ' . vc_shortcode_custom_css_class( $css, ' ' ) . '"' . $style . '>';
+
+$output .= "\n\t\t\t" . wpb_js_remove_wpautop( $content );
+
+$output .= "\n\t" . '</div> ';
+echo $output;

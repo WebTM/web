@@ -1,5 +1,5 @@
 <?php
-$output = $el_class = $bg_image = $bg_color = $bg_image_repeat = $font_color = $padding = $margin_bottom = $css = '';
+$output = $el_class = $bg_image = $bg_color = $bg_image_repeat = $font_color = $width = $padding = $margin_bottom = $css =  '';
 extract(shortcode_atts(array(
     'el_class'        => '',
     'bg_image'        => '',
@@ -108,22 +108,17 @@ if( 'image-left' == $background_style ){
 	
 	$el_class = $this->getExtraClass($el_class);
 	
-	$css_class = apply_filters( 
-        VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, 
-        ''. 
-        ( $this->settings('base')==='vc_row_inner' ? 'vc_inner' : '' ) . 
-        get_row_css_class() . 
-        vc_shortcode_custom_css_class( $css, '' ), 
-        $this->settings['base'], $atts );
+	$css_class = apply_filters(VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG,''.( $this->settings('base')==='vc_row_inner' ? 'vc_inner' : '' ) .vc_shortcode_custom_css_class( $css, ' ' ), $this->settings['base'], $atts );
 	
 	$style = $this->buildStyle($bg_image, $bg_color, $bg_image_repeat, $font_color, $padding, $margin_bottom);
-	$output .= '
-    <!--<a href="#" id="'. ebor_sanitize_title($single_link) .'" class="in-page-link"></a>-->
-    <section class="'. $background_style .' '.$css_class.'"'.$style.'>
-    <div class="container"><div class="row">';
-	$output .= wpb_js_remove_wpautop($content);
-	$output .= '</div></div></section>'.$this->endBlockComment('row');
+    
+
+    PC::magic_tag(wpb_js_remove_wpautop($content));
+    
+    
+    $output .= '<section class="'.$background_style.''.$css_class.'"'.$style.'>';
+    $output .=  wpb_js_remove_wpautop($content);
+	$output .= '</section>';
 
 }
-
 echo $output;
