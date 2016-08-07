@@ -19,7 +19,7 @@ function web_vc_add_attr(){
 		'heading' => "Background Style",
 		'param_name' => 'background_style',
 		'value' => array_flip(array(
-			'pivot-normal' => 'Standard Settings',
+			'' => 'Standard Settings',
 			'full' => 'Fullwidth Section',
 			'light-wrapper' => 'Light Background',
 			'dark-wrapper' => 'Dark Background',
