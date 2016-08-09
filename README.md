@@ -28,10 +28,11 @@ web/
 
 ```
 
-
+```
 design
 ├── fonts
 │   ├── http://moraray.ru/
+│   ├── https://sdklimov.com/
 │   └──
 ├── services
 ├── slider
@@ -40,3 +41,4 @@ design
 │   └──
 ├──
 └── footer
+```
