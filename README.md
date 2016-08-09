@@ -35,10 +35,26 @@ design
 │   ├── https://sdklimov.com/
 │   └──
 ├── services
-├── slider
+│   ├──
+│   ├──
+│   ├──
+│   ├──
+│   ├──
+│   └──
+├── slider/porftolio
+│   ├── http://elforma.com/
+│   ├──
+│   ├──
 │   └──
 ├── clients
+│   ├──
+│   ├──
+│   ├──
 │   └──
-├──
+├── blog
+│   ├──
+│   ├──
+│   ├──
+│   └──
 └── footer
 ```
