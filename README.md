@@ -10,13 +10,13 @@ web/
 ├── admin/           
 │   ├── page_builder_init.php   - Links to /page_blocks/
 │   ├── vc_init.php             - Links to /vc_blocks/
-│   └── 
+│   └──
 ├── vc_blocks/            - Shortcodes
 │   ├── vc_@page_block
-│   └── 
+│   └──
 ├── page_blocks/          - Admin options blocks
 │   ├── @page_block
-│   └── 
+│   └──
 ├── template_parts/       - Front-end blocks (layouts)
 │   ├── menu-
 │   ├── content-
@@ -29,5 +29,14 @@ web/
 ```
 
 
-
-
+design
+├── fonts
+│   ├── http://moraray.ru/
+│   └──
+├── services
+├── slider
+│   └──
+├── clients
+│   └──
+├──
+└── footer
