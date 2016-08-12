@@ -68,9 +68,9 @@ design
 
 
 
-- [ ] попробовать отключить Рage builder
-- [ ] Slider
-- [ ] Portfolio items
-- [ ] Fonts
-- [ ] Footer
+- [x] попробовать отключить Рage builder
+- [x] Slider
+- [x] Portfolio items
+- [x] Fonts
+- [x] Footer
 
