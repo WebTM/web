@@ -67,8 +67,6 @@ jQuery(document).ready(function($) {
 /*-----------------------------------------------------------------------------------*/
 jQuery(document).ready(function(){
 	
-	onYouTubeIframeAPIReady();
-	
 	jQuery('.post-password-form').addClass('photo-form-wrapper').find('label:has(input)').each(function(){
 		var text = jQuery(this).text(),
 			input = jQuery('input', this),
