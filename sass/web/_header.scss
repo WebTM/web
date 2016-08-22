@@ -1,24 +1,14 @@
 header{ position: relative; overflow: hidden; 
-	.container { 
-	@include webpro-reg;
-	position: relative; z-index: 3; }
-	.logo{ 
-	max-width: 150px; display: inline-block; margin-bottom: 40px; }
+	.container { @include webpro-reg; position: relative; z-index: 3; }
+	.logo{max-width: 150px; display: inline-block; margin-bottom: 40px; }
 	.btn{ margin-right: 16px; 
 		&:last-child{ margin-right: 0px; }
 	}}
 
-
-.page-header{ margin: 0px; padding: $standard-space 0; background: #f1fae3;
-	span.text-white { 
-	display: block;}
-	h1{ 
-	font-size: 46px; margin-bottom: 24px; }
-	br{ 
-	display: none; }
-	p.lead{ 
-	font-size: 22px; line-height:36px; color: #2f2f2f; max-width: 1100px;
-	}
-	.background-image-holder{ 
-	height: 100%; top: -20%; }
+.page-header{ margin: 0px; padding: $standard-space 0; border-bottom: none;
+	span.text-white {display: block;}
+	h1{	font-size: 70px; font-weight: bold; margin-bottom: 12px; }
+	br{	display: none; }
+	p.lead{	font-size: 22px; font-weight: 400;  font-style: italic; letter-spacing: 0.03em; line-height:36px; color: #696969; max-width: 1100px;}
+	.background-image-holder{height: 100%; top: -20%; }
 }
