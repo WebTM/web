@@ -37,7 +37,7 @@ class AQ_Portfolio_Block extends AQ_Block {
 		
 		$portfolio_types = array(
 			'half' => 'Fullwidth Portfolio (2 Columns)',
-			'fullwidth' => 'Fullwidth Portfolio (3 Columns)',
+			'fullwidth' => 'Fullwidth Portfolio',
 			'quarter' => 'Fullwidth Portfolio (4 Columns)',
 			'contained' => 'Contained Portfolio',
 		);

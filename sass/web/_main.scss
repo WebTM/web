@@ -42,7 +42,7 @@ section.full{ padding-top: 0; padding-bottom: 0; }
 // Feature Sections
 // --------------------------------------------------
 
-.feature{ overflow: hidden; }
+.feature{ overflow: hidden; padding: $standard-space 0;}
 .feature h1{ font-size: 28px; color: $color-primary; @include fira-sans;}
 .feature i{ color: $color-primary; }
 .feature-icon-large i{ 
@@ -67,3 +67,6 @@ section.full{ padding-top: 0; padding-bottom: 0; }
 .background-image-holder.parallax-background{ height: 120%; top: -10%; }
 
 .hover-background .background-image-holder{ height: 110%; width: 110%; }
+
+
+.bg-primary {}

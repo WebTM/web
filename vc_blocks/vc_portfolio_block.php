@@ -48,8 +48,11 @@ function web_portfolio_shortcode( $atts ) {
 		<div class="projects-wrapper clearfix">
 		
 			<?php 
-				if( 'contained' == $type )
+				if( 'Contained Portfolio' == $type )
 					echo '<div class="divide60"></div>';
+					
+				if( 'Fullwidth Portfolio' == $type )
+					echo 'Fullwidth Portfolio';
 					
 				if( 'Yes' == $show_filter ){	
 					$cats = get_categories('taxonomy=portfolio_category');
@@ -57,8 +60,8 @@ function web_portfolio_shortcode( $atts ) {
 				}
 			?>
 	
-			<?php if( 'Fullwidth Portfolio' == $type ) : ?>
-
+			<?php if( 'Fullwidth Portfolio' == $type ) : ?> 
+					
 				<div class="projects-container">
 				
 					<?php 
@@ -160,7 +163,7 @@ function web_portfolio_shortcode( $atts ) {
 						?>
 					</div><!--end of projects-container-->
 				</div>
-		
+
 			<?php endif; ?>
 
 		</div><!--end of projects wrapper-->
@@ -180,10 +183,11 @@ add_shortcode( 'web_portfolio', 'web_portfolio_shortcode' );
 function web_portfolio_shortcode_vc() {
 	
 	$portfolio_types = array(
-		'Fullwidth Portfolio',
+		'none',
 		'Contained Portfolio',
 		'4 Column Fullwidth',
-		'2 Column Fullwidth'
+		'2 Column Fullwidth',
+		'Fullwidth Portfolio'
 	);
 	
 	vc_map( 
@@ -205,7 +209,7 @@ function web_portfolio_shortcode_vc() {
 					"heading" => __("Display type", 'web'),
 					"param_name" => "type",
 					"value" => $portfolio_types,
-					"description" => ''
+					"description" => 'description'
 				),
 				array(
 					"type" => "dropdown",
