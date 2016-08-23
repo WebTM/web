@@ -28,6 +28,15 @@
 ## Template Mixins
 --------------------------------------------------------------*/
 
+@mixin transition($property, $duration, $timing){
+	-webkit-transition: $property $duration $timing;
+	   -moz-transition: $property $duration $timing;
+	    -ms-transition: $property $duration $timing;
+	     -o-transition: $property $duration $timing;
+	        transition: $property $duration $timing;
+}
+
+
 .transition-500{
 	-webkit-transition: all $medium-transition ease;
 	-moz-transition: all $medium-transition ease;
@@ -46,7 +55,7 @@
 	transition: all $short-transition ease;
 }
 
-.cover-div{
+@mixin cover-div {
 	position: absolute;
 	width: 100%;
 	height: 100%;

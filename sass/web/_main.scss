@@ -1,3 +1,14 @@
+.font-body{ font-family: $Fira-Sans-Hair-Italic; }
+.font-heading{ font-family: $webpro-reg; }
+.alt-font{ font-family: $webpro; font-weight: bold; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; }
+
+// Spacing
+
+$standard-space: 64px;
+.no-align-mobile{ padding-top: 0px !important; margin-top: 24px; }
+
+
+
 .overlay:before{  
 	@include overlay-params($opacity-strength: 0.9, $background-color: $color-primary); 
 	left: 0; }
@@ -70,3 +81,4 @@ section.full{ padding-top: 0; padding-bottom: 0; }
 
 
 .bg-primary {}
+

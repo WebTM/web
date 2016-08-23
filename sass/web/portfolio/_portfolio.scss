@@ -10,11 +10,11 @@
 .filters li.active{ border-bottom: 2px solid $color-secondary-2; }
 
 .project{ height: 345px; }
-.project.col-md-4{ width: 33%; }
+.project.col-md-4{ width: 33%;}
 .project.col-md-4:nth-child(3n - 1){ width: 34%; }
 .project.col-md-4 .background-image-holder{ width: 103%; }
 
-.column-projects .project.col-md-4{ width: 33.33333%; overflow: hidden; }
+.column-projects .project.col-md-4{ width: 33.33%; overflow: hidden; }
 .column-projects .project.col-md-4 .background-image-holder{ width: 100% !important; }
 .column-projects .project{ overflow: hidden; }
 
@@ -34,7 +34,7 @@
 
 .project .image-holder{ overflow: hidden; position: relative; }
 .project img{ width: 100%; }
-.project .hover-state{@extend .cover-div; background-color: fade($color-secondary-1, 90%); text-align: center; @extend .transition-500; opacity: 0; padding-right: 15px; }
+.project .hover-state{  @include cover-div;  background-color: rgba($color-secondary-1, .9); text-align: center; @include transition(all, 500ms, ease); opacity: 0; padding-right: 15px; }
 .project:hover .hover-state{ opacity: 1; }
 .project .hover-state h1{ margin-bottom: 8px; font-size: 24px; }
 .project .hover-state h3{ font-size: 18px; margin-bottom: 8px; }

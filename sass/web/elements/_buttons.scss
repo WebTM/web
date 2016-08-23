@@ -1,0 +1,63 @@
+
+//
+// Button Styles
+// --------------------------------------------------
+
+.btn,
+.button,
+.added_to_cart,
+.menu-button > a {
+	background: none;
+    @extend .transition-300;
+	min-width: 155px;
+}
+
+.btn:hover,
+.button:hover,
+.added_to_cart:hover,
+.menu-button > a:hover,
+.btn:active,
+.btn:focus {
+	background: none;
+	color: #fff;
+	border-color: $color-secondary-2;
+	background-color: $color-secondary-2;
+}
+
+.btn-primary,
+.button,
+.added_to_cart,
+.menu-button > a{ 
+	@include standard-radius; 
+	display: inline-block; 
+	padding: 14px 28px 13px 28px; 
+	line-height: 1; 
+	border: 2px solid $color-secondary-2; 
+	color: $color-secondary-2;
+}
+
+.btn-primary.btn-filled { background: $color-secondary-2; color: #fff; }
+
+.btn-white,
+.added_to_cart{
+	border-color: #fff;
+	color: #fff;
+}
+
+.btn-white:hover, .added_to_cart:hover{ background: #fff; color: $color-heading; border-color: #fff; }
+
+.btn-white.btn-filled{ background: #fff; color: $color-primary; }
+
+.btn-grey{
+	border-color: $color-text;
+	color: $color-heading;
+}
+
+.btn-grey:hover{ background-color: $color-heading; color: #fff; border-color: $color-heading; }	
+
+.btn-lg{ padding: 18px 40px; }
+.btn-sm{ padding: 10px 28px; font-size: 11px; }
+.btn-xs{ padding: 8px 24px; font-size: 10px; }
+
+.btn-text-only{ border-color: rgba(0,0,0,0); }
+.btn-text-only:hover{ background: none; color: $color-secondary-2; border-color: rgba(0,0,0,0); }

@@ -6,11 +6,18 @@ $short-transition: 300ms;
 $medium-transition: 500ms;
 $long-transition: 2000ms;
 
+$standard-radius: 25px;
+
 // Colors
 
 $color-heading: #333333;
 $color-primary: #000;
+$color-secondary-1:  #2c3e50;
+$color-secondary-2:   #3498db;
 .text-white { color: #fff; }
+
+@mixin standard-radius{ border-radius: $standard-radius; }
+
 
 // Fonts
 
@@ -256,16 +263,6 @@ $color-primary: #000;
     font-style: normal;
 }
 
-
-
-.font-body{ font-family: $Fira-Sans-Hair-Italic; }
-.font-heading{ font-family: $webpro-reg; }
-.alt-font{ font-family: $webpro; font-weight: bold; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; }
-
-// Spacing
-
-$standard-space: 64px;
-.no-align-mobile{ padding-top: 0px !important; margin-top: 24px; }
 
 
 
