@@ -44,7 +44,7 @@
 	color: #fff;
 }
 
-.btn-white:hover, .added_to_cart:hover{ background: #fff; color: $color-heading; border-color: #fff; }
+.btn-white:hover, .btn-white:visited, .added_to_cart:hover { background: #fff; color: #fff; border-color: #fff; }
 
 .btn-white.btn-filled{ background: #fff; color: $color-primary; }
 
