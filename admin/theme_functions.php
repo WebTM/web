@@ -287,8 +287,6 @@ if(!( class_exists('web_framework_medium_rare_bootstrap_navwalker') )){
 		}
 	}
 }
-
-
 if(!( function_exists('web_get_header_layout') )){
 	function web_get_header_layout(){
 		global $post;
@@ -320,9 +318,6 @@ if(!( function_exists('web_get_header_options') )){
 		return $options;	
 	}
 }
-
-
-
 if(!( function_exists('web_get_post_layouts') )){
 	function web_get_post_layouts(){
 		$options = array(
@@ -347,20 +342,6 @@ if(!( function_exists('web_get_blog_layouts') )){
 		return $options;	
 	}
 }
-
-
-
-
-/**
- * ebor_get_footer_layout
- * 
- * Use to conditionally check the page footer meta layout against the theme option for the same
- * In short, this function can override the global footer option on a post by post basis
- * Call within get_footer() for this to override the global footer choice
- * 
- * @since 1.0.0
- * @author tommusrhodus
- */
 if(!( function_exists('web_get_footer_layout') )){
 	function web_get_footer_layout(){
 		global $post;
@@ -382,17 +363,12 @@ if(!( function_exists('web_get_footer_options') )){
 			'social' => 'Simple Social Footer',
 			'columns' => 'Footer With Widgets',
 			'social-short' => 'Short Social Footer',
-			'contact' => 'Call to Action Footer'
+			'contact' => 'Contact Footer',
+			'ui' => 'UI Footer'
 		);
 		return $options;	
 	}
 }
-
-
-
-/**
- * Register Menu Locations For The Theme
- */
 if(!( function_exists('web_register_nav_menus') )){
 	function web_register_nav_menus() {
 		register_nav_menus( 
