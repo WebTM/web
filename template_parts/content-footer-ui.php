@@ -18,7 +18,7 @@
 					    );
 					}
 				?>
-			    <div class="menu-socials">
+			    <div class="ui__socials">
 					<a href="<?php  home_url(); ?>"><i class="icon social_skype"></i></a>
       				<a href="<?php  home_url(); ?>"><i class="icon social_wordpress_square"></i></a>
        				<a href="<?php  home_url(); ?>"><i class="icon icon_mobile"></i></a>

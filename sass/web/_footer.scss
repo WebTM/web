@@ -37,38 +37,16 @@ footer {
         margin: 0px 35px;
         font-size: 20px;
         vertical-align: middle;  } } 
-   
-
-   ui {
-       background: #1b364e none repeat scroll 0 0; 
-       padding: 0;
-   }
-
-
-
-
-
-
-
-
-
-
 
 }
 
-   .ui {
-       background: #1b364e none repeat scroll 0 0; 
-       padding: 0;
-    .menu-socials { 
-        left: 5%;    text-align: center;    width: 90%;
+.ui {  
+    background: #1b364e none repeat scroll 0 0; padding: 0;
+    
+    .ui__socials { 
+        text-align: center; padding: 1.875rem 0 5rem;
      a {
-        color: #fff;
-        display: inline-block;
-        margin: 0px 35px;
-        font-size: 20px;
-        vertical-align: middle;  } } 
-   
-
-
-
+        color: #fff; display: inline-block; margin: 0px 35px; font-size: 20px; vertical-align: middle; 
+        } 
+    } 
    }
