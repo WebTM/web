@@ -34,6 +34,11 @@ section{ padding-top: 0; padding-bottom: 0; position: relative; overflow: hidden
 section.pad-large{ padding-top: $standard-space*2; padding-bottom: $standard-space*2; }
 section.full{ padding-top: 0; padding-bottom: 0; }
 
+//
+// Spacing
+// --------------------------------------------------
+
+
 .no-pad{ padding: 0px; }
 .no-pad-top{ padding-top: 0px !important; }
 .no-pad-left{ padding-left: 0px; }
@@ -54,7 +59,7 @@ section.full{ padding-top: 0; padding-bottom: 0; }
 // --------------------------------------------------
 
 .feature { overflow: hidden; padding: 40px 0;}
-.feature h1{ font-size: 28px; color: $color-primary; @include fira-sans;}
+.feature h1{ font-size: 25px; color: #0c0c0c; @include fira-sans; font-weight: 300;}
 .feature i{ color: $color-primary; }
 .feature-icon-large i{ display: block; text-align: center; color: $color-primary; font-size: 52px; padding-top: 30px 0; }
 

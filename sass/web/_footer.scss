@@ -1,52 +1,23 @@
+
 footer {
-    background: #DBDBD4 none repeat scroll 0 0; 
-    color: #DBDBD4;
-    font-size: 14px;
-    line-height: 25px;
-    height:auto !important;
-    min-height:100%;
-    padding: 13% 0 30px;
-    position: relative;
-    
-    .bg-left, .bg-right {
-        height: 100%;
-        position: absolute;
-        top: 0;
-        width: 50%;
-        z-index: 10;    }
-    
-    .bg-left {
-        background: #252525 none repeat scroll 0 0;        left: 0;       //  transform: translateX(-100%);   
-         }
-
-    .bg-right {
-        background: #e6b903 none repeat scroll 0 0;
-        right: 0;
-        //   transform: translateX(-100%);
-        width: 100%;
-        z-index: 8;    }
-    .menu-socials {
-          position: relative; 
-          z-index: 20;     }
-
-    .menu-socials { 
-        left: 5%;    text-align: center;    width: 90%;
-     a {
-        color: #7d7d7d;
-        display: inline-block;
-        margin: 0px 35px;
-        font-size: 20px;
-        vertical-align: middle;  } } 
-
+    padding: 40px 0 0;
+    overflow: hidden;
 }
 
-.ui {  
-    background: #1b364e none repeat scroll 0 0; padding: 0;
-    
-    .ui__socials { 
-        text-align: center; padding: 1.875rem 0 5rem;
-     a {
-        color: #fff; display: inline-block; margin: 0px 35px; font-size: 20px; vertical-align: middle; 
-        } 
+footer.footer__contact{ 
+    background: #DBDBD4 none repeat scroll 0 0; color: #DBDBD4; font-size: 14px; line-height: 25px; height:auto !important; min-height:100%; padding: 13% 0 30px; position: relative;
+    .bg-left, .bg-right { height: 100%; position: absolute; top: 0; width: 50%; z-index: 10;}
+    .bg-left { background: #252525 none repeat scroll 0 0; left: 0;}
+    .bg-right { background: #e6b903 none repeat scroll 0 0; right: 0; width: 100%; z-index: 8;}
+    .menu-socials { position: relative; z-index: 20; }
+    .menu-socials { left: 5%; text-align: center; width: 90%;
+        a { color: #7d7d7d; display: inline-block; margin: 0px 35px; font-size: 20px; vertical-align: middle;  } } 
+}
+
+footer.footer__ui {  
+    background-color: #1b364e; color: #ebeff0; 
+    .footer__ui-logo { display: block; height: 118px; width: 106px; margin: 0 auto 10px; padding: 0; color: transparent; font-size: 0; background: url("https://s3.amazonaws.com/static.hackingui.com/images/footer-logo.png") no-repeat left top;}
+    .footer__ui-text { text-align: center; color: #dfe3ec; padding: 1.875rem 0 5rem; font-size: 50px; @include webpro-reg; 
+     a { color: #fff; display: inline-block; margin: 0px 35px; vertical-align: middle; } 
     } 
-   }
+}

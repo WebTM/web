@@ -1,4 +1,4 @@
-<footer class="short-2">
+<footer class="footer__contact">
     <div class="bg-left trans-slower delay-1"></div>
     <div class="bg-right trans-slow"></div>
 	<div class="container">
