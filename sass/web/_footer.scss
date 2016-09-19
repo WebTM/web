@@ -17,7 +17,28 @@ footer.footer__contact{
 footer.footer__ui {  
     background-color: #1b364e; color: #ebeff0; 
     .footer__ui-logo { display: block; height: 118px; width: 106px; margin: 0 auto 10px; padding: 0; color: transparent; font-size: 0; background: url("https://s3.amazonaws.com/static.hackingui.com/images/footer-logo.png") no-repeat left top;}
-    .footer__ui-text { text-align: center; color: #dfe3ec; padding: 1.875rem 0 5rem; font-size: 50px; @include webpro-reg; 
+    .footer__ui-copyright {color: #dfe3ec; font-size: 30px; padding: 1.875rem 0 5rem; @include webpro-reg; 
      a { color: #fff; display: inline-block; margin: 0px 35px; vertical-align: middle; } 
     } 
+    .footer__ui-icons {font-size: 20px; padding: 1.875rem 0 5rem; @include webpro-reg; 
+    .feature {
+    text-align: center;
+    padding: 0 20px;
+    }
+    .feature> img {
+        margin: 0 auto;
+        max-height: 5vh;
+        max-width: 100%;
+        transition: all .4s;
+    }
+    }
+}
+.feature {
+    text-align: center;
+}
+.feature> img {
+    margin: 0 auto;
+    max-height: 20vh;
+    max-width: 100%;
+    transition: all .4s;
 }
