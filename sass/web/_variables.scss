@@ -6,8 +6,8 @@ $short-transition: 300ms;
 $medium-transition: 500ms;
 $long-transition: 2000ms;
 
-$standard-radius: 25px;
 
+$standard-space: 64px;
 // Colors
 
 $color-heading: #333333;
@@ -16,6 +16,7 @@ $color-secondary-1:  #2c3e50;
 $color-secondary-2:   #3498db;
 .text-white { color: #fff; }
 
+$standard-radius: 25px;
 @mixin standard-radius{ border-radius: $standard-radius; }
 
 

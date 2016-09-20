@@ -2,8 +2,19 @@
 // Galleries & Portfolio Sections
 // --------------------------------------------------
 
-.projects-gallery h2{ text-align: left; @include webpro-reg; font-size: 50px; font-weight: bold; margin-bottom: 64px !important;}
-.projects-wrapper{ text-align: center; }
+
+.projects-gallery {
+	h2 {
+		text-align: left;
+		@include webpro-reg; font-size: 50px;
+		font-weight: bold;
+		margin-bottom: 64px !important;
+	}
+}
+.projects-wrapper {
+	text-align: center;
+}
+
 .filters{ padding: 0px; list-style: none; overflow: hidden; display: inline-block; margin-bottom: 32px; 
 
 	li{ float: left; margin-right: 16px; @include webpro-reg; color: $color-secondary-2; cursor: pointer; 

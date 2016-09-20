@@ -87,14 +87,12 @@ jQuery(document).ready(function(){
 	 * Adjust header type if there isn't a page header set
 	 */
 	if(!( 
-		jQuery('.main-container > .row > .aq-block').eq(0).hasClass('aq-block-aq_page_header_block') 
-		|| jQuery('.main-container > .row > .aq-block').eq(0).hasClass('aq-block-aq_revslider_block') 
+		jQuery('.main-container > .row > .aq-block').eq(0).hasClass('aq-block-aq_revslider_block') 
 		|| jQuery('.main-container > .row > .aq-block').eq(0).hasClass('aq-block-aq_masterslider_block') 
 		|| jQuery('.main-container > section').eq(0).hasClass('fullscreen-element') 
 		|| jQuery('.main-container > section').eq(0).hasClass('hero-slider')
 		|| jQuery('.main-container > header').eq(0).hasClass('title') 
 		|| jQuery('.main-container > header').eq(0).hasClass('page-header') 
-		|| jQuery('.main-container > .vc_row > .vc_column_container > .wpb_wrapper > div').eq(0).hasClass('aq-block-aq_page_header_block')
 		|| jQuery('.main-container > .vc_row > .vc_column_container > .wpb_wrapper > div').eq(0).hasClass('avt_masterslider_el')
 	)){
 		jQuery('nav.top-bar').removeClass('overlay-bar');
