@@ -52,7 +52,8 @@ function web_portfolio_shortcode( $atts ) {
 					echo '<div class="divide60"></div>';
 					
 				if( 'Fullwidth Portfolio' == $type )
-					echo '<h1> Portfolio</h1>';
+					echo '<h2>Сделано</h2>';
+	
 					
 				if( 'Yes' == $show_filter ){	
 					$cats = get_categories('taxonomy=portfolio_category');
