@@ -1090,6 +1090,15 @@ header .btn:last-child {
   font-weight: bold;
   margin-bottom: 12px;
 }
+.page-header h1:after {
+  content: "";
+  display: block;
+  width: 25%;
+  height: 3px;
+  background: #179bdf;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
 .page-header br {
   display: none;
 }
@@ -1119,7 +1128,7 @@ header .btn:last-child {
 }
 .use .feature > img {
   margin: 0 auto;
-  max-height: 6vh;
+  max-height: 5vh;
   max-width: 100%;
   transition: all 0.4s;
 }

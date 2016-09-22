@@ -7,7 +7,17 @@ header{ position: relative; overflow: hidden;
 
 .page-header{ margin: 0px; padding: 70px 0 70px; border-bottom: none; background: #d4d9e5;
 	span.text-white {display: block;}
-	h1{	font-size: 70px; font-weight: bold; margin-bottom: 12px; }
+	h1{	font-size: 70px; font-weight: bold; margin-bottom: 12px; 
+	  &:after {
+            content: "";
+            display: block;
+            width: 25%;
+            height: 3px;
+            background: #179bdf;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+	}
 	br{	display: none; }
 	p.lead{	font: 500 15px/20px 'Fira Sans'; line-height:28px; color: #343035a3; text-transform: uppercase; max-width: 800px;}
 	.background-image-holder{height: 100%; top: -20%; }
