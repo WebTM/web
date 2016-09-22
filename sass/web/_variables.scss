@@ -19,6 +19,15 @@ $color-secondary-2:   #3498db;
 $standard-radius: 25px;
 @mixin standard-radius{ border-radius: $standard-radius; }
 
+@mixin divider {
+            content: "";
+            display: block;
+            width: 25%;
+            height: 3px;
+            background: #179bdf;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
 
 // Fonts
 

@@ -1,11 +1,12 @@
 <section class="vc_row-fluid use">
-<div class="container">
 	<div class="row">
 	<div class="col-sm-6">
-		<div>
+		<div class="use_text">
+
 		<h3>Все разрабатываемые сайты, полностью готовы к работе, и не требуют от пользователя никаких дополнительных доработок и настроек.</h3>
 		</div>
 	</div>
+
 		<div class="vc_col-sm-1">
 			<div class="feature feature-icon-large">
 				<a href="http://getbootstrap.com/" target="_blank" class="feature feature-icon-large" data-shortname="bootstrap">
@@ -46,7 +47,7 @@
 		</div> 
 
   	</div>
-</div>
+
 </section>
 
 <footer class="footer__ui">
