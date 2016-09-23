@@ -8,10 +8,10 @@
 .no-align-mobile{ padding-top: 0px !important; margin-top: 24px; }
 
 
-.vcenter {
-   float:none;
-   display:inline-block;
-   vertical-align:middle;
+.middle {
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
 }
 
 
@@ -86,12 +86,11 @@ section {
 	overflow: hidden;
 	padding: 80px 0;
 	h1 {
-		font-size: 19px;
+		font-size: 20px;
 		color: #0c0c0c;
 		@include fira-sans; 
-		font-weight: 500;
+		font-weight: 400;
 		text-align: center;
-		padding-top: 10px;
 	}
 	i {
 		color: $color-primary;
@@ -103,7 +102,7 @@ section {
 		text-align: center;
 		color: $color-primary;
 		font-size: 52px;
-		padding-top: 30px 0;
+		padding: 30px 0;
 	}
 }
 

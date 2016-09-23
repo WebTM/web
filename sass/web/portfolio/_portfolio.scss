@@ -6,14 +6,21 @@
 .projects-gallery {
 	h2 {
 	@include webpro-reg; 
-	font-size: 48px;
+	  font-size: 48px;
     font-weight: 400;
     letter-spacing: -0.01em;
     line-height: 1.3;
     margin: 0px;
+    &:before {
+      @include divider;
+      margin-top: 30px;
+      width: 10%;
+      }
 		&:after {
 			@include divider;
-        }
+      margin-bottom: 50px;
+      width: 3%;
+      }
 	}
 }
 .projects-wrapper {

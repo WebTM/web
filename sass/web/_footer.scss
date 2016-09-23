@@ -1,23 +1,16 @@
 .use { 
-    background-color: #dfe3ec; padding: 70px 90px 60px; 
+    background: linear-gradient(-235deg, rgb(21, 216, 203) 0%, rgb(164, 97, 241) 100%);
     .use_text {
-    background: #83635b url('http://www.nccc.com.au/_System/images/bg-rustic.jpg') center no-repeat;
-    background-size: cover;
-    position: relative;
-    overflow: visible!important; 
-    float: left;
-    margin-top: -75px;
-    width: 100%;
-    height: auto;
-    border: 1px solid #83635b;
-    box-shadow: 0 1px 1px rgba(0,0,0,.2);
-    overflow: hidden;
-    z-index: 1;
+        width: 100%;
+        height: auto;
     h3 {@include webpro-reg; font-size: 20px; line-height: 28px;}
     }
     .feature { text-align: center; padding: 30px 0;}
     .feature> img { margin: 0 auto; max-height: 5vh; max-width: 100%; transition: all .4s;}
 }
+
+
+
 
 footer {
     padding: 40px 0 0;
