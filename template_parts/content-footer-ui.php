@@ -1,4 +1,4 @@
-<section class="vc_row-fluid use">
+<!--<section class="vc_row-fluid use">
 	<div class="row">
 	<div class="col-sm-6">
 		<div class="use_text">
@@ -49,7 +49,7 @@
   	</div>
 
 </section>
-
+-->
 <footer class="footer__ui">
 	<div class="container">
 		<div class="row">
