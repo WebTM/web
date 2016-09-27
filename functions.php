@@ -32,12 +32,17 @@ function ui_setup() {
 	
 	remove_action( 'wp_head', 'wlwmanifest_link' );
 	remove_action( 'wp_head', 'wp_generator' );
+	remove_action( 'wp_head', 'generator' );
 	remove_action( 'wp_head', 'rsd_link' );
 	remove_action( 'wp_head', 'feed_links', 2 );
 	remove_action( 'wp_head', 'feed_links_extra', 3 ); 
 	remove_action( 'wp_head', 'index_rel_link' );
 	remove_action( 'wp_head', 'wp_shortlink_wp_head',10,0);
 	remove_action ('wp_head', 'rel_canonical');
+	remove_action('wp_head', 'print_emoji_detection_script', 7);
+	remove_action('wp_print_styles', 'print_emoji_styles');
+
+
 
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
@@ -84,7 +89,7 @@ add_action( 'widgets_init', 'ui_widgets_init' );
  * Enqueue scripts and styles.
  */
 function ui_scripts() {
-	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/style/css/bootstrap.min.css' );
+	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/style/css/bootstrap.min.css', 1);
 	wp_enqueue_style( 'web-elegant-icons', get_template_directory_uri() . '/style/css/elegant-icons.min.css' );
 	wp_enqueue_style( 'ui-style', get_stylesheet_uri() );
 	wp_enqueue_script( 'ui-skip-link-focus-fix', get_template_directory_uri() . '/style/js/skip-link-focus-fix.js', array(), '20130115', true );
