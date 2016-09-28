@@ -52,8 +52,8 @@ design
 ├── slider/porftolio
 │   ├── http://elforma.com/
 │   ├── http://uigstudio.com/
-│   ├──
-│   └──
+│   ├── http://ariol.by/portfolio/maxtarget
+│   └── http://ariol.by/
 ├── clients
 │   ├── http://dennissengthong.com/
 │   ├── http://forin-it-service.ch/

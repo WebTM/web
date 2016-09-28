@@ -15,5 +15,5 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<?php get_template_part('template_parts/content', web_get_header_layout()); ?>
+	<?php get_template_part('template_parts/content-header', web_get_header_layout()); ?>
 	<div class="main-container">

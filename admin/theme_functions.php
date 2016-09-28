@@ -306,14 +306,14 @@ if(!( function_exists('web_get_header_layout') )){
 if(!( function_exists('web_get_header_options') )){
 	function web_get_header_options(){
 		$options = array(
-			'blank' => 'No Header or Nav',
+			'logo' => 'No Header or Nav',
 			'top' => 'Top Bar Header',
 			'overlay' => 'Overlay Bar Header',
 			'offscreen' => 'Выезжающее меню',
 			'fullscreen' => 'Fullscreen Header',
 			'contained' => 'Contained Header',
 			'center' => 'Center Header',
-			'bar' => 'Simple Bar Header'
+			'portfolio' => 'Страница Портфолио'
 		);
 		return $options;	
 	}
