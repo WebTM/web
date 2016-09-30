@@ -20,14 +20,14 @@
 	$header_images = get_post_meta($post->ID, '_ebor_header_images', 1);
 	
 	if( is_array($header_images) )
-		get_template_part('inc/content','post-header');
+		get_template_part('template_parts/content','post-header');
 ?>
 	
-	<section class="duplicatable-content dark-wrapper">
+	<section class="portfolio-item">
 		<div class="container">
 			<div class="row">
 				
-				<div class="col-sm-8 col-sm-offset-2">
+				<div class="col-sm-8 col-sm-offset-1">
 					<div <?php post_class('article-body'); ?>>
 						<?php
 							get_template_part('postformats/format', get_post_format());
