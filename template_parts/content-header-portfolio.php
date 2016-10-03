@@ -1,33 +1,23 @@
 <!--header start-->
-<?php
-	//images
-	$attachments = explode(',', $image);
-	if(is_array($attachments)) :
-?>
-
-<header class="page-header">
-	<div class="container">
+<header class="page-header__portfolio">
+	<div class="container_fluid">
 		<div class="row">
-			<div class="col-lg-12">
-				<?php 
-					if( isset( $attachments[0] ) )
-						// echo wp_get_attachment_image($attachments[0], 'full', false, array('class' => 'logo'));
-						
-					if( $small )
-						echo '<span class="alt-font">'. htmlspecialchars_decode($small) .'</span>';
-					
-					if( $big )
-						echo '<h1 class="space-bottom-medium">'. htmlspecialchars_decode($big) .'</h1>';
-						
-					if( $sub )	
-						echo '<p class="lead">'. htmlspecialchars_decode($sub) .'</p>';
-				
-					if( $shortcode )
-						echo do_shortcode(htmlspecialchars_decode($shortcode));
-				?>
-			</div>
+			<div class="col-md-12">
+            	<div class="page-header__portfolio__our_works">
+                	<div class="middle_text">
+                    	<div class="breadcrumb">
+	                        <ol class="breadcrumb">
+	                            <li><a href="/">Главная</a></li>
+	                            <li><a href="/portfolio">Работы</a></li>
+	                            <li class="active"><span>Сайт маркетингового агентства «МаксТаргет» </span></li>
+	                        </ol>
+                   		</div>
+                    	<h1 class="text-center">Сайт маркетингового агентства «МаксТаргет» </h1>
+                </div>
+            	</div>
+        	</div>
 		</div>
 	</div>	
 </header>
 <!--header end-->
-<?php endif;
+
