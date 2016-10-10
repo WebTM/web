@@ -5,14 +5,8 @@
 			<div class="col-md-12">
             	<div class="page-header__portfolio__our_works">
                 	<div class="middle_text">
-                    	<div class="breadcrumb">
-	                        <ol class="breadcrumb">
-	                            <li><a href="/">Главная</a></li>
-	                            <li><a href="/portfolio">Работы</a></li>
-	                            <li class="active"><span>Сайт маркетингового агентства «МаксТаргет» </span></li>
-	                        </ol>
-                   		</div>
-                    	<h1 class="text-center">Сайт маркетингового агентства «МаксТаргет» </h1>
+                	<?php if (function_exists('ui_breadcrumbs')) ui_breadcrumbs(); ?>
+                    <h1 class="text-center"><?php echo get_the_title(); ?></h1>
                 </div>
             	</div>
         	</div>
