@@ -58,6 +58,6 @@
 	 * Get the related portfolio posts for this
 	 */
 	if( get_option('portfolio_related', '1') == '1' )
-		get_template_part('loop/loop','portfolio-related');
+		get_template_part('template_parts/loop','portfolio-related');
 		
 	get_footer();
