@@ -30,6 +30,8 @@
 .main-container {
 	@include translateX($x-amount: 0px);
 	overflow: hidden;
+	background-color: #f5f4f2;
+
 	&.reveal-nav {
 		@include translateX($x-amount: -300px);
 	}
