@@ -34,7 +34,6 @@ if( 'image-left' == $background_style ){
 			    <div class="col-md-6 col-md-offset-6 col-sm-8 col-sm-offset-4 content clearfix">';
 	
 	$el_class = $this->getExtraClass($el_class);
-	
 	$css_class = apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, 'vc_row wpb_row '. ( $this->settings('base')==='vc_row_inner' ? 'vc_inner ' : '' ) . get_row_css_class() . $el_class . ' ', $this->settings['base'], $atts );
 	
 	$output .= '<div class="'.$css_class.'">';
@@ -112,11 +111,12 @@ if( 'image-left' == $background_style ){
 
 	
 	$el_class = $this->getExtraClass($el_class);
-	
-	$css_class = apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, ''. ( $this->settings('base')==='vc_row_inner' ? 'vc_inner ' : '' ) . get_row_css_class() . $el_class . vc_shortcode_custom_css_class( $css, ' ' ), $this->settings['base'], $atts );
-	
+	$el_class = str_ireplace( " ", "", $el_class );
+	$css_class = apply_filters(VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, $el_class .' '. ( $this->settings('base')==='vc_row_inner' ? 'vc_inner ' : '' ) . get_row_css_class() .  vc_shortcode_custom_css_class( $css, ' ' ), $this->settings['base'], $atts );
+
+
 	$style = $this->buildStyle($bg_image, $bg_color, $bg_image_repeat, $font_color, $padding, $margin_bottom);
-	$output .= '<section class="'. $background_style.' '.$css_class.'"'.$style.'><div class="container"><div class="row">';
+	$output .= '<section class="'.$style.$css_class.'"><div class="container"><div class="row">';
 	$output .= wpb_js_remove_wpautop($content);
 	$output .= '</div></div></section>'.$this->endBlockComment('row');
 
