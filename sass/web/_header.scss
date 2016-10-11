@@ -1,11 +1,11 @@
-header{ position: relative; overflow: hidden; 
+header{ position: relative; overflow: hidden; background-image: url(../img/bg-header.jpg); background-size: cover;
 	.container { @include webpro-reg; position: relative; z-index: 3; }
 	.logo{max-width: 150px; display: inline-block; margin-bottom: 40px; }
 	.btn{ margin-right: 16px; 
 		&:last-child{ margin-right: 0px; }
 	}}
 
-.page-header{ margin: 0px; padding: 70px 0 70px; border-bottom: none;  /*  background: #eceff3; */
+.page-header{ margin: 0px; padding: 170px 0 400px; border-bottom: none;  /*  background: #eceff3; */
 	span.text-white {display: block;}
 	h1{	font-size: 70px; font-weight: bold; margin-bottom: 12px; 
 	  &:after {
