@@ -275,4 +275,157 @@ $standard-radius: 25px;
 
 
 
+// MetaPro-Black
+// http://lp-derksteiner.ru/
 
+
+@font-face {
+   font-family: "MetaPro-Black";
+   src: url('../font/metapro-black.eot');
+   src: url('../font/metapro-black.eot?#iefix') format('embedded-opentype'),
+        url('../font/metapro-black.svg#MetaPro-Black') format('svg'),
+        url('../font/metapro-black.ttf') format('truetype'),
+        url('../font/metapro-black.woff') format('woff');
+}
+@font-face
+{
+   font-family: "MetaPro-Medium";
+   src: url('../font/MetaPro-Medium.eot');
+   src: url('../font/MetaPro-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../font/MetaPro-Medium.svg#MetaPro-Medium') format('svg'),
+        url('../font/MetaPro-Medium.ttf') format('truetype'),
+        url('../font/MetaPro-Medium.woff') format('woff');
+}
+@font-face
+{
+   font-family: "PF DinDisplay Pro Light";
+   src: url('../font/pfdindisplaypro-light.eot');
+   src: url('../font/pfdindisplaypro-light.eot?#iefix') format('embedded-opentype'),
+        url('../font/pfdindisplaypro-light.svg#PFDinDisplayPro-Light') format('svg'),
+        url('../font/pfdindisplaypro-light.ttf') format('truetype'),
+        url('../font/pfdindisplaypro-light.woff') format('woff');
+}
+@font-face
+{
+   font-family: "PF DinDisplay Pro";
+   src: url('../font/pfdindisplaypro-reg.eot');
+   src: url('../font/pfdindisplaypro-reg.eot?#iefix') format('embedded-opentype'),
+        url('../font/pfdindisplaypro-reg.svg#PFDinDisplayPro-Regular') format('svg'),
+        url('../font/pfdindisplaypro-reg.ttf') format('truetype'),
+        url('../font/pfdindisplaypro-reg.woff') format('woff');
+}
+@font-face
+{
+   font-family: "PF DinDisplay Pro Medium";
+   src: url('../font/pfdindisplaypro-med.eot');
+   src: url('../font/pfdindisplaypro-med.eot?#iefix') format('embedded-opentype'),
+        url('../font/pfdindisplaypro-med.svg#PFDinDisplayPro-Medium') format('svg'),
+        url('../font/pfdindisplaypro-med.ttf') format('truetype'),
+        url('../font/pfdindisplaypro-med.woff') format('woff');
+}
+a
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+a:visited
+{
+   color: #800080;
+}
+a:active
+{
+   color: #FF0000;
+}
+a:hover
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+h1
+{
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 32px;
+   font-style: normal;
+   text-decoration: none;
+   color: #000000;
+   background-color: transparent;
+   margin: 0px 0px 0px 0px;
+   padding: 0px 0px 0px 0px;
+   display: inline;
+}
+h2
+{
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 27px;
+   font-style: normal;
+   text-decoration: none;
+   color: #000000;
+   background-color: transparent;
+   margin: 0px 0px 0px 0px;
+   padding: 0px 0px 0px 0px;
+   display: inline;
+}
+h3
+{
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 24px;
+   font-style: normal;
+   text-decoration: none;
+   color: #000000;
+   background-color: transparent;
+   margin: 0px 0px 0px 0px;
+   padding: 0px 0px 0px 0px;
+   display: inline;
+}
+h4
+{
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 21px;
+   font-style: italic;
+   text-decoration: none;
+   color: #000000;
+   background-color: transparent;
+   margin: 0px 0px 0px 0px;
+   padding: 0px 0px 0px 0px;
+   display: inline;
+}
+h5
+{
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 19px;
+   font-style: normal;
+   text-decoration: none;
+   color: #000000;
+   background-color: transparent;
+   margin: 0px 0px 0px 0px;
+   padding: 0px 0px 0px 0px;
+   display: inline;
+}
+h6
+{
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 16px;
+   font-style: normal;
+   text-decoration: none;
+   color: #000000;
+   background-color: transparent;
+   margin: 0px 0px 0px 0px;
+   padding: 0px 0px 0px 0px;
+   display: inline;
+}
+.CustomStyle
+{
+   font-family: "Courier New";
+   font-weight: bold;
+   font-size: 16px;
+   font-style: normal;
+   text-decoration: none;
+   color: #000080;
+   background-color: transparent;
+}

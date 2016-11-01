@@ -63,13 +63,26 @@ design
 │   └── http://www.jacsomedia.hu/
 ├── blog
 │   ├── http://www.nccc.com.au/
-│   ├──
+│   ├── 
 │   ├── https://ministry.co/
 │   └──
 └── footer
 │   ├── http://www.smashbrand.com/
 │   └── http://www.lestudio-rouen.com/
 ```
+text
+...
+
+http://1-spbpro.ru/sites.php
+http://maxshoshiev.ru/
+http://www.wordpress4you.ru/
+https://freelance.today/poleznoe/dlya-novichkov-sozdanie-polzovatelskih-plaginov-wordpress-s-nulya-kak-profi.html
+http://wpcode.ru/
+http://www.webapplex.ru
+http://strela.guru/
+https://truemisha.ru/
+https://xmarkup.ru/sozdanie-shablonov-pod-wordpress/
+
 
 http://grooni.com/
 http://demo.theme-sky.com/gon/homepage/special-collection/  
