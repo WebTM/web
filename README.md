@@ -82,6 +82,11 @@ http://www.webapplex.ru
 http://strela.guru/
 https://truemisha.ru/
 https://xmarkup.ru/sozdanie-shablonov-pod-wordpress/
+https://chillside.ru/?yclid=6495348577537366584
+http://gnatkovsky.com.ua/karta-sajta-bez-plagina-wordpress.html
+http://recordum.ru/moi-uslugi
+http://recordum.ru/moi-uslugi
+https://lmstech.ru/services/sozdanie-sajtov-na-wordpress/
 
 
 http://grooni.com/
