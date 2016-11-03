@@ -59,7 +59,8 @@
 			</div>
 
 		    <div class="col-sm-4 col-xs-12">
-        		<div class="footer__ui-copyright alignleft">2016</div>
+        		<div class="footer__ui-copyright alignleft">© ui0
+        		</div>
     		</div>
 	   	 	
 	   	 	<div class="col-sm-8 col-xs-12">
