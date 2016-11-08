@@ -1,30 +1,53 @@
-.font-body{ font-family: $Fira-Sans-Hair-Italic; }
-.font-heading{ font-family: $webpro-reg; }
-.alt-font{ font-family: $webpro; font-weight: bold; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-rendering: optimizelegibility;
+}
+
+.font-body {
+	font-family: $Fira-Sans-Hair-Italic;
+}
+
+.font-heading {
+	font-family: $webpro-reg;
+}
+
+.alt-font {
+	font-family: $webpro;
+	font-weight: bold;
+	font-size: 11px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
 
 // Spacing
 
 
-.no-align-mobile{ padding-top: 0px !important; margin-top: 24px; }
-
-
-.middle {
-    display: inline-block;
-    vertical-align: middle;
-    white-space: normal;
+.no-align-mobile {
+	padding-top: 0px !important;
+	margin-top: 24px;
 }
 
-
+.middle {
+	display: inline-block;
+	vertical-align: middle;
+	white-space: normal;
+}
 
 .overlay {
 	&:before {
-		@include overlay-params($opacity-strength: 0.9, $background-color: $color-primary);
+		@include overlay-params($opacity-strength: 0.9, $background-color:$color-primary);
 		left: 0;
 	}
+
 	.container {
 		position: relative;
 		z-index: 3;
 	}
+
 }
 
 .main-container {
@@ -35,8 +58,8 @@
 	&.reveal-nav {
 		@include translateX($x-amount: -300px);
 	}
-}
 
+}
 
 //
 // <section> Standards
@@ -48,38 +71,117 @@ section {
 	padding-bottom: 0;
 	position: relative;
 	overflow: hidden;
+
 	&.pad-large {
 		padding-top: $standard-space*2;
 		padding-bottom: $standard-space*2;
 	}
+
 	&.full {
 		padding-top: 0;
 		padding-bottom: 0;
 	}
+
+	&.use {
+		padding:50px 0;
+		background: linear-gradient(-235deg, #3498db 0%, rgba(59, 166, 247, 0.86) 100%);
+
+		.use_text {
+			width: 100%;
+			height: auto;
+			h2 {
+				font-family: "Fira Sans";
+			    margin-top: 12px;
+			    margin-bottom: 20px;
+			    font-size: 44px;
+			    font-size: 4rem;
+			    line-height: 1.5em;
+			    font-weight: 300;
+			    color: #bfe2f9;
+		              &:after {
+		                @include divider;
+		                margin-bottom: 25px;
+		                width: 80px;
+		                background-color: #fdbb07;
+		        }
+
+		    }
+
+			h3 {
+				font-family: "Fira Sans";
+				font-size: 18px;
+				font-weight: 300;
+				line-height: 26px;
+				color: #fff;
+			}
+
+		}
+
+		.feature {
+			float: left;
+			padding: 20px 30px 0 0;
+		}
+
+		.feature> img {
+			margin: 0 auto;
+			max-height: 5vh;
+			max-width: 100%;
+			transition: all .4s;
+		}
+
+	}
+
 }
-
-
 
 //
 // Spacing
 // --------------------------------------------------
 
 
-.no-pad{ padding: 0px; }
-.no-pad-top{ padding-top: 0px !important; }
-.no-pad-left{ padding-left: 0px; }
-.no-pad-right{ padding-right: 0px; }
-.no-pad-bottom{ padding-bottom: 0px; }
+.no-pad {
+	padding: 0px;
+}
 
-.space-top-small{ margin-top: $standard-space/4 !important; }
-.space-bottom-medium{ margin-bottom: $standard-space/2 !important; }
-.space-bottom-large{ margin-bottom: $standard-space !important; }
-.space-bottom-xlarge{ margin-bottom: $standard-space*2 !important; }
+.no-pad-top {
+	padding-top: 0px !important;
+}
 
-.no-margin{ margin: 0; }
-.no-margin-bottom{ margin-bottom: 0px !important; }
-	
-	
+.no-pad-left {
+	padding-left: 0px;
+}
+
+.no-pad-right {
+	padding-right: 0px;
+}
+
+.no-pad-bottom {
+	padding-bottom: 0px;
+}
+
+.space-top-small {
+	margin-top: $standard-space/4 !important;
+}
+
+.space-bottom-medium {
+	margin-bottom: $standard-space/2 !important;
+}
+
+.space-bottom-large {
+	margin-bottom: $standard-space !important;
+}
+
+.space-bottom-xlarge {
+	margin-bottom: $standard-space*2 !important;
+}
+
+.no-margin {
+	margin: 0;
+}
+
+.no-margin-bottom {
+	margin-bottom: 0px !important;
+}
+
 //
 // Feature Sections
 // --------------------------------------------------
@@ -87,17 +189,21 @@ section {
 .feature {
 	overflow: hidden;
 	padding: 90px 0;
+
 	h1 {
 		font-size: 20px;
 		color: #0c0c0c;
-		@include fira-sans; 
+		@include fira-sans;
 		font-weight: 400;
 		text-align: center;
 	}
+
 	i {
 		color: $color-primary;
 	}
+
 }
+
 .feature-icon-large {
 	i {
 		display: block;
@@ -105,13 +211,15 @@ section {
 		font-size: 48px;
 		padding: 0 0 30px;
 	}
+
 }
 
 //
 // Image Sections
 // --------------------------------------------------
 
-.background-image-holder, .foreground-image-holder {
+.background-image-holder,
+.foreground-image-holder {
 	position: absolute;
 	top: 0px;
 	left: 0px;
@@ -121,18 +229,23 @@ section {
 	z-index: 0;
 	background-position: 50% 50% !important;
 }
+
 .background-image-holder {
 	&.parallax-background {
 		height: 120%;
 		top: -10%;
 	}
+
 }
+
 .hover-background {
 	.background-image-holder {
 		height: 110%;
 		width: 110%;
 	}
+
 }
+
 .bg-primary {
 	background-color: #dfe3ec !important;
 }
