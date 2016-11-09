@@ -51,7 +51,7 @@ design
 │   └──
 ├── slider/porftolio
 │   ├── http://elforma.com/
-│   ├── http://uigstudio.com/
+│   ├── http://uigstudio.com/ +
 │   ├── http://ariol.by/portfolio/maxtarget
 │   ├── http://ariol.by/
 │   └──https://webdevstudios.com/portfolio/
@@ -60,19 +60,20 @@ design
 │   ├── http://forin-it-service.ch/
 │   ├── http://dreambigcreative.net/
 │   ├── http://adioswp.designlazy.com/home/
-│   └── http://www.jacsomedia.hu/
+│   └── http://www.jacsomedia.hu/ +
 ├── blog
 │   ├── http://www.nccc.com.au/
 │   ├── 
 │   ├── https://ministry.co/
 │   └──
 └── footer
-│   ├── http://www.smashbrand.com/
+│   ├── http://www.smashbrand.com/ +
+│   ├── http://janlosert.com/store/dashboard-ui-kit
 │   └── http://www.lestudio-rouen.com/
 ```
 text
 ...
-
+http://markupus.com/
 http://1-spbpro.ru/sites.php
 http://maxshoshiev.ru/
 http://www.wordpress4you.ru/
@@ -96,6 +97,8 @@ http://themeforest.net/item/salient-responsive-multipurpose-theme/full_screen_pr
 http://themenectar.com/demo/salient-blog/mauris-pharetra-interdum-lorem-2/
 http://themenectar.com/demo/salient-one-page/
 http://createdigital.me/
+
+http://www.ivstroy.com.ua/
 
 
 `[vc_row full_width="stretch_row_content_no_spaces" background_style="full"][vc_column][web_page_header layout="logo" image="1150" big="Создание сайтов" sub="Весь комплекс услуг: от карандашного наброска, разработки прототипа и дизайн-макета будущего сайта до верстки, интеграции на WordPress, последующего продвижения и сопровождения проекта."][/web_page_header][/vc_column][/vc_row][vc_row background_style="bg-primary" css=".vc_custom_1471191694153{background-color: #f1fae3 !important;}" full_width="stretch_row_content_no_spaces"][vc_column width="1/3" style="Light Background" background_style="bg-primary"][web_text title="Веб-разработка на WordPress" icon="icon_genius" lead="yes"][/web_text][/vc_column][vc_column width="1/3"][web_text title="Верстка макетов и шаблонов для WordPress" icon="icon_tools" lead="yes"][/web_text][/vc_column][vc_column width="1/3"][web_text title="Сопровождение веб-проектов" icon="icon_tools" lead="yes"][/web_text][/vc_column][/vc_row][vc_row background_style="full"][vc_column][web_portfolio pppage="3" type="Contained Portfolio" show_filter="No"][/vc_column][/vc_row]`

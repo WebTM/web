@@ -64,8 +64,10 @@
                         <li class="item-left"><a href="https://www.instagram.com/janlosert/" onclick="track('ClickOut','footer-instagram')" target="_blank">Instagram</a></li>
                     </ul>
                 </div>
-			</div>
 
+			</div>
 
 	</div><!--end of container-->
 </footer>
+
+<!--  &sube; 2016-->
