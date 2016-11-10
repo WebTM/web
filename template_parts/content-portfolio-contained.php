@@ -1,5 +1,6 @@
 <div id="portfolio-<?php the_ID(); ?>" class="col-md-4 col-sm-6 project image-holder <?php echo ebor_the_terms('portfolio_category', ' ', 'slug'); ?>">
 	<div class="ebor-project-container">
+	
 
 		<div class="background-image-holder">
 			<?php the_post_thumbnail('full', array('class' => 'background-image')); ?>

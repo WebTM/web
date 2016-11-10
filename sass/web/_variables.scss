@@ -16,6 +16,15 @@ $color-secondary-1:  #2c3e50;
 $color-secondary-2:   #3498db;
 .text-white { color: #fff; }
 
+.font-body {  font-family: $Fira-Sans-Hair-Italic;}
+.font-heading {  font-family: $webpro-reg;}
+.alt-font {  
+  font-family: $webpro;
+  font-weight: bold;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;}
+
 $standard-radius: 25px;
 @mixin standard-radius{ border-radius: $standard-radius; }
 
@@ -26,6 +35,23 @@ $standard-radius: 25px;
             height: 3px;
             background: #179bdf;
             margin-bottom: 10px;
+        }
+
+@mixin h2-index {
+        font-family: "Fira Sans";
+        margin-top: 12px;
+        margin-bottom: 30px;
+        font-size: 64px;
+        font-size: 6.4rem;
+        line-height: 1.2em;
+        font-weight: 700;
+        color: #ffffff;
+              &:after {
+                @include divider;
+                margin-bottom: 25px;
+                width: 80px;
+                background-color: #fdbb07;
+        }
         }
 
 // Fonts
