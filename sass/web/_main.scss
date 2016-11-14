@@ -88,12 +88,11 @@ section {
 		}
 	}
 
-		.feature {
+	.feature {
 			float: left;
-			padding: 20px 30px 0 0;
 		}
 
-		.feature> img {
+	.feature> img {
 			margin: 0 auto;
 			max-height: 5vh;
 			max-width: 100%;
@@ -101,8 +100,6 @@ section {
 		}
 
 	}
-
-}
 
 //
 // Spacing
@@ -181,6 +178,7 @@ section {
 		color: $color-primary;
 		font-size: 48px;
 		padding: 0 0 30px;
+		text-align: center;
 	}
 
 }
