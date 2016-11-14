@@ -50,6 +50,8 @@ function web_portfolio_shortcode( $atts ) {
 			<?php 
 				if( 'Contained Portfolio' == $type )
 					echo '<div class="divide60"></div>';
+					echo '<span class="h-label">Сделано</span>';
+					echo '<h2>Портфолио</h2>';
 					
 				if( 'Fullwidth Portfolio' == $type )
 					echo '<h2>Сделано</h2>';

@@ -8,6 +8,7 @@ $long-transition: 2000ms;
 
 
 $standard-space: 64px;
+$standard-radius: 25px;
 // Colors
 
 $color-heading: #333333;
@@ -25,7 +26,10 @@ $color-secondary-2:   #3498db;
   text-transform: uppercase;
   letter-spacing: 1px;}
 
-$standard-radius: 25px;
+
+.divide60 {padding-top:60px}
+
+
 @mixin standard-radius{ border-radius: $standard-radius; }
 
 @mixin divider {
@@ -36,7 +40,6 @@ $standard-radius: 25px;
             background: #179bdf;
             margin-bottom: 10px;
         }
-
 @mixin h2-index {
         font-family: "Fira Sans";
         margin-top: 12px;
@@ -46,13 +49,17 @@ $standard-radius: 25px;
         line-height: 1.2em;
         font-weight: 700;
         color: #ffffff;
-              &:after {
-                @include divider;
-                margin-bottom: 25px;
-                width: 80px;
-                background-color: #fdbb07;
-        }
-        }
+      }
+@mixin h-label {
+        display: block;
+        font-size: 16px;
+        font-size: 1.6rem;
+        line-height: 1.4em;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.21em;
+        color: #fdbb07;
+    }
 
 // Fonts
 

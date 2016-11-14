@@ -54,14 +54,7 @@ footer.footer__ui {
     font-family: "Fira Sans";
     color: #ebeff0;
     .h-label {
-        display: block;
-        font-size: 16px;
-        font-size: 1.6rem;
-        line-height: 1.4em;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.21em;
-        color: #fdbb07;
+        @include h-label; 
     }
     h2 {
         font-family: "Fira Sans";

@@ -59,14 +59,10 @@ section {
 		padding-bottom: 0;
 	}
 
-	&.use {
+	.use {
 		padding:50px 0;
 		background: linear-gradient(-235deg, #3498db 0%, rgba(59, 166, 247, 0.86) 100%);
-
-		.use_text {
-			width: 100%;
-			height: auto;
-			h2 {
+		h2 {
 				font-family: "Fira Sans";
 			    margin-top: 12px;
 			    margin-bottom: 20px;
@@ -81,18 +77,16 @@ section {
 		                width: 80px;
 		                background-color: #fdbb07;
 		        }
-
 		    }
 
-			h3 {
+		h3 {
 				font-family: "Fira Sans";
 				font-size: 18px;
 				font-weight: 300;
 				line-height: 26px;
 				color: #fff;
-			}
-
 		}
+	}
 
 		.feature {
 			float: left;

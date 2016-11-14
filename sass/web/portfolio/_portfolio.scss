@@ -5,26 +5,20 @@
 
 .projects-gallery {
 	h2 {
-	@include webpro-reg; 
-	  font-size: 48px;
-    font-weight: 400;
-    letter-spacing: -0.01em;
-    line-height: 1.3;
-    margin: 0px;
+  	@include h2-index; 
+    color: #151111;
     &:before {
-      @include divider;
-      margin-top: 30px;
-      width: 10%;
-      }
-		&:after {
-			@include divider;
-      margin-bottom: 40px;
-      width: 3%;
-      }
+                @include divider;
+                width: 50px;
+                background-color: #fdbb07;
+        }
 	}
+  .h-label {
+        @include h-label; 
+    }
 }
 .projects-wrapper {
-	text-align: center;
+
 }
 
 .filters{ padding: 0px; list-style: none; overflow: hidden; display: inline-block; margin-bottom: 32px; 
@@ -42,6 +36,47 @@
       h3 { margin-bottom: 24px;}
     }
   }}
+
+
+
+.project {
+    height: 345px;
+    &.col-md-4 {
+        width: 33% .3;
+        overflow: hidden;
+        .background-image-holder {
+            width: 103%;
+        }
+    }
+}
+.project-container {
+    overflow: hidden;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 15px;
+    bottom: 0;
+    .hover-state {
+  padding-left: 30px;
+  margin-left: -15px;
+  left: 15px;
+}
+}
+.column-projects {
+    .project {
+        overflow: hidden;
+        &.col-md-4 {
+            width: 33.33333%;
+            overflow: hidden;
+            .background-image-holder {
+              width:100% !important;
+            }
+        }
+    }
+}
+
+
 .project{ height: 345px; 
  	img{ width: 100%; }
 	.col-md-4{ width: 33%;

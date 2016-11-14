@@ -1,49 +1,49 @@
-<section class="vc_row-fluid use">
-
+<section class="use">
 <div class="container">
-	<div class="row">
-		<div class="use_text">
-		<h2>Результат</h2>
-		<h3>Все разрабатываемые сайты, полностью готовы к работе, и не требуют от пользователя никаких дополнительных доработок и настроек.</h3>
-
+<div class="row">
 	
+	<div class="col-sm-6 col-md-6 use">
 
-	
-			<div class="feature feature-icon-large">
-				<a href="http://getbootstrap.com/" target="_blank" class="feature feature-icon-large" data-shortname="bootstrap">
-				<img src="http://svgporn.com/logos/bootstrap.svg" alt="Bootstrap" class="bootstrap">
-				</a>
-			</div>
+	<h2>Результат</h2>
+				<div class="feature feature-icon-large">
+					<a href="http://getbootstrap.com/" target="_blank" class="feature feature-icon-large" data-shortname="bootstrap">
+					<img src="http://svgporn.com/logos/bootstrap.svg" alt="Bootstrap" class="bootstrap">
+					</a>
+				</div>
 
-			<div class="feature feature-icon-large">
-				<a href="http://www.w3.org/TR/CSS/" target="_blank" class="feature feature-icon-large" data-shortname="css-3">
-				<img src="http://svgporn.com/logos/css-3.svg" alt="CSS3" class="css-3">
-				</a>
-			</div>
+				<div class="feature feature-icon-large">
+					<a href="http://www.w3.org/TR/CSS/" target="_blank" class="feature feature-icon-large" data-shortname="css-3">
+					<img src="http://svgporn.com/logos/css-3.svg" alt="CSS3" class="css-3">
+					</a>
+				</div>
 
-			<div class="feature feature-icon-large">
-				<a href="http://sass-lang.com/" target="_blank" class="feature feature-icon-large" data-shortname="sass">
-				<img src="http://svgporn.com/logos/sass.svg" alt="Sass" class="sass"></a>
-			</div>
+				<div class="feature feature-icon-large">
+					<a href="http://sass-lang.com/" target="_blank" class="feature feature-icon-large" data-shortname="sass">
+					<img src="http://svgporn.com/logos/sass.svg" alt="Sass" class="sass"></a>
+				</div>
 
-			<div class="feature feature-icon-large">
-				<a href="http://www.w3.org/TR/html5/" target="_blank" class="feature feature-icon-large" data-shortname="html-5">
-				<img src="http://svgporn.com/logos/html-5.svg" alt="HTML5" class="html-5"></a>
-			</div>
+				<div class="feature feature-icon-large">
+					<a href="http://www.w3.org/TR/html5/" target="_blank" class="feature feature-icon-large" data-shortname="html-5">
+					<img src="http://svgporn.com/logos/html-5.svg" alt="HTML5" class="html-5"></a>
+				</div>
 
-			<div class="feature feature-icon-large">
-				<a href="https://wordpress.org/" target="_blank" class="feature feature-icon-large" data-shortname="wordpress">
-				<img src="http://svgporn.com/logos/wordpress-icon.svg" alt="Wordpress" class="wordpress"></a>
-			</div>
+				<div class="feature feature-icon-large">
+					<a href="https://wordpress.org/" target="_blank" class="feature feature-icon-large" data-shortname="wordpress">
+					<img src="http://svgporn.com/logos/wordpress-icon.svg" alt="Wordpress" class="wordpress"></a>
+				</div>
 
-			<div class="feature feature-icon-large">
-				<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="feature feature-icon-large" data-shortname="javascript">
-				<img src="http://svgporn.com/logos/javascript.svg" alt="Javascript (JS)" class="javascript"></a>
-			</div>
-		</div>
+				<div class="feature feature-icon-large">
+					<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="feature feature-icon-large" data-shortname="javascript">
+					<img src="http://svgporn.com/logos/javascript.svg" alt="Javascript (JS)" class="javascript"></a>
+				</div>
 	</div>
-</div>
 
+	<div class="col-sm-6 col-md-6">
+		<h3>Все разрабатываемые сайты, полностью готовы к работе, и не требуют от пользователя никаких дополнительных доработок и настроек.</h3>
+	</div>
+
+</div>
+</div>
 </section>
 
 <footer class="footer__ui">

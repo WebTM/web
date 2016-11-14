@@ -103,6 +103,7 @@ class AQ_Portfolio_Block extends AQ_Block {
 				<?php 
 					if( 'contained' == $type )
 						echo '<div class="divide60"></div>';
+
 						
 					if( 1 == $show_filter )
 						echo web_portfolio_filters($cats); 
@@ -187,7 +188,7 @@ class AQ_Portfolio_Block extends AQ_Block {
 					</div><!--end of projects-container-->
 			
 				<?php elseif( 'contained' == $type ) : ?>
-					
+				
 					<div class="row">
 						<div class="projects-container column-projects">
 							<?php 
