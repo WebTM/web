@@ -32,9 +32,9 @@ header {
 	padding: 5% 0;
 	border-bottom: 1px solid #dbdfe0;
 
-	/*  background: #eceff3; */
 	span.text-white {
 		display: block;
+
 	}
 
 	h1 {
@@ -60,7 +60,7 @@ header {
 		line-height: 1.4em;
 		font-weight: 400;
 		letter-spacing: 0.6;
-		color: #b7b7b7;
+		color: #b3b3b9;
 	}
 
 	p.lead {
@@ -130,4 +130,7 @@ header {
 	h1	{
 		    text-align: left; 
 	}
+}
+.portfolio{
+	background-image: -webkit-linear-gradient(left, #e74d41 0%, #e64643 28.05%, #f17e27 100%);
 }

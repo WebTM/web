@@ -30,7 +30,6 @@
 .main-container {
 	@include translateX($x-amount: 0px);
 	overflow: hidden;
-	background-color: #f5f4f2;
 
 	&.reveal-nav {
 		@include translateX($x-amount: -300px);
@@ -59,9 +58,9 @@ section {
 		padding-bottom: 0;
 	}
 
-	.use {
+	&.use {
 		padding:50px 0;
-		background: linear-gradient(-235deg, #3498db 0%, rgba(59, 166, 247, 0.86) 100%);
+		background: #e2ebf2;
 		h2 {
 				font-family: "Fira Sans";
 			    margin-top: 12px;
@@ -86,11 +85,13 @@ section {
 				line-height: 26px;
 				color: #fff;
 		}
+		.feature {
+			float: left;
+			padding: 20px;
+		}
 	}
 
-	.feature {
-			float: left;
-		}
+
 
 	.feature> img {
 			margin: 0 auto;

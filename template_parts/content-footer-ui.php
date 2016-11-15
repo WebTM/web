@@ -2,7 +2,7 @@
 <div class="container">
 <div class="row">
 	
-	<div class="col-sm-6 col-md-6 use">
+	<div class="col-sm-6 col-md-6">
 
 	<h2>Результат</h2>
 				<div class="feature feature-icon-large">
