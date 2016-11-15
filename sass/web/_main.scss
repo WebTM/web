@@ -1,5 +1,3 @@
-
-
 // Spacing
 
 
@@ -7,26 +5,21 @@
 	padding-top: 0px !important;
 	margin-top: 24px;
 }
-
 .middle {
 	display: inline-block;
 	vertical-align: middle;
 	white-space: normal;
 }
-
 .overlay {
 	&:before {
 		@include overlay-params($opacity-strength: 0.9, $background-color:$color-primary);
 		left: 0;
 	}
-
 	.container {
 		position: relative;
 		z-index: 3;
 	}
-
 }
-
 .main-container {
 	@include translateX($x-amount: 0px);
 	overflow: hidden;
@@ -34,9 +27,7 @@
 	&.reveal-nav {
 		@include translateX($x-amount: -300px);
 	}
-
 }
-
 //
 // <section> Standards
 // --------------------------------------------------
@@ -52,56 +43,64 @@ section {
 		padding-top: $standard-space*2;
 		padding-bottom: $standard-space*2;
 	}
-
 	&.full {
 		padding-top: 0;
 		padding-bottom: 0;
 	}
-
 	&.use {
-		padding:50px 0;
+		padding: 50px 0;
 		background: #e2ebf2;
+		border-top: 1px solid #c7cdd6;
+		.work-caption-block {
+			position: relative;
+			padding: 2em 2em 4em;
+			margin-top: 2em;
+			transition: all .5s;
+			-webkit-transition: all .5s;
+		}
 		h2 {
-				font-family: "Fira Sans";
-			    margin-top: 12px;
-			    margin-bottom: 20px;
-			    font-size: 52px;
-			    font-size: 5rem;
-			    line-height: 1.5em;
-			    font-weight: 600;
-			    color: #1f2225;
-		              &:after {
-		                @include divider;
-		                margin-bottom: 25px;
-		                width: 80px;
-		                background-color: #fdbb07;
-		        }
-		    }
-
-		h3 {
-				font-family: "Fira Sans";
-				font-size: 20px;
-				font-weight: 400;
-				line-height: 26px;
-				color: #020000;
+			font-family: "Fira Sans";
+		    margin-top: 12px;
+		    margin-bottom: 20px;
+		    font-size: 39px;
+		    font-size: 3.9rem;
+		    text-transform: uppercase;
+    		letter-spacing: 0.1em;
+		    line-height: 1.5em;
+		    font-weight: 600;
+		    color: #1f2225;
+			&:after {
+				@include divider;
+				margin-bottom: 25px;
+				width: 80px;
+				background-color: #fdbb07;
+			}
+		}
+		p {
+			font-family: "Fira Sans";
+			font-size: 20px;
+			font-weight: 400;
+			line-height: 26px;
+			color: #020000;
 		}
 		.feature {
 			float: left;
-			padding: 20px;
+			padding: 19px;
+
+			.feature-icon-large {
+				&:first-child {
+					padding-left: 0;
+				}
+			}
 		}
 	}
-
-
-
 	.feature> img {
-			margin: 0 auto;
-			max-height: 5vh;
-			max-width: 100%;
-			transition: all .4s;
-		}
-
+		margin: 0 auto;
+		max-height: 5vh;
+		max-width: 100%;
+		transition: all .4s;
 	}
-
+}
 //
 // Spacing
 // --------------------------------------------------
@@ -110,47 +109,36 @@ section {
 .no-pad {
 	padding: 0px;
 }
-
 .no-pad-top {
 	padding-top: 0px !important;
 }
-
 .no-pad-left {
 	padding-left: 0px;
 }
-
 .no-pad-right {
 	padding-right: 0px;
 }
-
 .no-pad-bottom {
 	padding-bottom: 0px;
 }
-
 .space-top-small {
 	margin-top: $standard-space/4 !important;
 }
-
 .space-bottom-medium {
 	margin-bottom: $standard-space/2 !important;
 }
-
 .space-bottom-large {
 	margin-bottom: $standard-space !important;
 }
-
 .space-bottom-xlarge {
 	margin-bottom: $standard-space*2 !important;
 }
-
 .no-margin {
 	margin: 0;
 }
-
 .no-margin-bottom {
 	margin-bottom: 0px !important;
 }
-
 //
 // Feature Sections
 // --------------------------------------------------
@@ -166,13 +154,10 @@ section {
 		font-weight: 400;
 		text-align: center;
 	}
-
 	i {
 		color: $color-primary;
 	}
-
 }
-
 .feature-icon-large {
 	i {
 		display: block;
@@ -181,15 +166,12 @@ section {
 		padding: 0 0 30px;
 		text-align: center;
 	}
-
 }
-
 //
 // Image Sections
 // --------------------------------------------------
 
-.background-image-holder,
-.foreground-image-holder {
+.background-image-holder, .foreground-image-holder {
 	position: absolute;
 	top: 0px;
 	left: 0px;
@@ -199,23 +181,18 @@ section {
 	z-index: 0;
 	background-position: 50% 50% !important;
 }
-
 .background-image-holder {
 	&.parallax-background {
 		height: 120%;
 		top: -10%;
 	}
-
 }
-
 .hover-background {
 	.background-image-holder {
 		height: 110%;
 		width: 110%;
 	}
-
 }
-
 .bg-primary {
 	background-color: #dfe3ec !important;
 }

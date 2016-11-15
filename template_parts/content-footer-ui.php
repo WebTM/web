@@ -1,10 +1,17 @@
 <section class="use">
-<div class="container">
-<div class="row">
+	<div class="container">
+	<div class="row">
 	
-	<div class="col-sm-6 col-md-6">
+	<div class="col-sm-7 col-md-7">
+		
+		<div class="work-caption-block"> 
 
-	<h2>Результат</h2>
+   		<h2>Результат</h2> 
+	    <p>Все разрабатываемые сайты, полностью готовы к работе, и не требуют от пользователя никаких дополнительных доработок и настроек.</p>
+		
+		</div>
+	</div>
+	<div class="col-sm-5 col-md-5">
 				<div class="feature feature-icon-large">
 					<a href="http://getbootstrap.com/" target="_blank" class="feature feature-icon-large" data-shortname="bootstrap">
 					<img src="http://svgporn.com/logos/bootstrap.svg" alt="Bootstrap" class="bootstrap">
@@ -36,10 +43,6 @@
 					<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="feature feature-icon-large" data-shortname="javascript">
 					<img src="http://svgporn.com/logos/javascript.svg" alt="Javascript (JS)" class="javascript"></a>
 				</div>
-	</div>
-
-	<div class="col-sm-6 col-md-6">
-		<h3>Все разрабатываемые сайты, полностью готовы к работе, и не требуют от пользователя никаких дополнительных доработок и настроек.</h3>
 	</div>
 
 </div>

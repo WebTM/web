@@ -282,6 +282,12 @@ jQuery(document).ready(function(){
 	jQuery('.image-slider').flexslider({ animation: "slide"});
 	jQuery('.testimonials-slider').flexslider({ directionNav: false });
 	
+	
+	
+	 
+	 jQuery('.feature').eq(1).addClass('aaaa');
+
+	 
 	// Slide Sizes
 	
 	jQuery('.slider-fullscreen .slides li').each(function(){
@@ -342,6 +348,7 @@ jQuery(document).ready(function(){
     }
 
     jQuery('.main-container section:first-child').addClass('first-child');
+
 
     jQuery('.parallax-background').each(function () {
 
