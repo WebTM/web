@@ -1,7 +1,16 @@
 .single-portfolio {
-    background-color: #1b364e;
-    font-family: "Fira Sans";
-    color: #ebeff0;
-    margin-top: 40px;
-       
+  font-family: "Fira Sans";
+  color: #ebeff0;
+  h3 {
+    color: #333;
+  }
+  a {
+    font-size: 16px;
+    font-size: 1.6rem;
+    color: #3498db;
+    &hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
 }

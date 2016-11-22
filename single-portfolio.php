@@ -5,7 +5,7 @@
 	get_header();
 	echo get_post_format_string( get_post_format() );
 	the_post();
-	
+
 	/**
 	 * Check if we have a template shortcode (page builder) in the post content
 	 * If we do, that's all we want to show, as in, we don't want surrounding markup.
@@ -15,7 +15,7 @@
 	if( has_shortcode(get_the_content(), 'template') || has_shortcode(get_the_content(), 'vc_row') ) :
 	
 		the_content();
-	
+	echo "asdadadadad";
 	/**
 	 * If there's no template shortcode in the content, just display a more standard post instead.
 	 */	

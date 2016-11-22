@@ -1,5 +1,6 @@
 <?php
 	get_header();
+	echo "dasdadadasa";
 	the_post();
 	
 	$header_images = get_post_meta($post->ID, '_ebor_header_images', 1);
