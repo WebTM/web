@@ -363,7 +363,8 @@ if(!( function_exists('web_get_footer_options') )){
 			'social' => 'Simple Social Footer',
 			'columns' => 'Footer With Widgets',
 			'social-short' => 'Short Social Footer',
-			'contact' => 'Contact Footer',
+			'contact' => 'Contact Footer',			
+			'portfolio' => 'Portfolio Footer',
 			'ui' => 'UI Footer'
 		);
 		return $options;	

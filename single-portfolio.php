@@ -3,6 +3,7 @@
 	Template Name: Portfolio
 	*/
 	get_header();
+	echo get_post_format_string( get_post_format() );
 	the_post();
 	
 	/**
