@@ -8,6 +8,6 @@
 		get_template_part('inc/content','post-header');
 	}
 		
-	get_template_part('inc/content-post-single', ebor_get_post_layout());
+	get_template_part('inc/content-post-single', web_get_post_layout());
 	
 	get_footer();					

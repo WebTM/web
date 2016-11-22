@@ -1,4 +1,4 @@
-123123<?php 
+<?php 
 	get_header();
 	
 	$term = get_queried_object();
