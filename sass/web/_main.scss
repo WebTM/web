@@ -28,6 +28,16 @@
 		@include translateX($x-amount: -300px);
 	}
 }
+
+
+
+.breadcrumb {
+    padding: 10px 0px;
+    margin-bottom: 0px;
+    list-style: none;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+}
 //
 // <section> Standards
 // --------------------------------------------------
@@ -138,6 +148,9 @@ section {
 }
 .no-margin-bottom {
 	margin-bottom: 0px !important;
+}
+.fix {
+    position: fixed;
 }
 //
 // Feature Sections

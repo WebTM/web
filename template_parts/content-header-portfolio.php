@@ -1,5 +1,34 @@
 <!--header start-->
-<header class="page-header__portfolio">
+
+
+<header class="page-header__menu">
+
+                <div class="container">
+                    <div class="logo">
+                        <a href="/">UI</a>
+                    </div>
+					<nav class="nav">
+					<div class="nav-collapse">
+												<ul>
+													<li><a href="/" class="link">Home</a>
+													</li>
+													<li><a href="case_studies.html" class="link">Case studies</a>
+													</li>
+													
+												</ul>
+					</div>
+    			<a href="#" class="contact">
+            <i class="icon"></i><span>Contact us</span></a>
+             </nav>
+        </div>
+
+	
+</header>
+
+
+
+<!--header end-->
+<section class="page-header__portfolio">
 	<div class="container_fluid">
 		<div class="row">
 			<div class="col-md-12">
@@ -12,6 +41,4 @@
         	</div>
 		</div>
 	</div>	
-</header>
-<!--header end-->
-
+</section>

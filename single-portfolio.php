@@ -3,7 +3,6 @@
 	Template Name: Portfolio
 	*/
 	get_header();
-	echo get_post_format_string( get_post_format() );
 	the_post();
 
 	/**
@@ -15,7 +14,6 @@
 	if( has_shortcode(get_the_content(), 'template') || has_shortcode(get_the_content(), 'vc_row') ) :
 	
 		the_content();
-	echo "asdadadadad";
 	/**
 	 * If there's no template shortcode in the content, just display a more standard post instead.
 	 */	
@@ -41,6 +39,8 @@
 								the_title('<h1>', '</h1>');	
 								echo '<span class="sub alt-font">'. ebor_the_terms('portfolio_category', ', ', 'name') .'</span></header>';
 							}
+							$format = get_post_format_string( get_post_format() );
+							echo $format;
 							
 							the_content();
 							wp_link_pages();

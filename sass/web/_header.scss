@@ -73,13 +73,111 @@ header {
 
 }
 
+.page-header__menu {
+	  width: 100%;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    background: #00a7e7;
+    padding: 15px 0;
+    position: fixed;
+	&:before {
+		display: table;
+		clear: both;
+		content: '';
+	}
+  	&:after {
+		display: table;
+		clear: both;
+		content: '';
+	}
+  	.container {
+    position: relative;
+	}
+  	.logo {
+    display: inline-block;
+    vertical-align: middle;
+    color:#fff;
+    width: 156px;
+   		a {
+			color: #fff;
+			font-size: 20px;
+			display: block;
+			padding: 7px 12px;
+    	}
+	}
+
+  .nav {
+		float: right;
+		cursor: default;
+    a {
+    color: #fff;
+    font-size: 18px;
+    display: block;
+    padding: 7px 12px;
+    }
+	  .nav-collapse {
+			display: inline-block;
+			margin-right: 12px;
+			vertical-align: top;
+		ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+      li {
+        display: inline-block;
+        .link {
+    text-decoration: none;
+    position: relative;
+       &:active:after, &:hover:after {
+          opacity: .6;
+          left: 12px;
+          right: 12px;
+        }
+       &:after {
+        position: absolute;
+        content: '';
+        height: 2px;
+        left: 50%;
+        right: 50%;
+        background: #fff;
+        bottom: 6px;
+        opacity: 0;
+        -webkit-transition: left .1s,right .1s,opacity .1s;
+        transition: left .1s,right .1s,opacity .1s;
+      }
+    }
+      }
+    }
+    }
+    .contact {
+      display: inline-block;
+      padding: 5px 15px;
+      border: 2px solid #fff;
+      border-radius: 3px;
+      background-clip: padding-box;
+      .icon {
+      display: inline-block;
+      width: 27px;
+      height: 21px;
+      vertical-align: middle;
+      margin-right: 6px;
+      }
+      &:hover {
+      color: #00a7e7;
+      background: #fff;
+      text-decoration: none;
+      } 
+    }
+		}
+	}
+	
+
+
+
 .page-header__portfolio {
-	margin: 0px;
-	padding: 70px 0 40px;
-	border-bottom: none;
-	background: #eceff3;
-	text-align: center;
-	margin-bottom: 25px;
+    margin-top: 65px;
+    margin-bottom: 25px;
 
 	.page-header__portfolio__our_works {
 		@include webpro-reg;
@@ -117,6 +215,9 @@ header {
 	}
 
 }
+
+
+
 
 .services {
 	border-bottom: 1px solid #d5dadf;

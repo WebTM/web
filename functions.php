@@ -127,6 +127,7 @@ function ui_breadcrumbs() {
 
   $wrap_before = '<div class="breadcrumb"><ol class="breadcrumb">'; // открывающий тег обертки
   $wrap_after = '</ol></div><!-- .breadcrumbs -->'; // закрывающий тег обертки
+  $sep = '';
 
   $show_home_link = 1; // 1 - показывать ссылку "Главная", 0 - не показывать
   $show_on_home = 0; // 1 - показывать "хлебные крошки" на главной странице, 0 - не показывать
