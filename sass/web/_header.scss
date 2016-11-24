@@ -13,7 +13,6 @@ header {
 	.logo {
 		max-width: 150px;
 		display: inline-block;
-		margin-bottom: 40px;
 	}
 
 	.btn {
@@ -159,7 +158,7 @@ header {
       text-decoration: none;
       -webkit-transition: background .2s,color .2s;
       transition: background .2s,color .2s;
-      } 
+      }
       &:after {
           position: absolute;
           content: '';
@@ -175,7 +174,7 @@ header {
     }
 		}
 	}
-	
+
 
 
 
@@ -228,7 +227,7 @@ header {
 .services {
 	border-bottom: 1px solid #d5dadf;
 	h1	{
-		    text-align: left; 
+		    text-align: left;
 	}
 }
 .portfolio{
