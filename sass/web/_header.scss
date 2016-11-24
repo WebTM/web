@@ -81,23 +81,14 @@ header {
     background: #00a7e7;
     padding: 15px 0;
     position: fixed;
-	&:before {
+  	&:active:after, &:hover:after {
 		display: table;
 		clear: both;
 		content: '';
-	}
-  	&:after {
-		display: table;
-		clear: both;
-		content: '';
-	}
-  	.container {
-    position: relative;
-	}
-  	.logo {
+	  }
+   	.logo {
     display: inline-block;
     vertical-align: middle;
-    color:#fff;
     width: 156px;
    		a {
 			color: #fff;
@@ -106,8 +97,7 @@ header {
 			padding: 7px 12px;
     	}
 	}
-
-  .nav {
+    .nav {
 		float: right;
 		cursor: default;
     a {
@@ -127,27 +117,27 @@ header {
       li {
         display: inline-block;
         .link {
-    text-decoration: none;
-    position: relative;
-       &:active:after, &:hover:after {
+          text-decoration: none;
+          position: relative;
+           &:active:after, &:hover:after {
           opacity: .6;
           left: 12px;
           right: 12px;
+          }
+           &:after {
+          position: absolute;
+          content: '';
+          height: 2px;
+          left: 50%;
+          right: 50%;
+          background: #fff;
+          bottom: 6px;
+          opacity: 0;
+          -webkit-transition: left .1s,right .1s,opacity .1s;
+          transition: left .3s,right .3s,opacity .3s;
         }
-       &:after {
-        position: absolute;
-        content: '';
-        height: 2px;
-        left: 50%;
-        right: 50%;
-        background: #fff;
-        bottom: 6px;
-        opacity: 0;
-        -webkit-transition: left .1s,right .1s,opacity .1s;
-        transition: left .1s,right .1s,opacity .1s;
-      }
-    }
-      }
+        }
+        }
     }
     }
     .contact {
@@ -167,11 +157,27 @@ header {
       color: #00a7e7;
       background: #fff;
       text-decoration: none;
+      -webkit-transition: background .2s,color .2s;
+      transition: background .2s,color .2s;
       } 
+      &:after {
+          position: absolute;
+          content: '';
+          height: 2px;
+          left: 50%;
+          right: 50%;
+          background: #fff;
+          bottom: 6px;
+          opacity: 0;
+          -webkit-transition: left .1s,right .1s,opacity .1s;
+          transition: left .3s,right .3s,opacity .3s;
+        }
     }
 		}
 	}
 	
+
+
 
 
 
