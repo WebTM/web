@@ -1224,23 +1224,14 @@ header .btn:last-child {
   padding: 15px 0;
   position: fixed;
 }
-.page-header__menu:before {
+.page-header__menu:active:after, .page-header__menu:hover:after {
   display: table;
   clear: both;
   content: '';
-}
-.page-header__menu:after {
-  display: table;
-  clear: both;
-  content: '';
-}
-.page-header__menu .container {
-  position: relative;
 }
 .page-header__menu .logo {
   display: inline-block;
   vertical-align: middle;
-  color: #fff;
   width: 156px;
 }
 .page-header__menu .logo a {
@@ -1291,7 +1282,7 @@ header .btn:last-child {
   bottom: 6px;
   opacity: 0;
   -webkit-transition: left 0.1s, right 0.1s, opacity 0.1s;
-  transition: left 0.1s, right 0.1s, opacity 0.1s;
+  transition: left 0.3s, right 0.3s, opacity 0.3s;
 }
 .page-header__menu .nav .contact {
   display: inline-block;
@@ -1311,6 +1302,20 @@ header .btn:last-child {
   color: #00a7e7;
   background: #fff;
   text-decoration: none;
+  -webkit-transition: background 0.2s, color 0.2s;
+  transition: background 0.2s, color 0.2s;
+}
+.page-header__menu .nav .contact:after {
+  position: absolute;
+  content: '';
+  height: 2px;
+  left: 50%;
+  right: 50%;
+  background: #fff;
+  bottom: 6px;
+  opacity: 0;
+  -webkit-transition: left 0.1s, right 0.1s, opacity 0.1s;
+  transition: left 0.3s, right 0.3s, opacity 0.3s;
 }
 .page-header__portfolio {
   margin-top: 65px;
