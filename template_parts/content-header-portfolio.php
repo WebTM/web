@@ -15,7 +15,7 @@
         </ul>
       </div>
       <a href="#" class="contact">
-              <i class="icon"></i><span>Contact us</span>
+          <i class="icon"></i><span>Contact us</span>
       </a>
     </nav>
   </div>
