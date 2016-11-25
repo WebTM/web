@@ -1,148 +1,222 @@
 //
 // Galleries & Portfolio Sections
 // --------------------------------------------------
-
-
 .projects-gallery {
-	h2 {
-  	@include h2-index; 
+  h2 {
+    @include h2-index;
     color: #151111;
     &:before {
-                @include divider;
-                width: 50px;
-                background-color: #fdbb07;
-        }
-	}
+      @include divider;
+      width: 50px;
+      background-color: #fdbb07;
+    }
+  }
   .h-label {
-        @include h-label; 
-    }
+    @include h-label;
+  }
 }
-.projects-wrapper {
-
-}
-
-.filters{ padding: 0px; list-style: none; overflow: hidden; display: inline-block; margin-bottom: 32px; 
-
-	li{ float: left; margin-right: 16px; @include webpro-reg; color: $color-secondary-2; cursor: pointer; 
-		&:last-child{ margin-right: 0px; }
-		.active{ border-bottom: 2px solid $color-secondary-2; }
-	}}
-.column-projects { margin-bottom: 80px;
-  .project { overflow: hidden; height: 300px; margin-bottom: 15px;
-    .col-md-4 { width: 33.33%; overflow: hidden;
-      .background-image-holder { width: 100% !important;}
+.projects-wrapper {}
+.filters {
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  display: inline-block;
+  margin-bottom: 32px;
+  li {
+    float: left;
+    margin-right: 16px;
+    @include webpro-reg;
+    color: $color-secondary-2;
+    cursor: pointer;
+    &:last-child {
+      margin-right: 0;
     }
-    .hover-state {
-      h3 { margin-bottom: 24px;}
+    .active {
+      border-bottom: 2px solid $color-secondary-2;
     }
-  }}
-
-
-
-.project {
-    height: 345px;
-    &.col-md-4 {
-        width: 33% .3;
-        overflow: hidden;
-        .background-image-holder {
-            width: 103%;
-        }
-    }
-}
-.project-container {
-    overflow: hidden;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 15px;
-    bottom: 0;
-    .hover-state {
-  padding-left: 30px;
-  margin-left: -15px;
-  left: 15px;
-}
+  }
 }
 .column-projects {
-    .project {
-        overflow: hidden;
-        &.col-md-4 {
-            width: 33.33333%;
-            overflow: hidden;
-            .background-image-holder {
-              width:100% !important;
-            }
-        }
+  margin-bottom: 80px;
+  .project {
+    overflow: hidden;
+    height: 300px;
+    margin-bottom: 15px;
+    .col-md-4 {
+      width: 33.33%;
+      overflow: hidden;
+      .background-image-holder {
+        width: 100% !important;
+      }
     }
+    .hover-state {
+      h3 {
+        margin-bottom: 24px;
+      }
+    }
+  }
 }
-
-.project{ height: 345px; 
- 	img{ width: 100%; }
-	.col-md-4{ width: 33%;
-		&:nth-child(3n - 1){ width: 34%; }
-		.background-image-holder{ width: 103%; }	}
-	.image-holder{ overflow: hidden; position: relative; }
-	&:hover {
-   		.hover-state { opacity: 1;}  	
-   		.align-vertical { @include translateY($y-amount: 0px);  opacity: 1;}
-   		}
-  	.hover-state{  @include cover-div;  background-color: rgba($color-secondary-1, .9); text-align: center; @include transition(all, 500ms, ease); opacity: 0; padding-right: 15px; 
-		h1{ margin-bottom: 8px; font-size: 24px; }
-		h3{ font-size: 18px; margin-bottom: 8px; }
-		p{ margin-bottom: 24px; }
-		.btn-white:hover{ color: $color-secondary-1; }}}
-
-
-
-.hover-state .align-vertical{
-	@include translateY($y-amount: 200px); 
-	@extend .transition-500; opacity: 0; 
-	}
-.image-gallery {margin-top: 64px;
- 	.image-holder { margin-bottom: 30px; height: 375px; overflow: hidden; position: relative; 
- }}
-.image-slider { position: relative; margin-bottom: 32px;
-	.flex-direction-nav { display: none;
+.project {
+  height: 345px;
+  &.col-md-4 {
+    width: 33% 0.3;
+    overflow: hidden;
+    .background-image-holder {
+      width: 103%;
+    }
+  }
+}
+.project-container {
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 15px;
+  bottom: 0;
+  .hover-state {
+    padding-left: 30px;
+    margin-left: -15px;
+    left: 15px;
+  }
+}
+.column-projects {
+  .project {
+    overflow: hidden;
+    &.col-md-4 {
+      width: 33.33333%;
+      overflow: hidden;
+      .background-image-holder {
+        width: 100% !important;
+      }
+    }
+  }
+}
+.project {
+  height: 345px;
+  img {
+    width: 100%;
+  }
+  .col-md-4 {
+    width: 33%;
+    &:nth-child(3n - 1) {
+      width: 34%;
+    }
+    .background-image-holder {
+      width: 103%;
+    }
+  }
+  .image-holder {
+    overflow: hidden;
+    position: relative;
+  }
+  &:hover {
+    .hover-state {
+      opacity: 1;
+    }
+    .align-vertical {
+      @include translateY($y-amount: 0px);
+      opacity: 1;
+    }
+  }
+  .hover-state {
+    @include cover-div;
+    background-color: rgba($color-secondary-1, .9);
+    text-align: center;
+    @include transition(all, 500ms, ease);
+    opacity: 0;
+    padding-right: 15px;
+    h1 {
+      margin-bottom: 8px;
+      font-size: 24px;
+    }
+    h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+    p {
+      margin-bottom: 24px;
+    }
+    .btn-white:hover {
+      color: $color-secondary-1;
+    }
+  }
+}
+.hover-state .align-vertical {
+  @include translateY($y-amount: 200px);
+  @extend .transition-500;
+  opacity: 0;
+}
+.image-gallery {
+  margin-top: 64px;
+  .image-holder {
+    margin-bottom: 30px;
+    height: 375px;
+    overflow: hidden;
+    position: relative;
+  }
+}
+.image-slider {
+  position: relative;
+  margin-bottom: 32px;
+  .flex-direction-nav {
+    display: none;
     a {
       &.flex-prev {
         &:before {
-          left: 0px;
+          left: 0;
         }
       }
     }
   }
-  .flex-control-nav { bottom: -48px;
+  .flex-control-nav {
+    bottom: -48px;
     li {
-      a { background: rgba(0,0,0,0.3);
-        &.flex-active {background: rgba(0,0,0,0.8);}
-      }}}}
-
-
-
-
-
-
-
-
-
-@media screen and (max-width: 990px){
-	.project.col-md-4{ width: 50%; }
-	.project.col-md-4:nth-child(3n - 1){ width: 50%; }
-	.project.col-md-4 .background-image-holder{ width: 100%; }
-	.column-projects .project.col-md-4{ width: 50%; }
+      a {
+        background: rgba(0,0,0,0.3);
+        &.flex-active {
+          background: rgba(0,0,0,0.8);
+        }
+      }
+    }
+  }
 }
-@media screen and (max-width: 767px){
-	.project.col-md-4{ width: 100%; }
-	.project.col-md-4:nth-child(3n - 1){ width: 100%; }
-	.column-projects .project.col-md-4{ width: 100%; }
-	.product-right .product-image{ width: 75%; right: 12.5% !important; }
+@media screen and (max-width: 990px) {
+  .project.col-md-4 {
+    width: 50%;
+  }
+  .project.col-md-4:nth-child(3n - 1) {
+    width: 50%;
+  }
+  .project.col-md-4 .background-image-holder {
+    width: 100%;
+  }
+  .column-projects .project.col-md-4 {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .project.col-md-4 {
+    width: 100%;
+  }
+  .project.col-md-4:nth-child(3n - 1) {
+    width: 100%;
+  }
+  .column-projects .project.col-md-4 {
+    width: 100%;
+  }
+  .product-right .product-image {
+    width: 75%;
+    right: 12.5% !important;
+  }
 }
 @media (min-width: @screen-sm-min) {
-    .image-gallery .image-holder{ height: 245px; }
+  .image-gallery .image-holder {
+    height: 245px;
   }
-  
+}
 @media (min-width: @screen-md-min) {
-    .image-gallery .image-holder{ height: 375px; }
+  .image-gallery .image-holder {
+    height: 375px;
   }
-  
-
+}

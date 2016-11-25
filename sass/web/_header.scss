@@ -67,6 +67,7 @@ header {
   background: #00a7e7;
   padding: 15px 0;
   position: fixed;
+	font-family: "Fira Sans";
   &:active:after,
   &:hover:after {
     display: table;
@@ -164,9 +165,15 @@ header {
   }
 }
 .page-header__portfolio {
-  margin-top: 65px;
-  margin-bottom: 25px;
+	    position: relative;
+	    padding: 54px 0 0;
+	    font-family: ProximaNova-Extrabld,sans-serif;
+	    color: #000;
+	    background-color: #fff;
+
   .page-header__portfolio__our_works {
+    margin: 0 auto;
+    padding: 0 40px;
     @include webpro-reg;
     .breadcrumb {
       font-size: 14px;
@@ -192,6 +199,67 @@ header {
     }
   }
 }
+
+
+
+.technology__header {
+    position: relative;
+    height: 180px;
+    padding: 40px 0 0;
+    font-family: ProximaNova-Extrabld,sans-serif;
+    color: #000;
+    background-image: url(../img/header__bg-single2.png);
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+.technology__header-i {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px
+}
+
+.technology__name {
+    font-size: 40px;
+    line-height: 1em
+}
+
+.technology__description {
+    max-width: 900px;
+    margin: 60px 0 30px;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 34px
+}
+.technology__breadcrumbs {
+    margin: 0 0 22px;
+    font: 15px/15px Arial,sans-serif;
+}
+.technology__breadcrumbs-item {
+    display: inline-block;
+    margin: 0 6px 0 0;
+    vertical-align: top;
+    &:after {
+      margin: 0 0 0 6px;
+      content: '/';
+  }
+}
+.technology__breadcrumbs-item .link {
+    color: #000;
+    transition: color .15s ease-out;
+}
+.technology__name {
+    font-size: 56px;
+    line-height: 1em;
+}
+.technology__buttons {
+    position: absolute;
+    top: 96px;
+    right: 40px;
+}
+
 .services {
   border-bottom: 1px solid #d5dadf;
   h1 {
