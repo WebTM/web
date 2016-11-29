@@ -27,15 +27,15 @@ function ui_setup() {
 
 	load_theme_textdomain( 'ui', get_template_directory() . '/languages' );
 
-	
+
 	// Remove from head some links.
-	
+
 	remove_action( 'wp_head', 'wlwmanifest_link' );
 	remove_action( 'wp_head', 'wp_generator' );
 	remove_action( 'wp_head', 'generator' );
 	remove_action( 'wp_head', 'rsd_link' );
 	remove_action( 'wp_head', 'feed_links', 2 );
-	remove_action( 'wp_head', 'feed_links_extra', 3 ); 
+	remove_action( 'wp_head', 'feed_links_extra', 3 );
 	remove_action( 'wp_head', 'index_rel_link' );
 	remove_action( 'wp_head', 'wp_shortlink_wp_head',10,0);
 	remove_action ('wp_head', 'rel_canonical');
@@ -125,21 +125,21 @@ function ui_breadcrumbs() {
   $text['page'] = 'Страница %s'; // текст 'Страница N'
   $text['cpage'] = 'Страница комментариев %s'; // текст 'Страница комментариев N'
 
-  $wrap_before = '<div class="breadcrumb"><ol class="breadcrumb">'; // открывающий тег обертки
-  $wrap_after = '</ol></div><!-- .breadcrumbs -->'; // закрывающий тег обертки
+  $wrap_before = '<div class="single-portfolio__breadcrumbs">'; // открывающий тег обертки
+  $wrap_after = '<!-- .breadcrumbs -->'; // закрывающий тег обертки
   $sep = '';
 
   $show_home_link = 1; // 1 - показывать ссылку "Главная", 0 - не показывать
   $show_on_home = 0; // 1 - показывать "хлебные крошки" на главной странице, 0 - не показывать
   $show_current = 1; // 1 - показывать название текущей страницы, 0 - не показывать
-  $before = '<li class="active"><span>'; // тег перед текущей "крошкой"
-  $after = '</span></li>'; // тег после текущей "крошки"
+  $before = '</div><div class="single-portfolio__name">'; // тег перед текущей "крошкой"
+  $after = '</div>'; // тег после текущей "крошки"
   /* === КОНЕЦ ОПЦИЙ === */
 
   global $post;
   $home_link = home_url('/');
-  $link_before = '<li>';
-  $link_after = '</li>';
+  $link_before = '<div class="single-portfolio__breadcrumbs-item">';
+  $link_after = '</div>';
   $link_attr = ' itemprop="url"';
   $link = $link_before . '<a href="%1$s">%2$s</a>' . $link_after;
   $frontpage_id = get_option('page_on_front');

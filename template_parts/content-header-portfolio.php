@@ -22,36 +22,9 @@
 </header><!--header end-->
 
 
-
-<section class="page-header__portfolio">
-  <div class="container_fluid">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="page-header__portfolio__our_works">
-          <div class="middle_text">
-            <?php if (function_exists('ui_breadcrumbs')) ui_breadcrumbs(); ?>
-            <h1 class="text-center"><?php echo get_the_title(); ?></h1>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<div class="technology__header">
-  <div class="technology__header-i">
-    <div class="technology__breadcrumbs">
-      <div class="technology__breadcrumbs-item">
-        <a class="link" href="/#catalog">Все технологии</a>
-      </div>
-      <div class="technology__breadcrumbs-item">
-        <a class="link" href="/browser/">API Браузера</a>
-      </div>
-    </div>
-    <div class="technology__name">
-      Конструктор обновления браузеров
-    </div>
-    <div class="technology__buttons"></div>
+<div class="single-portfolio__header">
+  <div class="single-portfolio__header-i">
+    <?php if (function_exists('ui_breadcrumbs')) ui_breadcrumbs(); ?>
+    <div class="single-portfolio__buttons"></div>
   </div>
 </div>
