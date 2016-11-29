@@ -128,6 +128,22 @@ header {
                     .link {
                         text-decoration: none;
                         position: relative;
+                    
+                    .icon {
+                      display: inline-block;
+                      width: 18px;
+                      height: 21px;
+                      font-size:20px;
+                      vertical-align: middle;
+                      margin-left: 0;
+                      margin-right: 2px;
+                      line-height: 18px;
+                    }
+                    .icon.icon_mail {
+                        height: 16px;
+                        line-height: 10px;
+                        margin-right: 6px;
+                    }
 
                         &:active:after,
                         &:hover:after {
@@ -155,17 +171,25 @@ header {
 
         .contact {
             display: inline-block;
-            padding: 5px 15px;
+            padding: 5px 10px 5px 5px;
             border: 2px solid #fff;
             border-radius: 3px;
             background-clip: padding-box;
 
             .icon {
                 display: inline-block;
-                width: 27px;
-                height: 21px;
+                height: 20px;
+                line-height: 18px;
+                margin-right: 0;
                 vertical-align: middle;
-                margin-right: 6px;
+                width: 16px;
+                &:hover {
+                color: #3ddc3c;
+                }
+                &:after {
+                color: #3ddc3c;
+                }
+
             }
 
             &:hover {

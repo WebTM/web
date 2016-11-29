@@ -122,8 +122,35 @@ footer.footer__ui {
   }
 }
 footer.footer__portfolio {
-  background-color: #1b364e;
   font-family: "Fira Sans";
   color: #ebeff0;
-  margin-top: 40px;
+  background-size: cover;
+  margin: 0;
+  .footer__portfolio-content {
+      position: relative;
+      margin: 0 auto;
+      text-align: center
+  }
+
+  .footer__portfolio-telephone {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 55px;
+    font-weight: 500;
+    display: block;
+  }
+
+  .footer__portfolio-email {
+      color: #f0f0f0;
+      text-decoration: none;
+      font-size: 50px;
+      font-weight: 300;
+      display: block;
+      padding-bottom: 25px;
+  }
+
+  .footer__portfolio-address {
+      color: #f0f0f0;
+  }
+
 }

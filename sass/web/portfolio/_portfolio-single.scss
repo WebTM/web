@@ -1,16 +1,76 @@
 .single-portfolio {
-  font-family: "Fira Sans";
-  color: #ebeff0;
-  h3 {
-    color: #333;
-  }
-  a {
-    font-size: 16px;
-    font-size: 1.6rem;
-    color: #3498db;
-    &hover {
-      color: #fff;
-      text-decoration: underline;
+    font-family: "Fira Sans";
+    color: #ebeff0;
+    background-color: #f0f0f0;
+
+    img {
+        border-radius: 5px;
     }
-  }
+    p {
+      padding-bottom: 50px;
+    }
+    .single-portfolio__promo {
+        border-radius: 5px;
+        margin-bottom: 50px;
+        padding: 30px 0 0px;
+        background-color: #fff;
+        text-align: center;
+        p {
+          padding-bottom: 0px;
+        }
+        .single-portfolio__promo__siteButton {
+            border-color: #a2d3fe;
+            text-align: center;
+            -webkit-transition: 0.15s;
+            transition: 0.15s;
+            margin: 10px auto 0;
+            padding: 15px 50px;
+        }
+        .single-portfolio__promo__siteButton_github {
+            border-color: #a2d3fe;
+            text-align: center;
+            -webkit-transition: 0.15s;
+            transition: 0.15s;
+            margin: 0;
+            padding: 10px 0px;
+            font-size: 15px;
+        }
+        .single-portfolio__promo__triangle_top {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 45px 45px 0 0;
+            border-color: #dadada transparent transparent;
+        }
+
+        .single-portfolio__promo__triangle_bottom {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 0 45px 45px;
+            border-color: transparent transparent #f0f0f0;
+        }
+
+        h3 {
+            color: #333;
+            font: 16px/16px "Fira Sans";
+        }
+    }
+
+    a {
+        font-size: 16px;
+        font-size: 1.6rem;
+        color: #3498db;
+
+        &hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+    }
 }

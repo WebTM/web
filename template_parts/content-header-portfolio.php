@@ -7,15 +7,24 @@
       <div class="nav-collapse">
         <ul>
           <li>
-            <a class="link" href="/">Home</a>
+            <a class="link" href="mailto: mail@ui0.ru">
+            <i class="icon icon_mail"></i>mail@ui0.ru</a>
           </li>
           <li>
-            <a class="link" href="case_studies.html">Case studies</a>
+
+            <a class="link" href="tel: +7951683-2866">
+            <i class="icon icon_mobile"></i>+7 (951) 683-2866</a>
+
+          </li>
+                    <li>
+            <a class="link skype" href="skype:full.god?chat">
+            <i class="icon social_skype"></i></a>
           </li>
         </ul>
       </div>
       <a href="#" class="contact">
-          <i class="icon"></i><span>Contact us</span>
+          <i class="icon icon_lightbulb_alt"></i>
+          <span>Сделать заказ</span>
       </a>
     </nav>
   </div>

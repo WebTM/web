@@ -1,14 +1,14 @@
 <section class="use">
 	<div class="container">
 	<div class="row">
-	
-	<div class="col-sm-7 col-md-7">
-		
-		<div class="work-caption-block"> 
 
-   		<h2>Результат</h2> 
+	<div class="col-sm-7 col-md-7">
+
+		<div class="work-caption-block">
+
+   		<h2>Результат</h2>
 	    <p>Все разрабатываемые сайты, полностью готовы к работе, и не требуют от пользователя никаких дополнительных доработок и настроек.</p>
-		
+
 		</div>
 	</div>
 	<div class="col-sm-5 col-md-5">
@@ -53,18 +53,19 @@
 	<div class="container">
 		<div class="row">
 
-			<div class="col-sm-12">  
-				<span class="h-label">Теперь:</span> 
+			<div class="col-sm-12">
+				<span class="h-label">Теперь:</span>
 				<h2>Связаться!</h2>
 				<p class="info">Если вы хотите поговорить о проекте, который вы хотите реализовать или нужен совет в ваших идеях, просто напишите мне сообщение. Я в настоящее время доступен для небольших проектов.</p>
 
-				<a class="button button--big" href="mailto:me@janlosert.com">Написать письмо</a>
+				<a class="button button--big" href="mailto:mail@ui0.ru">Написать письмо</a>
 				<div class="social">
                     <ul>
-                        <li class="item-left"><a href="https://dribbble.com/janlosert" onclick="track('ClickOut','footer-dribbble')" target="_blank">Dribbble</a></li>
-                        <li class="item-left"><a href="https://www.behance.net/janlosert" onclick="track('ClickOut','footer-behance')" target="_blank">Behance</a></li>
-                        <li class="item-left"><a href="https://twitter.com/JanLosert" onclick="track('ClickOut','footer-twitter')" target="_blank">Twitter</a></li>
-                        <li class="item-left"><a href="https://www.instagram.com/janlosert/" onclick="track('ClickOut','footer-instagram')" target="_blank">Instagram</a></li>
+												<li class="item-left"><a class="footer__portfolio-telephone" href="mailto: mail@ui0.ru">mail@ui0.ru</a></li>
+												<li class="item-left"><a class="footer__portfolio-telephone" href="tel: +7951683-2866">+7 (951) 683-2866</a></li>
+												<li class="item-left"><a class="footer__portfolio-telephone" href="tel: +7951683-2866">Skype</a></li>
+                        <li class="item-left"><a href="#" target="_blank">ICQ</a></li>
+												<li class="item-left"><a href="#" target="_blank">VK</a></li>
                     </ul>
                 </div>
 
