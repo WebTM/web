@@ -56,13 +56,17 @@ section {
 		padding-bottom: 0;
 	}
 	&.use {
-		padding: 50px 0;
+		padding: 70px 0;
 		background: #e2ebf2;
 		border-top: 1px solid #c7cdd6;
+		background-image: url("../img/header__bg-single3.png");
+		background-color: #fff;
+		background-position: 50% 50%;
+		background-size: inherit;
 		.work-caption-block {
 			position: relative;
-			padding: 2em 0em 4em;
-			margin-top: 2em;
+			padding: 0 0 4em;
+
 			transition: all .5s;
 			-webkit-transition: all .5s;
 		}
@@ -92,8 +96,7 @@ section {
 			color: #020000;
 		}
 		.feature {
-			float: left;
-			padding: 19px;
+			padding: 30px;
 
 			.feature-icon-large {
 				&:first-child {
@@ -103,9 +106,7 @@ section {
 		}
 	}
 	.feature> img {
-		margin: 0 auto;
-		max-height: 5vh;
-		max-width: 100%;
+   		max-height: 7vh;
 		transition: all .4s;
 	}
 }

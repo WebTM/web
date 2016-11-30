@@ -89,7 +89,7 @@ add_action( 'widgets_init', 'ui_widgets_init' );
  * Enqueue scripts and styles.
  */
 function ui_scripts() {
-	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/style/css/bootstrap.min.css', 1);
+	// wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/style/css/bootstrap.min.css', 1);
 	wp_enqueue_style( 'web-elegant-icons', get_template_directory_uri() . '/style/css/elegant-icons.min.css' );
 	wp_enqueue_style( 'ui-style', get_stylesheet_uri() );
 	wp_enqueue_script( 'ui-skip-link-focus-fix', get_template_directory_uri() . '/style/js/skip-link-focus-fix.js', array(), '20130115', true );
