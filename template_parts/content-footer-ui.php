@@ -39,8 +39,6 @@
 				<span class="h-label">Теперь:</span>
 				<h2>Связаться!</h2>
 				<p class="info">Если вы хотите поговорить о проекте, который вы хотите реализовать или нужен совет в ваших идеях, просто напишите мне сообщение. Я в настоящее время доступен для небольших проектов.</p>
-
-				<a class="button button--big" href="mailto:mail@ui0.ru">Написать письмо</a>
 				<div class="social">
 					<ul>
 						<li class="item-left"><a class="footer__portfolio-telephone" href="mailto: mail@ui0.ru">mail@ui0.ru</a></li>
