@@ -1,7 +1,7 @@
 .single-portfolio {
     font-family: "Fira Sans";
     color: #ebeff0;
-    background-color: #f0f0f0;
+    background-color: rgba(240, 240, 240, 0.6);
 
     img {
         border-radius: 5px;
@@ -55,7 +55,7 @@
             height: 0;
             border-style: solid;
             border-width: 0 0 45px 45px;
-            border-color: transparent transparent #f0f0f0;
+            border-color: transparent transparent #f6f6f6;
         }
 
         h3 {

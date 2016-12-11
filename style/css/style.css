@@ -6362,7 +6362,7 @@ section.full {
   padding-bottom: 0;
 }
 section.use {
-  padding: 70px 0;
+  padding: 50px 0 70px;
   background: #e2ebf2;
   border-top: 1px solid #c7cdd6;
   background-image: url("../img/header__bg-single3.png");
@@ -6522,6 +6522,21 @@ header .btn:last-child {
   margin: 0;
   padding: 5% 0;
   border-bottom: 1px solid #dbdfe0;
+  background-image: url(../img/bg-header6.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  position: relative;
+}
+.page-header:after {
+  content : "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(165, 165, 165, 0.9);
+  width: 100%;
+  height: 100%;
+  opacity : 0.5;
 }
 .page-header h1 {
   font-family: "Fira Sans";
@@ -7269,7 +7284,7 @@ ul .menu-offscreen-menu {
 .single-portfolio {
   font-family: "Fira Sans";
   color: #ebeff0;
-  background-color: #f0f0f0;
+  background-color: rgba(240, 240, 240, 0.6);
 }
 .single-portfolio img {
   border-radius: 5px;
@@ -7323,7 +7338,7 @@ ul .menu-offscreen-menu {
   height: 0;
   border-style: solid;
   border-width: 0 0 45px 45px;
-  border-color: transparent transparent #f0f0f0;
+  border-color: transparent transparent #f6f6f6;
 }
 .single-portfolio .single-portfolio__promo h3 {
   color: #333;

@@ -28,6 +28,25 @@ header {
     margin: 0;
     padding: 5% 0;
     border-bottom: 1px solid #dbdfe0;
+    background-image: url(../img/bg-header6.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    position: relative;
+    
+    &:after {
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(165, 165, 165, 0.9);
+    width: 100%;
+    height: 100%;
+    opacity : 0.5;
+    }
+
+
+
 
     h1 {
         font-family: "Fira Sans";
