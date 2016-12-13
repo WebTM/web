@@ -1,12 +1,12 @@
-<?php 
+<?php
 	get_header();
-	
+
 	$term = get_queried_object();
 	$title = $term->name;
 ?>
 
 	<section class="projects-gallery dark-wrapper">
-		
+
 		<?php if( $title ) : ?>
 			<div class="container">
 				<div class="row">
@@ -17,11 +17,11 @@
 			</div>
 			<div class="divide60"></div>
 		<?php endif; ?>
-		
+
 		<div class="projects-wrapper clearfix">
 			<?php get_template_part('content-', get_option('portfolio_layout', 'portfolio-fullwidth')); ?>
 		</div>
-		
+
 	</section>
 
 <?php get_footer();

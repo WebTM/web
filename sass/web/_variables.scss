@@ -19,7 +19,7 @@ $color-secondary-2:   #3498db;
 
 .font-body {  font-family: $Fira-Sans-Hair-Italic;}
 .font-heading {  font-family: $webpro-reg;}
-.alt-font {  
+.alt-font {
   font-family: $webpro;
   font-weight: bold;
   font-size: 11px;
@@ -31,15 +31,25 @@ $color-secondary-2:   #3498db;
 .divi50 {padding:50px 0}
 
 @mixin standard-radius{ border-radius: $standard-radius; }
-
+@mixin background-opacity {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(165, 165, 165, 0.9);
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
 @mixin divider {
-            content: "";
-            display: block;
-            width: 25%;
-            height: 3px;
-            background: #179bdf;
-            margin-bottom: 10px;
-        }
+    content: "";
+    display: block;
+    width: 25%;
+    height: 3px;
+    background: #179bdf;
+    margin-bottom: 10px;
+}
 @mixin h2-index {
         font-family: "Fira Sans";
         margin-top: 12px;
@@ -84,8 +94,8 @@ $color-secondary-2:   #3498db;
 @mixin ProximaNova-Extrabld {  font-family: 'ProximaNova-Extrabld', arial, sans-serif;}
 @mixin Gothic725BlkBT {  font-family: 'Gothic725BlkBT', arial, sans-serif;}
 
-@mixin fira-sans {
-    font-family: 'Fira Sans';
+@font-face {
+    font-family: 'FiraSans-Hair';
     src: url('../../style/fonts/eot/FiraSans-Hair.eot');
     src: local('Fira Sans Hair'),
          url('../../style/fonts/eot/FiraSans-Hair.eot') format('embedded-opentype'),
@@ -95,10 +105,10 @@ $color-secondary-2:   #3498db;
     font-style: normal;
 }
 
-@mixin Fira-Sans-Hair-Italic {
-    font-family: 'Fira Sans';
+@font-face {
+    font-family: 'FiraSans-HairItalic';
     src: url('../../style/fonts/eot/FiraSans-HairItalic.eot');
-    src: local('Fira Sans Hair Italic'),
+    src: local('FiraSans Hair Italic'),
          url('../../style/fonts/eot/FiraSans-HairItalic.eot') format('embedded-opentype'),
          url('../../style/fonts/woff/FiraSans-HairItalic.woff') format('woff'),
          url('../../style/fonts/ttf/FiraSans-HairItalic.ttf') format('truetype');
@@ -106,8 +116,8 @@ $color-secondary-2:   #3498db;
     font-style: italic;
 }
 
-@font-face{
-    font-family: 'Fira Sans';
+@font-face {
+    font-family: 'FiraSans-UltraLight';
     src: url('../../style/fonts/eot/FiraSans-UltraLight.eot');
     src: local('Fira Sans UltraLight'),
          url('../../style/fonts/eot/FiraSans-UltraLight.eot') format('embedded-opentype'),
@@ -118,7 +128,7 @@ $color-secondary-2:   #3498db;
 }
 
 @font-face{
-    font-family: 'Fira Sans';
+    font-family: 'FiraSans-UltraLightItalic';
     src: url('../../style/fonts/eot/FiraSans-UltraLightItalic.eot');
     src: local('Fira Sans UltraLight Italic'),
          url('../../style/fonts/eot/FiraSans-UltraLightItalic.eot') format('embedded-opentype'),
@@ -129,7 +139,7 @@ $color-secondary-2:   #3498db;
 }
 
 @font-face{
-    font-family: 'Fira Sans';
+    font-family: 'Fira Sans Light';
     src: url('../../style/fonts/eot/FiraSans-Light.eot');
     src: local('Fira Sans Light'),
          url('../../style/fonts/eot/FiraSans-Light.eot') format('embedded-opentype'),
@@ -140,7 +150,7 @@ $color-secondary-2:   #3498db;
 }
 
 @font-face{
-    font-family: 'Fira Sans';
+    font-family: 'FiraSansLightItalic';
     src: url('../../style/fonts/eot/FiraSans-LightItalic.eot');
     src: local('Fira Sans Light Italic'),
          url('../../style/fonts/eot/FiraSans-LightItalic.eot') format('embedded-opentype'),
@@ -151,7 +161,7 @@ $color-secondary-2:   #3498db;
 }
 
 @font-face{
-    font-family: 'Fira Sans';
+    font-family: 'FiraSans-Regular';
     src: url('../../style/fonts/eot/FiraSans-Regular.eot');
     src: local('Fira Sans Regular'),
          url('../../style/fonts/eot/FiraSans-Regular.eot') format('embedded-opentype'),
@@ -162,7 +172,7 @@ $color-secondary-2:   #3498db;
 }
 
 @font-face{
-    font-family: 'Fira Sans';
+    font-family: 'FiraSans-Italic';
     src: url('../../style/fonts/eot/FiraSans-Italic.eot');
     src: local('Fira Sans Regular Italic'),
          url('../../style/fonts/eot/FiraSans-Italic.eot') format('embedded-opentype'),
@@ -173,7 +183,7 @@ $color-secondary-2:   #3498db;
 }
 
 @font-face{
-    font-family: 'Fira Sans';
+    font-family: 'FiraSans-Medium';
     src: url('../../style/fonts/eot/FiraSans-Medium.eot');
     src: local('Fira Sans Medium'),
          url('../../style/fonts/eot/FiraSans-Medium.eot') format('embedded-opentype'),
@@ -184,7 +194,7 @@ $color-secondary-2:   #3498db;
 }
 
 @font-face{
-    font-family: 'Fira Sans';
+    font-family: 'FiraSans-MediumItalic';
     src: url('../../style/fonts/eot/FiraSans-MediumItalic.eot');
     src: local('Fira Sans Medium Italic'),
          url('../../style/fonts/eot/FiraSans-MediumItalic.eot') format('embedded-opentype'),
@@ -195,7 +205,7 @@ $color-secondary-2:   #3498db;
 }
 
 @font-face{
-    font-family: 'Fira Sans';
+    font-family: 'FiraSans-SemiBold';
     src: url('../../style/fonts/eot/FiraSans-SemiBold.eot');
     src: local('Fira Sans SemiBold'),
          url('../../style/fonts/eot/FiraSans-SemiBold.eot') format('embedded-opentype'),
@@ -206,7 +216,7 @@ $color-secondary-2:   #3498db;
 }
 
 @font-face{
-    font-family: 'Fira Sans';
+    font-family: 'FiraSans-SemiBoldItalic';
     src: url('../../style/fonts/eot/FiraSans-SemiBoldItalic.eot');
     src: local('Fira Sans SemiBold Italic'),
          url('../../style/fonts/eot/FiraSans-SemiBoldItalic.eot') format('embedded-opentype'),
@@ -217,7 +227,7 @@ $color-secondary-2:   #3498db;
 }
 
 @font-face{
-    font-family: 'Fira Sans';
+    font-family: 'FiraSans-Bold';
     src: url('../../style/fonts/eot/FiraSans-Bold.eot');
     src: local('Fira Sans Bold'),
          url('../../style/fonts/eot/FiraSans-Bold.eot') format('embedded-opentype'),
@@ -228,7 +238,7 @@ $color-secondary-2:   #3498db;
 }
 
 @font-face{
-    font-family: 'Fira Sans';
+    font-family: 'FiraSans-BoldItalic';
     src: url('../../style/fonts/eot/FiraSans-BoldItalic.eot');
     src: local('Fira Sans Bold Italic'),
          url('../../style/fonts/eot/FiraSans-BoldItalic.eot') format('embedded-opentype'),
@@ -239,7 +249,7 @@ $color-secondary-2:   #3498db;
 }
 
 @font-face{
-    font-family: 'Fira Sans';
+    font-family: 'FiraSans-ExtraBold';
     src: url('../../style/fonts/eot/FiraSans-ExtraBold.eot');
     src: local('Fira Sans ExtraBold'),
          url('../../style/fonts/eot/FiraSans-ExtraBold.eot') format('embedded-opentype'),
@@ -250,7 +260,7 @@ $color-secondary-2:   #3498db;
 }
 
 @font-face{
-    font-family: 'Fira Sans';
+    font-family: 'FiraSans-ExtraBoldItalic';
     src: url('../../style/fonts/eot/FiraSans-ExtraBoldItalic.eot');
     src: local('Fira Sans ExtraBold Italic'),
          url('../../style/fonts/eot/FiraSans-ExtraBoldItalic.eot') format('embedded-opentype'),
@@ -261,7 +271,7 @@ $color-secondary-2:   #3498db;
 }
 
 @font-face{
-    font-family: 'Fira Sans';
+    font-family: 'FiraSans-Heavy';
     src: url('../../style/fonts/eot/FiraSans-Heavy.eot');
     src: local('Fira Sans Heavy'),
          url('../../style/fonts/eot/FiraSans-Heavy.eot') format('embedded-opentype'),
@@ -272,7 +282,7 @@ $color-secondary-2:   #3498db;
 }
 
 @font-face{
-    font-family: 'Fira Sans';
+    font-family: 'FiraSans-HeavyItalic';
     src: url('../../style/fonts/eot/FiraSans-HeavyItalic.eot');
     src: local('Fira Sans Heavy Italic'),
          url('../../style/fonts/eot/FiraSans-HeavyItalic.eot') format('embedded-opentype'),
@@ -284,7 +294,7 @@ $color-secondary-2:   #3498db;
 
 
 @font-face{
-    font-family: 'Fira Mono';
+    font-family: 'FiraMono';
     src: url('../../style/fonts/eot/FiraMono-Regular.eot');
     src: local('Fira Mono'),
          url('../../style/fonts/eot/FiraMono-Regular.eot') format('embedded-opentype'),
@@ -295,7 +305,7 @@ $color-secondary-2:   #3498db;
 }
 
 @font-face{
-    font-family: 'Fira Mono';
+    font-family: 'FiraMono-Bold';
     src: url('../../style/fonts/eot/FiraMono-Bold.eot');
     src: local('Fira Mono Bold'),
          url('../../style/fonts/eot/FiraMono-Bold.eot') format('embedded-opentype'),
@@ -307,9 +317,9 @@ $color-secondary-2:   #3498db;
 
 
 
+//TODO fix fonts
 // MetaPro-Black
 // http://lp-derksteiner.ru/
-
 
 @font-face {
    font-family: "MetaPro-Black";
