@@ -162,7 +162,7 @@ section {
 	h1 {
 		font-size: 20px;
 		color: #0c0c0c;
-		@include fira-sans;
+		font-family: "FiraSans-Hair";
 		font-weight: 400;
 		text-align: center;
 	}
@@ -173,7 +173,7 @@ section {
 .feature-icon-large {
 	i {
 		display: block;
-		color: $color-primary;
+		color: #00a7e7;
 		font-size: 48px;
 		padding: 0 0 30px;
 		text-align: center;

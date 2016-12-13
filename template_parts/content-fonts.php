@@ -1,4 +1,11 @@
-
+<div class="col-lg-12"><h1>Colors</h1></div>
+<div class="col-lg-2" style="background: #f7fbfa;"><h1>#f7fbfa</h1></div>
+<div class="col-lg-2" style="background: #00a7e7;"><h1>#00a7e7</h1></div>
+<div class="col-lg-2" style="background: #f0f0f0;"><h1>f0f0f0</h1></div>
+<div class="col-lg-2" style="background: #49c0f7;"><h1>#49c0f7</h1></div>
+<div class="col-lg-2" style="background: #3ca7d3;"><h1>#3ca7d3</h1></div>
+<div class="col-lg-2" style="background: #daedf7;"><h1>#daedf7</h1></div>
+#f7fbfa
 <div class="col-lg-12"><h1>Fonts</h1></div>
 <div class="col-lg-6">
 	<h2 style="font:80px webpro">80px webpro</h2>
