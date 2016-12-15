@@ -4,7 +4,7 @@ header {
     background-size: cover;
 
     .container {
-        @include webpro-reg;
+        font: webpro-reg;
         position: relative;
         z-index: 3;
     }
