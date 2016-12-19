@@ -25,14 +25,15 @@ header {
 
 .page-header {
     margin: 0;
-    padding: 5% 0;
-    border-bottom: 1px solid #dbdfe0;
-    background-image: url(../img/header_bg.png);
+    padding: 3% 0;
+    border-bottom: 1px solid #3d4f57;
+    background-image: url(../img/header_bg14.png);
   //  background: -webkit-linear-gradient(left, #323a46 0%, #3d4a5f 28.05%, #6d515c 100%);
   //  background: #2eb4e7;
-    background-size: cover;
-    background-position: 50% 50%;
+    background-size: inherit;
     position: relative;
+    background-position: 50% 50%;
+    background: -webkit-linear-gradient(left, #252b35 0%, #252b35 28.05%, #3b3131 100%);
 
   //  &:after {
   //    @include background-opacity
@@ -58,24 +59,22 @@ header {
         padding-top: 25px;
         font-family: "Fira Sans";
         display: block;
-        margin-bottom: 35px;
+        margin-bottom: 40px;
         font-size: 20px;
         font-size: 2rem;
         line-height: 1.4em;
-        font-weight: 400;
-        letter-spacing: 0.6;
+        font-weight: 100;
+        letter-spacing: 0.1pt;
         // color: #4f5258;
-        color: #fff;
+        color: #ffffff;
+        width: 930px;
     }
 
     p.lead {
         font: 600 48px "Fira Sans";
-        text-transform: uppercase;
-        text-transform: none;
         margin-top: 30px;
         display: block;
-        // color: #302d2d;
-        color: #fff;
+        color: #ece7ff;
     }
 
     .background-image-holder {
@@ -306,3 +305,4 @@ header {
 .portfolio {
     background-image: -webkit-linear-gradient(left, #e74d41 0%, #e64643 28.05%, #f17e27 100%);
 }
+

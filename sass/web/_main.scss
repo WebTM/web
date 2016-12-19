@@ -59,7 +59,7 @@ section {
 		padding: 50px 0 70px;
 		background: #e2ebf2;
 		border-top: 1px solid #c7cdd6;
-		background-image: url("../img/header__bg-single3.png");
+	//	background-image: url("../img/header__bg-single3.png");
 		background-color: #fff;
 		background-position: 50% 50%;
 		background-size: inherit;
@@ -160,11 +160,11 @@ section {
 	padding: 90px 0;
 
 	h1 {
-		font-size: 20px;
-		color: #0c0c0c;
-		font-family: "FiraSans-Hair";
-		font-weight: 400;
+		font-size: 22px;
+		color: #000000;
+		font-family: "Fira Sans";
 		text-align: center;
+		font-weight: 500;
 	}
 	i {
 		color: $color-primary;
@@ -175,8 +175,8 @@ section {
 		display: block;
 		color: #00a7e7;
 		font-size: 48px;
-		padding: 0 0 30px;
 		text-align: center;
+		padding-bottom: 30px;
 	}
 }
 //
@@ -208,3 +208,4 @@ section {
 .bg-primary {
 	background-color: #dfe3ec !important;
 }
+
