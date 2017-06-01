@@ -47,7 +47,7 @@ design
 │   ├── http://melinda.themes.tvda.eu/homes/home-maintenance/
 │   ├── http://begun.ru/
 │   ├── https://www.forexchief.com/ru/
-│   ├──
+│   ├── http://prnews.io/
 │   └──
 ├── slider/porftolio
 │   ├── http://elforma.com/
