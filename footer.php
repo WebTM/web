@@ -3,6 +3,7 @@
  * The template for displaying the footer.
  *
  * @package webtm
+ * https://www.uplab.ru/privacy.php - footer contacts
  */
 ?>
 
