@@ -72,7 +72,7 @@ $color-secondary-2:   #3498db;
     }
 
 
-    @mixin font-face($style-name, $file, $family, $weight:"", $style:"") {
+@mixin font-face($style-name, $file, $family, $weight:"", $style:"") {
             $filepath: "../fonts/" + $family + "/" + $file;
             @font-face {
                 font-family: "#{$style-name}";
