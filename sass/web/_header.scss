@@ -23,10 +23,13 @@ header {
     }
 }
 .page-header {
-    margin: 0;
-    padding-top: 10px;
+    margin: 0 auto;
+    padding: 10px 100px;
     background-color: #ebf1f5;
     border-bottom: 1px solid #d5dadf;
+    padding-bottom: 0;
+    width: 90%;
+    border-radius: 0 0 150px 150px;
   //  background-image: url(../img/header__bg-single.png);
   //  background: -webkit-linear-gradient(left, #323a46 0%, #3d4a5f 28.05%, #6d515c 100%);
   //  background: #2eb4e7;
@@ -40,28 +43,34 @@ header {
   //background: -o-linear-gradient(-45deg,#3a7db1 0,#41a7ce 50%,#47cbe7 100%);
   //background: -ms-linear-gradient(-45deg,#3a7db1 0,#41a7ce 50%,#47cbe7 100%);
   //background: linear-gradient(135deg,#3a7db1 0,#41a7ce 50%,#47cbe7 100%);
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#29a575),to(#2797e4));
+    background-image: -webkit-linear-gradient(top,#29a575,#2797e4);
+    background-image: linear-gradient(to bottom,#29a575,#2797e4);
+    -webkit-box-shadow: 0 10px 25px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.15);
+    box-shadow: 0 10px 25px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.15);
 
   //  &:after {
   //    @include background-opacity
   //  }
 
     h1 {
-      font: 800 64px "Fira Sans";
-      letter-spacing: 0.1pt;
-      color: #000;
-      margin:10px 0;
-      line-height: 1.1;
+        font: 800 64px "Fira Sans";
+        letter-spacing: 0.1pt;
+        color: #fff;
+        margin: 80px 0 0;
+        line-height: 1.1;
       &:after {
           @include divider;
-          margin-bottom: 25px;
-          height: 4px;
-          width: 100px;
-          background-color: #fdbb07;
+            margin-top: 10px;
+            margin-bottom: 0px;
+            height: 4px;
+            width: 100px;
+            background-color: #fdbb07;
         }
     }
 
     .logo {
-        font-family: "Fira Sans";
+        font-family: ProximaNova-Extrabld, sans-serif;
         text-transform: uppercase;
         font-weight: 700;
         color: #fdbb07;
@@ -85,12 +94,12 @@ header {
         padding-top: 25px;
         font-family: "Fira Sans";
         display: block;
-        margin-bottom: 40px;
+        margin-bottom: 80px;
         font-size: 2rem;
         line-height: 1.4em;
         font-weight: 100;
         letter-spacing: 0.1pt;
-        color: #000000;
+        color: #fff;
     }
     br {
         display: none;

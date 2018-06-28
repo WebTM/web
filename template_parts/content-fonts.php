@@ -29,10 +29,10 @@
 	<hr>
 </div>
 <div class="col-lg-6">
-	<h2 style="font:80px MonoCondensed-Bold">80px MonoCondensed-Bold</h2>
-	<h2 style="font:bold 60px MonoCondensed-Bold">60px MonoCondensed-Bold</h2>
-	<h2 style="font:40px MonoCondensed-Bold">40px MonoCondensed-Bold</h2>
-	<h2 style="font:24px MonoCondensed-Bold">24px MonoCondensed-Bold</h2>
+	<h2 style="font:80px Anv">80px Anv</h2>
+	<h2 style="font:bold 60px Anv">60px Anv</h2>
+	<h2 style="font:40px Anv">40px Anv</h2>
+	<h2 style="font:24px Anv">24px Anv</h2>
 	<hr>
 </div>
 <div class="col-lg-6">
@@ -92,24 +92,24 @@
 	<hr>
 </div>
 <div class="col-lg-6">
-	<h2 style="font:80px Fira Sans UltraLight Italic">80px Fira Sans UltraLight Italic</h2>
+	<h2 style="font:80px FiraSans-UltraLightItalic">80px Fira Sans UltraLight Italic</h2>
 	<h2 style="font:bold 60px FiraSans-UltraLightItalic">60px FiraSans-UltraLightItalic</h2>
 	<h2 style="font:40px FiraSans-UltraLightItalic">40px FiraSans-UltraLightItalic</h2>
 	<h2 style="font:24px FiraSans-UltraLightItalic">24px FiraSans-UltraLightItalic</h2>
 	<hr>
 </div>
 <div class="col-lg-6">
-	<h2 style="font:80px Fira Sans Light">80px Fira Sans Light</h2>
-	<h2 style="font:bold 60px Fira Sans Light">60px Fira Sans Light</h2>
-	<h2 style="font:40px Fira Sans Light">40px Fira Sans Light</h2>
-	<h2 style="font:24px Fira Sans Light">24px Fira Sans Light</h2>
+	<h2 style="font:80px FiraSans-Light">80px Fira Sans Light</h2>
+	<h2 style="font:bold 60px FiraSans-Light">60px Fira Sans Light</h2>
+	<h2 style="font:40px FiraSans-Light">40px Fira Sans Light</h2>
+	<h2 style="font:24px FiraSans-Light">24px Fira Sans Light</h2>
 	<hr>
 </div>
 <div class="col-lg-6">
-	<h2 style="font:80px FiraSansLightItalic">80px FiraSansLightItalic</h2>
-	<h2 style="font:bold 60px FiraSansLightItalic">60px FiraSansLightItalic</h2>
-	<h2 style="font:40px FiraSansLightItalic">40px FiraSansLightItalic</h2>
-	<h2 style="font:24px FiraSansLightItalic">24px FiraSansLightItalic</h2>
+	<h2 style="font:80px FiraSans-LightItalic">80px FiraSansLightItalic</h2>
+	<h2 style="font:bold 60px FiraSans-LightItalic">60px FiraSansLightItalic</h2>
+	<h2 style="font:40px FiraSans-LightItalic">40px FiraSansLightItalic</h2>
+	<h2 style="font:24px FiraSans-LightItalic">24px FiraSansLightItalic</h2>
 	<hr>
 </div>
 <div class="col-lg-6">
@@ -187,6 +187,13 @@
 	<h2 style="font:bold 60px FiraSans-Heavy">60px FiraSans-Heavy</h2>
 	<h2 style="font:40px FiraSans-Heavy">40px FiraSans-Heavy</h2>
 	<h2 style="font:24px FiraSans-Heavy">24px FiraSans-Heavy</h2>
+	<hr>
+</div>
+<div class="col-lg-6">
+	<h2 style="font:80px et-line">80px et-line</h2>
+	<h2 style="font:bold 60px et-line">60px et-line</h2>
+	<h2 style="font:40px et-line">40px et-line</h2>
+	<h2 style="font:24px et-line">24px et-line</h2>
 	<hr>
 </div>
 <div class="col-lg-6">
