@@ -1,0 +1,84 @@
+////
+/// @group _blocks/
+////
+
+/// top-btn
+
+.top-btn {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	margin-left: 0.75rem;
+	transform: rotate(-90deg);
+	white-space: nowrap;
+	transform-origin: bottom left;
+	user-select: none;
+	transition: 0.22s ease;
+	opacity: 0;
+	visibility: hidden;
+	padding: 0.25rem 0;
+
+	&.is-visible {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	&:hover {
+		color: map-get($colors, link-hover);
+
+		.top-btn__arrow {
+			width: rem(100);
+		}
+
+		.top-btn__text {
+			color: map-get($colors, link-hover);
+		}
+	}
+
+	&:active {
+		color: map-get($colors, link-active);
+
+		.top-btn__text {
+			color: map-get($colors, link-active);
+		}
+	}
+
+	&__text {
+		font-weight: 700;
+		color: rgba(map-get($colors, black), 0.7);
+		text-transform: uppercase;
+		font-size: 11px;
+		padding-right: rem(10);
+		letter-spacing: 2px;
+		font-family: map-get($font-family, default);
+	}
+
+	&__arrow {
+		display: block;
+		vertical-align: top;
+		position: relative;
+		transition: width 0.3s ease;
+		height: 2px;
+		margin: 5px 0;
+		width: rem(40);
+		background: currentColor;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 100%;
+			margin-left: -6px;
+			border: 2px solid;
+			border-bottom-width: 0;
+			border-left-width: 0;
+			width: 8px;
+			height: 8px;
+			transform: rotate(45deg);
+			transform-origin: top right;
+		}
+	}
+}

@@ -1,0 +1,30 @@
+////
+/// @group _mixin/util-colors.scss
+////
+
+/// набор цветов
+@mixin util-colors( $map: $palette ) {
+	@each $color-name, $color in $map {
+		._color-#{$color-name} {
+			color: $color
+		}
+	}
+}
+
+/// набор фоновых цветов
+@mixin util-bgcolors( $map: $palette ) {
+	@each $color-name, $color in $map {
+		._bgcolor-#{$color-name} {
+			background-color: $color
+		}
+	}
+}
+
+/// набор заливок
+@mixin util-fills( $map: $palette ) {
+	@each $color-name, $color in $map {
+		._fill-#{$color-name} {
+			fill: $color
+		}
+	}
+}

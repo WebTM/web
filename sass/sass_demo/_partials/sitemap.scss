@@ -1,0 +1,132 @@
+////
+/// @group _partials/sitemap.scss
+////
+
+
+// vars
+// ================================
+
+/// @type Color
+$sitemap-hoverbg: rgba( #000, .035 ) !default;
+
+// scss
+// ================================
+
+// общие правила
+.sitemap {
+	max-width: $md;
+	padding: 1rem;
+	background-color: #f6f7f9;
+	position: relative;
+	font-size: 1rem;
+	margin-bottom: 1.5rem;
+
+	@include media( $md ) {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+
+	ul {
+		list-style: none;
+		padding: 0 0 0 2em;
+		margin: 0;
+	}
+
+	li {
+		list-style: none;
+		line-height: 1.4em;
+	}
+
+	a {
+		padding: .2em 1em .2em .5em;
+		display: block;
+		color: #00e;
+
+		&:visited {
+			color: #0e00ad;
+		}
+
+		&:hover {
+			color: #f34;
+			background-color: $sitemap-hoverbg;
+		}
+
+		&:active {
+			color: #000;
+			background-color: $sitemap-hoverbg;
+		}
+	}
+}
+
+// первый уровень вложенности
+.sitemap > ul {
+	padding: 0;
+	margin: 1em 0;
+	position: relative;
+	overflow: hidden;
+}
+
+// второй уровень
+// без паддингов
+.sitemap > ul > li > ul {
+	padding-left: 0;
+}
+
+// все остальные уровни
+.sitemap > ul ul {
+	list-style: none;
+	padding: 0 0 0 2em;
+	margin: 0;
+}
+
+// внутрение элементы
+// начиная со второго уровня вложености
+.sitemap > ul ul li {
+
+	position: relative;
+	margin: .1em 0;
+
+	&:hover {
+		background-color: $sitemap-hoverbg;
+	}
+
+	a {
+		position: relative;
+		padding-left: 2.5em;
+
+		&:before,
+		&:after {
+			content: '';
+			position: absolute;
+			top: .2em;
+			width: 1600px;
+			height: 1.4em;
+			text-align: right;
+			opacity: .3;
+			background: transparent repeat-x center right;
+		}
+
+		&:before {
+			left: 0;
+			width: 2em;
+			background-image: url(pic/sitemap-start.svg);
+		}
+
+		&:after {
+			right: 100%;
+			background-image: url(pic/sitemap-middle.svg);
+		}
+
+	}
+}
+
+// визульаное закрытие уровня
+.sitemap > ul ul li {
+	&:last-child {
+		> a:only-child {
+			&:before {
+				background-image: url(pic/sitemap-end.svg);
+			}
+		}
+	}
+}

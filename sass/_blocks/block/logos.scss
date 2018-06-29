@@ -1,0 +1,41 @@
+////
+/// @group _blocks/
+////
+
+/// trinity
+
+.logos {
+	text-decoration: none;
+
+	&__image {
+		display: flex;
+		align-items: center;
+		height: rem(55);
+
+		img {
+			max-width: 90%;
+			max-height: 90%;
+		}
+	}
+
+	&--filter &__image {
+		img {
+			filter: grayscale(1);
+			transition: 0.2s ease-in;
+			opacity: 0.7;
+		}
+	}
+
+	&--filter:hover &__image {
+		img {
+			opacity: 1;
+			filter: grayscale(0);
+		}
+	}
+
+	&__text {
+		font-size: rem(14);
+		line-height: em(17, 14);
+		color: rgba(map-get($colors, black), 0.7);
+	}
+}

@@ -1,0 +1,95 @@
+////
+/// @group _partials/base.scss
+////
+
+
+// scss
+// ================================
+
+html {
+	position: relative;
+	height: 100%;
+	font-size: 10px;
+	font-family: $font-family;
+	font-weight: normal;
+	@include media( $md ) {
+		font-size: 14px;
+	}
+	@include media( $lg ) {
+		font-size: 16px;
+	}
+}
+
+*, :after, :before {
+	box-sizing: inherit;
+}
+
+a {
+	color: #43f;
+}
+
+body {
+	position: relative;
+	height: 100%;
+	box-sizing: border-box;
+	min-width: 320px;
+}
+
+pre {
+	padding: 1.2em;
+	tab-size: 4;
+	border-width: 0;
+	white-space: pre;
+	white-space: pre-wrap;
+	background: #eee;
+	word-wrap: break-word;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+small {
+	display: inline-block;
+    vertical-align: text-bottom;
+}
+
+svg {
+	pointer-events: none;
+}
+
+hr {
+	border-width: 0;
+	border-top: 1px solid #aaa;
+}
+
+::selection {
+	text-shadow:none;
+	color: #fff;
+	background: #2597ff;
+}
+
+::-moz-selection {
+	text-shadow:none;
+	color: #fff;
+	background: #2597ff;
+}
+
+::-ms-selection{
+	text-shadow:none;
+	color: #fff;
+	background: #2597ff;
+}
+
+input {
+	box-shadow: none;
+	@include placeholder( #999, true );
+	@include placeholder-on-focus();
+}
+
+textarea {
+	box-shadow: none;
+	@include placeholder( #999, true );
+	@include placeholder-on-focus();
+}

@@ -1,0 +1,13 @@
+////
+/// @group _mixins/clearfix.scss
+////
+
+/// очистка флоатов при помощи псевдо-элемента `:after`
+@mixin clearfix {
+	&:after {
+		content: '';
+		clear: both;
+		display: block;
+		height: 0;
+	}
+}

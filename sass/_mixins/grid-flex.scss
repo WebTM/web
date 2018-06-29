@@ -1,0 +1,393 @@
+////
+/// @group _mixins/grid.scss
+////
+
+/// Включить сетку в ремах
+/// @type Boolean
+$grid__in-rems: false !default;
+
+/// Количество позиций (колонок) сетки
+/// @type Number
+$grid__columns-count: 12 !default;
+
+/// Класс для блока сетки
+/// @type String
+$grid__grid-class: 'grid' !default;
+
+/// Класс для элемента сетки (колонка)
+/// @type String
+$grid__cell-class: 'gcell' !default;
+
+/// ???????????????
+/// @type String
+$grid__box-class: 'gbox' !default;
+
+/// @type Size
+$grid__gutter: $gutter;
+
+/// @type Map
+$grid__gutter-factor: $gutter-factor;
+
+/// @type String
+$grid__delimiter: $delimiter;
+
+/// @type Map
+$grid__breakpoints: $breakpoints;
+
+@if $grid__in-rems {
+	$grid__gutter: rem($gutter);
+}
+
+/// Установка параметров flex ширины
+///
+/// @param {Size|Keyword} $width [auto] - ширина элемента
+/// @param {Size|Keyword} $rangeWidth [$width] - мин/макс ширина элемента
+/// @param {Size|Keyword} $flexBasis [$width] - мин/макс ширина элемента
+/// @param {Keyword} $dir [max] - мин/макс ширина элемента
+@mixin flexBasis( $width:auto, $rangeWidth:$width, $flexBasis:$width, $dir:max ) {
+	width: $width;
+	@if ($dir == max) {
+		max-width: $rangeWidth;
+	} @else {
+		min-width: $rangeWidth;
+	}
+	flex-basis: $flexBasis;
+}
+
+/// Установка параметров flex ширины c минимальным параметром
+///
+/// @param {Size|Keyword} $width [auto] - ширина элемента
+/// @param {Size|Keyword} $rangeWidth [$width] - мин/макс ширина элемента
+/// @param {Size|Keyword} $flexBasis [$width] - мин/макс ширина элемента
+@mixin flexBasisMin( $width:auto, $rangeWidth:$width, $flexBasis:$width ) {
+	@include flexBasis( $width, $rangeWidth, $flexBasis, min);
+}
+
+
+/// @access private
+@mixin _grid-spaces($cell_class, $point-alias: '') {
+	@each $factor-name, $factor in $grid__gutter-factor {
+		&--#{$point-alias}space#{$factor-name} {
+			margin-left: ($gutter*$factor)/-2;
+			margin-right: ($gutter*$factor)/-2;
+			> .#{$cell_class} {
+				padding-left: ($gutter*$factor)/2;
+				padding-right: ($gutter*$factor)/2;
+			}
+		}
+	}
+}
+
+
+/// @access private
+@mixin _grid-columns($cell_class, $columns, $point-alias: '') {
+	@for $i from 1 through $columns {
+		&--#{$point-alias}#{$i} {
+			>.#{$cell_class} {
+				@include flexBasis( 100% / $i );
+			}
+		}
+	}
+}
+
+
+/// @access private
+@mixin _grid-cell($columns, $point-alias: '') {
+	@for $i from 1 through $columns {
+		&--#{$point-alias}#{$i} {
+			@include flexBasis( ($i * 100%) / $columns );
+		}
+	}
+}
+
+
+/// Составление флекс сетки
+@mixin grid(
+	$columns: $grid__columns-count,
+	$grid_class: $grid__grid-class,
+	$cell_class: $grid__cell-class,
+	$box_class: $grid__box-class
+) {
+
+	.#{$grid_class} {
+		display: flex;
+		flex-wrap: wrap;
+
+
+		.#{$box_class} {
+			height: 100%;
+			min-height: 100%;
+		}
+
+		// пример: grid--5
+		@include _grid-columns($cell_class, $columns);
+		@include _grid-spaces($cell_class);
+
+
+		> .#{$cell_class} {
+			display: inline-block;
+			@include _grid-cell($columns);
+		}
+	}
+}
+
+
+/// Составление флекс сетки с медиа запросами
+@mixin grid-mq(
+	$columns: $grid__columns-count,
+	$grid_class: $grid__grid-class,
+	$cell_class: $grid__cell-class,
+	$box_class: $grid__box-class
+) {
+
+	.#{$grid_class} {
+		// для каждого медизапроса
+		@each $point-name, $point in $breakpoints {
+			// составляем директиву
+			@include media($point-name) {
+
+				// пример: md-
+				$point-alias: $point-name + $delimiter;
+
+				// пример: grid--md-5
+				@include _grid-columns($cell_class, $columns, $point-alias);
+
+				// пример: grid--md-auto
+				&--#{$point-alias}auto {
+					> .#{$cell_class} {
+						@include flexBasis( auto, none );
+					}
+				}
+
+				// пример: .grid > .gcell
+				> .#{$cell_class} {
+					@include _grid-cell($columns, $point-alias);
+
+					&--#{$point-alias}auto {
+						@include flexBasis( auto, 100% );
+					}
+				}
+			}
+		}
+	}
+}
+
+
+/// Составление флекс сетки с отступами на медиа запросах
+@mixin grid-spaces-mq(
+	$columns: $grid__columns-count,
+	$grid_class: $grid__grid-class,
+	$cell_class: $grid__cell-class,
+	$box_class: $grid__box-class
+) {
+
+	.#{$grid_class} {
+		// для каждого медизапроса
+		@each $point-name, $point in $breakpoints {
+			// составляем директиву
+			@include media($point-name) {
+
+				// пример: md-
+				$point-alias: $point-name + $delimiter;
+
+				@include _grid-spaces($cell_class, $point-alias);
+
+				// пример: grid--lg-auto
+				&--#{$point-alias}nospace {
+					margin: 0;
+					> .#{$cell_class} {
+						padding: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+/// Составление модификаторов сетки, для управления флекс свойствами
+@mixin grid-orders(
+	$columns: $grid__columns-count,
+	$grid_class: $grid__grid-class,
+	$cell_class: $grid__cell-class,
+	$box_class: $grid__box-class
+) {
+
+	.#{$grid_class} {
+
+		&--inline {
+			display: inline-flex;
+		}
+		&--items-start {
+			align-items: flex-start;
+		}
+		&--items-end {
+			align-items: flex-end;
+		}
+		&--items-center {
+			align-items: center;
+		}
+		&--items-stretch {
+			align-items: stretch;
+		}
+		&--justify-start {
+			justify-content: flex-start;
+		}
+		&--justify-end {
+			justify-content: flex-end;
+		}
+		&--justify-center {
+			justify-content: center;
+		}
+		&--justify-between {
+			justify-content: space-between;
+		}
+		&--justify-around {
+			justify-content: space-around;
+		}
+		&--nowrap {
+			flex-wrap: nowrap;
+		}
+		&--column {
+			flex-direction: column;
+		}
+		&--row {
+			flex-direction: row;
+		}
+		&--row-reverse {
+			flex-direction: row-reverse;
+		}
+
+
+		> .#{$cell_class} {
+
+			&--start {
+				align-self: flex-start;
+			}
+			&--end {
+				align-self: flex-end;
+			}
+			&--center {
+				align-self: center;
+			}
+			&--stretch {
+				align-self: stretch;
+			}
+			&--nogrow {
+				flex-grow: 0;
+			}
+			&--grow {
+				flex-grow: 1;
+			}
+			&--shrink {
+				flex-shrink: 1;
+			}
+			&--noshrink{
+				flex-shrink: 0;
+			}
+			&--order-start {
+				order: -1;
+			}
+			&--order-end {
+				order: 1;
+			}
+			&--noorder {
+				order: 0;
+			}
+			&--nobasis {
+				flex-basis: 0;
+			}
+		}
+
+	}
+
+}
+
+
+
+/// Составление модификаторов сетки с медиа запросами, для управления флекс свойствами
+@mixin grid-orders-mq(
+	$columns: $grid__columns-count,
+	$grid_class: $grid__grid-class,
+	$cell_class: $grid__cell-class,
+	$box_class: $grid__box-class
+) {
+
+	.#{$grid_class} {
+		// для каждого медизапроса
+		@each $point-name, $point in $breakpoints {
+			// составляем директиву
+			@include media($point-name) {
+
+				// пример: md-
+				$point-alias: $point-name + $delimiter;
+
+				// для родителя
+				&--#{$point-alias}items-start {
+					align-items: flex-start;
+				}
+				&--#{$point-alias}items-end {
+					align-items: flex-end;
+				}
+				&--#{$point-alias}items-center {
+					align-items: center;
+				}
+				&--#{$point-alias}items-stretch {
+					align-items: stretch;
+				}
+				&--#{$point-alias}justify-start {
+					justify-content: flex-start;
+				}
+				&--#{$point-alias}justify-end {
+					justify-content: flex-end;
+				}
+				&--#{$point-alias}justify-center {
+					justify-content: center;
+				}
+				&--#{$point-alias}justify-between {
+					justify-content: space-between;
+				}
+				&--#{$point-alias}justify-around {
+					justify-content: space-around;
+				}
+				&--#{$point-alias}nowrap {
+					flex-wrap: nowrap;
+				}
+				&--#{$point-alias}wrap {
+					flex-wrap: wrap;
+				}
+				&--#{$point-alias}column {
+					flex-direction: column;
+				}
+				&--#{$point-alias}row {
+					flex-direction: row;
+				}
+			}
+
+		}
+	}
+
+
+
+	.grid>.gcell--parser-half {
+		@include flexBasis(360px);
+	}
+}
+
+
+
+
+
+/// Составление полной сетки одним миксином
+@mixin grid-full(
+	$columns: $grid__columns-count,
+	$grid_class: $grid__grid-class,
+	$cell_class: $grid__cell-class,
+	$box_class: $grid__box-class
+) {
+	@include grid;
+	@include grid-mq;
+	@include grid-orders;
+	@include grid-orders-mq;
+	@include grid-spaces-mq;
+}

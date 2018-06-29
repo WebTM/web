@@ -1,0 +1,66 @@
+////
+/// @group _partials/table-wrapper.scss
+////
+
+
+
+// scss
+// ================================
+
+.table-wrapper {
+	clear: both;
+	display: block;
+	position: relative;
+	padding: 0;
+	margin: 0;
+
+	&__holder {
+		max-width: 100%;
+		overflow-x: auto;
+		padding: 0;
+		margin: 0;
+	}
+
+	&__table {
+		width: 100%;
+		border-collapse: collapse;
+	}
+
+	&:before,
+	&:after {
+		content: '';
+		width: 8px;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		pointer-events: none;
+		opacity: 0;
+		transition: opacity .25s linear;
+	}
+
+	&:before {
+		left: 0;
+		background: -moz-linear-gradient(left,  rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+		background: -webkit-linear-gradient(left,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%);
+		background: linear-gradient(to right,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%);
+	}
+
+	&:after {
+		right: 0;
+		background: -moz-linear-gradient(left,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
+		background: -webkit-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%);
+		background: linear-gradient(to right,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%);
+	}
+
+	&--outside-left {
+		&:before {
+			opacity: .3;
+		}
+	}
+
+	&--outside-right {
+		&:after {
+			opacity: .3;
+		}
+	}
+}

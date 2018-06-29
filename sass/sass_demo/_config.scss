@@ -1,0 +1,356 @@
+////
+/// @group _config.scss
+////
+
+
+
+// ==================================
+//  Брейкпоинты
+// ==================================
+
+/// Start - не учитывается в карте брейкпоинтов
+/// - iPhone 5 `320px`
+/// - Nokia Lumia `320px`
+/// - Nexus 5 `360px`
+/// - Nokia N9 `360px`
+/// - Galaxy S5 `360px`
+/// @type Size
+$st: 320px;
+
+/// Extra Small
+/// - Mobile M `375px`
+/// - iPhone 6 `375px`
+/// - Nexus 4 `384px`
+/// - Nexus 6 `412px`
+/// - Mobile L `425px`
+/// - iPhone 6 plus `414px`
+/// @type Size
+$xs: 375px;
+
+/// Small
+/// - iPhone 4 (landscape) `480px`
+/// - Nokia Lumia (landscape) `533px`
+/// - iPhone 5 (landscape) `568px`
+/// @type Size
+$sm: 480px;
+
+/// Medium Small
+/// - Nexus 4 (landscape) `640px`
+/// - Nexus 5 (landscape) `640px`
+/// - Nokia N9 (landscape) `640px`
+/// - Galaxy S5 (landscape) `640px`
+/// - iPhone 6 (landscape) `667px`
+/// - Nexus 7 `700px`
+/// - Nexus 6 (landscape) `732px`
+/// - iPhone 6 Plus (landscape) `736px`
+/// @type Size
+$ms: 640px;
+
+/// Medium
+/// - iPad `768px`
+/// - iPad Mini `768px`
+/// - Nexus 10 `800px`
+/// - Nexus 7 `900px`
+/// - Laptop (landscape) `950px`
+/// @type Size
+$md: 768px;
+
+/// Default / Normal
+/// - Laptop `1024px`
+/// - iPad (landscape) `1024px`
+/// - iPad Mini (landscape) `1024px`
+/// @type Size
+$def: 1024px;
+
+/// Large
+/// - Laptop (landscape) `1280px`
+/// - Nexus 10 (landscape) `1280px`
+/// @type Size
+$lg: 1280px;
+
+/// Extra Large - не учитывается в карте брейкпоинтов
+/// - iPad Pro (landscape) `1366` ~ "15.6
+$xl: 1366px;
+
+/// Mega - не учитывается в карте брейкпоинтов
+/// - Laptop L `1440px`
+/// @type Size
+$mg: 1440px;
+
+/// Карта брейкпоинтов.
+/// Используеться при генерации, в цыкле,
+/// модификаторов под каждый медиа запрос
+///
+/// Как правило, результатом таких циклов
+///  - есть селекторы по схеме `{PREFIX}--$point{-SUFFIX}`,
+///  или, в случае с хелперами - `_$point-{PREFIX}`.
+///
+/// Пример на ячейке сетки -> основной селектор `.gcell`
+/// с модификаторами получаем:
+/// - .gcell--xs-6
+/// - .gcell--sm-4
+/// - .gcell--md-3
+/// - .gcell--def-2
+/// - .gcell--lg-1
+///
+/// Пример на хелпере `._show`:
+/// - ._xs-show
+/// - ._sm-show
+/// - ._md-show
+/// - ._def-show
+/// - ._lg-show
+///
+/// @type Map
+$breakpoints: (
+	// st: $st,
+	xs: $xs,
+	sm: $sm,
+	ms: $ms,
+	md: $md,
+	def: $def,
+	lg: $lg,
+	// xl: $xl,
+	// mg: $mg,
+);
+
+
+
+
+// ==================================
+//  Шрифты
+// ==================================
+
+/// Основной шрифт
+/// по умолчанию будет добавлен к `html`
+/// @type Keyword
+$font-family: 'Roboto', Arial, Helvetica, sans-serif;
+
+/// Дополнительный шрифт
+/// @type Keyword
+$font-family--sub: 'Cambria', Arial, Helvetica, sans-serif;
+
+/// Шрифт "кода"
+/// по умолчанию будет добавлен к `pre, code, samp, kbd`
+/// @type Keyword
+$font-family--monospace: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+
+
+
+
+// ==================================
+//  Отступы
+// ==================================
+
+/// Разделитель
+/// @type String
+$delimiter: '-';
+
+/// Отступ
+/// @type Size
+$gutter: 20px;
+
+/// Карта коэфициентов для отступов
+/// Каждая единица будет умножена $gutter
+///
+/// Если $gutter = 20px,
+/// то, к примеру для хелепера паддинга, получаем:
+/// - _p-sm  = 5px;
+/// - _p-md  = 10px;
+/// - _p-def = 20px;
+/// - _p-lg  = 30px;
+/// - _p-xl  = 40px;
+/// - _p-mg  = 50px;
+///
+/// @require $delimiter
+/// @type Map
+$gutter-factor: (
+    #{$delimiter}sm: 0.25,
+    #{$delimiter}md: 0.5,
+    #{$delimiter}def: 1,
+    #{$delimiter}lg: 1.5,
+    #{$delimiter}xl: 2,
+    #{$delimiter}mg: 2.5
+);
+
+
+
+
+// ==================================
+// Цвета
+// ==================================
+
+// Градации серого
+// ---------------------------------
+
+/// @type Color
+$color-black: #000;
+
+/// @type Color
+$color-gray90: lighten(#000, 10%);
+
+/// @type Color
+$color-gray75: lighten(#000, 25%);
+
+/// @type Color
+$color-gray50: lighten(#000, 50%);
+
+/// @type Color
+$color-gray25: lighten(#000, 75%);
+
+/// @type Color
+$color-gray10: lighten(#000, 90%);
+
+/// @type Color
+$color-white: #fff;
+
+
+// Цвет для ссылок
+// ---------------------------------
+
+/// @type Color
+$color-link: #43f;
+
+/// @type Color
+$color-link-visited: darken($color-link, 26%);
+
+/// @type Color
+$color-link-hover: #f34;
+
+
+// Цветовые статусы
+// ---------------------------------
+
+/// @type Color
+$color-primary: #8074ff;
+
+/// @type Color
+$color-secondary: #e652a6;
+
+/// @type Color
+$color-success: #c1af7a;
+
+/// @type Color
+$color-info: #00b3fe;
+
+/// @type Color
+$color-warning: #c89600;
+
+/// @type Color
+$color-danger: #ff6262;
+
+
+
+/// Палитра цветов
+/// @type Map карта
+$palette: (
+	black: $color-black,
+	gray90: $color-gray90,
+	gray75: $color-gray75,
+	gray50: $color-gray50,
+	gray25: $color-gray25,
+	gray10: $color-gray10,
+	white: $color-white,
+
+	link: $color-link,
+	primary: $color-primary,
+	secondary: $color-secondary,
+	success: $color-success,
+	info: $color-info,
+	warning: $color-warning,
+	danger: $color-danger,
+);
+
+
+/// Палитра цветов соц. сетей
+/// @type Map карта
+$palette-social: (
+	blogger: #f58220,
+	bobrdobr: #763c34,
+	delicious: #003bd8,
+	digg: #165495,
+	evernote: #75bb1e,
+	facebook: #3b5998,
+	formspring-me: #4693d7,
+	google-bookmarks-old: #246df8,
+	google-plus: #dd5044,
+	instagram: #325c86,
+	instapaper: #6b6b6b,
+	juick: #b98337,
+	linked-in: #007ab5,
+	liveinternet: #27819b,
+	livejournal: #6899c4,
+	mail-ru: #2f69a1,
+	memori: #fd2668,
+	myspace: #1d1d1d,
+	odnoklassniki: #f58220,
+	pinterest: #cb2027,
+	readability: #9d0000,
+	rss: #fb7629,
+	springpad: #f7b42f,
+	stumbleupon: #ed4713,
+	surfingbird: #14aef8,
+	tumblr: #2e4e67,
+	twitter: #64a8f2,
+	vk: #41658b,
+	webdiscover: #8bc514,
+	yahoo: #7b0099,
+	youtube: #cd201f
+);
+
+
+
+// ==================================
+//  Переназначаем переменные
+// ==================================
+
+// normalize-css-801s.scss
+// ------------------------
+/// @type Keyword
+$nmlz__font-family: $font-family;
+
+/// @type Keyword
+$nmlz__font-family__code: $font-family--monospace;
+
+/// @type Keyword
+$nmlz__font-weight: bold;
+
+/// @type Size
+$nmlz__margin__figure: 1em 0;
+
+
+
+// ==================================
+//  Пользовательский конфbг
+// ==================================
+@import 'custom-config';
+
+
+
+// ================================
+//  Импортируем глобальные функции и миксины
+// ================================
+
+// Normalize
+@import 'normalize-css-801s/dist/normalize-css-801s';
+
+
+// Functions
+@import '_functions/em';
+@import '_functions/rem';
+@import '_functions/shade';
+@import '_functions/strip-units';
+@import '_functions/tint';
+
+
+// Mixins
+@import '_mixins/mq-packer-hack';
+@import '_mixins/media';
+@import '_mixins/placeholders';
+@import '_mixins/clearfix';
+@import '_mixins/hvcenter';
+@import '_mixins/grid-flex';
+@import '_mixins/util-colors';
+@import '_mixins/util-floats';
+@import '_mixins/util-gutters';
+@import '_mixins/util-texts';
+@import '_mixins/util-visibility';

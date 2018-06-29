@@ -1,0 +1,52 @@
+////
+/// @group _partials/content-image.scss
+////
+
+
+// mixins
+// ================================
+
+@mixin content-image-full-width {
+	display: block;
+	float: none !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+};
+
+
+// scss
+// ================================
+
+.content-image {
+	position: relative;
+
+	&--width-1200-and-more {
+		@include content-image-full-width;
+	}
+
+	&--width-600-and-more {
+		.view-text--article & {
+			@include content-image-full-width;
+		}
+	}
+}
+
+.content-image {
+	$and-more-sizes: (
+		$mg: 1000,
+		$xl: 900,
+		$lg: 800,
+		$md: 500,
+		$ms: 300,
+		$sm: 200,
+		$xs: 100
+	);
+
+	@each $size-mq, $size-value in $and-more-sizes {
+		@include media( $size-mq, max ) {
+			&--width-#{$size-value}-and-more {
+				@include content-image-full-width;
+			}
+		}
+	}
+}

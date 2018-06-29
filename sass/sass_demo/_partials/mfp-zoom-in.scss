@@ -1,0 +1,47 @@
+////
+/// @group _partials/mfp-zoom-in.scss
+////
+
+
+// scss
+// ================================
+
+
+/// Селектор основго контента для всплываек
+$contentClass: '.hidden-wrapper';
+
+/// Fade-zoom animation
+/// @link http://dimsemenov.com/plugins/magnific-popup/
+.zoom-in {
+	#{$contentClass} {
+		opacity: 0;
+		transition: all 0.3s ease-in-out;
+		transform: scale(0.8);
+	}
+
+	/* animate in */
+	&.mfp-ready #{$contentClass} {
+		opacity: 1;
+		transform: scale(1);
+	}
+
+	/* animate out */
+	&.mfp-removing #{$contentClass} {
+		transform: scale(0.8);
+		opacity: 0;
+	}
+
+	/* Dark overlay, start state */
+	&.mfp-bg {
+		opacity: 0;
+		transition: opacity 0.3s ease-out;
+	}
+	/* animate in */
+	&.mfp-ready.mfp-bg {
+		opacity: 0.8;
+	}
+	/* animate out */
+	&.mfp-removing.mfp-bg {
+		opacity: 0;
+	}
+}

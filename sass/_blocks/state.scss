@@ -1,0 +1,52 @@
+////
+/// @group _blocks/
+////
+
+/// state
+.has-sticky {
+	position: sticky;
+	top: -1px;
+	transition: top 0.19s ease-out;
+	z-index: 2;
+
+	&--def {
+		@include media(def) {
+			position: static;
+		}
+	}
+
+	.show-header & {
+		top: rem(49px);
+
+		@include media(def) {
+			top: rem(69px);
+		}
+
+		@include media(xl) {
+			top: rem(99px);
+		}
+	}
+}
+
+.reset {
+	border-top: 1px solid transparent;
+
+	&__def {
+		margin-top: -0.235em;
+		margin-bottom: -0.252em;
+	}
+
+	&__big {
+		margin-top: -0.16em;
+		margin-bottom: -0.18em;
+	}
+
+	&__lg {
+		margin-top: -.42em;
+		margin-bottom: -.45em;
+	}
+}
+
+.svg-icon {
+	max-width: 100%;
+}

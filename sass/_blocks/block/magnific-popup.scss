@@ -1,0 +1,68 @@
+////
+/// @group _blocks/
+////
+
+/// Description
+.magnific-popup {
+	position: relative;
+	max-width: 100%;
+	margin: 0 auto;
+	overflow: visible;
+	background-color: map-get($colors, white);
+
+	&--sm {
+		max-width: 440px;
+	}
+
+	&--noty {
+		max-width: 610px;
+	}
+
+	&--lg {
+		max-width: 1000px;
+	}
+}
+
+.zoom-in {
+	& .mfp-iframe-holder {
+		.mfp-content {
+			line-height: 0;
+			width: 82%;
+			max-width: 1550px;
+		}
+	}
+
+	& .magnific-popup {
+		opacity: 0;
+		transition: 0.2s ease-in-out;
+		transform: scale(.8);
+	}
+
+	&.mfp-ready {
+		& .magnific-popup {
+			opacity: 1;
+			transform: scale(1);
+		}
+
+		&.mfp-bg {
+			opacity: .8;
+		}
+	}
+
+	&.mfp-removing {
+		& .magnific-popup {
+			transform: scale(.8);
+			opacity: 0;
+		}
+
+		&.mfp-bg {
+			opacity: 0;
+		}
+	}
+
+	&.mfp-bg {
+		opacity: 0;
+		transition: opacity 0.2s ease-out;
+	}
+
+}

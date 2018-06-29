@@ -1,0 +1,68 @@
+////
+/// @group _partials/breadcrumbs.scss
+////
+
+// scss
+// ================================
+
+.breadcrumbs {
+	width: 100%;
+	display: table;
+	font-size: 0;
+	line-height: 0;
+	margin: 1rem 0;
+	font-size: 1rem;
+}
+
+.breadcrumbs a {
+	color: #f00;
+	text-decoration: underline;
+}
+
+.breadcrumbs span {
+	color: #000;
+	display: inline-block;
+	vertical-align: top;
+	font-size: 1em;
+	line-height: 1.4;
+	margin-right: .5em;
+
+	&:before {
+		margin-right: .5em;
+		content: '/';
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	&:first-child:before {
+		display: none;
+	}
+}
+
+.breadcrumbs {
+	@include media( $md, max ) {
+		display: block;
+
+		span {
+			&, &:before {
+				display: none;
+			}
+
+			&:nth-last-child(2) {
+				display: block;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				max-width: 100%;
+				background: none;
+				margin: 0;
+
+				&:before {
+					content: '<';
+					margin: 0 5px 0 3px;
+					display: inline-block;
+				}
+			}
+		}
+	}
+}

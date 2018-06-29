@@ -1,0 +1,25 @@
+////
+/// @group _partials/view-size.scss
+////
+
+
+// scss
+// ================================
+
+.view-size {
+	position: relative;
+	max-width: 1240px;
+	padding: 0 1.5rem;
+	margin: 0 auto;
+	@include clearfix;
+}
+
+// отображение
+.view-size {
+	&--no-gap {
+		max-width: 1240px;
+	}
+	&--big {
+		max-width: 1660px;
+	}
+}

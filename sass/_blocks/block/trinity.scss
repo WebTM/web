@@ -1,0 +1,67 @@
+////
+/// @group _blocks/
+////
+
+/// trinity
+
+.trinity {
+	&-item {
+		position: relative;
+		background-position: center 20%;
+		background-size: cover;
+		padding: rem(20) 0;
+
+		.no-moz & {
+			background-color: rgba(map-get($colors, bg), 0.85);
+			background-blend-mode: multiply;
+		}
+
+		@include media(ms) {
+			background-size: auto 130%;
+			background-position: center top;
+		}
+
+		@include media(def) {
+			padding: 7vw 0;
+		}
+
+		@include media(1920px) {
+			padding: 134px 0;
+		}
+
+		&:nth-child(2) {
+			transition-delay: 0.15s;
+		}
+
+		&:nth-child(3) {
+			transition-delay: 0.3s;
+		}
+
+		.no-backgroundblendmode &::before,
+		.moz &::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			content: '';
+			background: rgba(#020613, 0.7);
+		}
+
+		&__inner {
+			position: relative;
+			z-index: 2;
+			margin: 0 auto;
+			padding: 0 8.333%;
+			box-sizing: content-box;
+
+			@include media(ms) {
+				padding: 0 1rem;
+			}
+
+			@include media(ms) {
+				max-width: 280px;
+			}
+		}
+	}
+}

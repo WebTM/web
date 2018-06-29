@@ -1,0 +1,14 @@
+/// Получение размера в `rem` от основного значения
+/// @requires strip-units
+/// @param {Number} $pxval - размер в `px`
+/// @param {Number} $base [16px] - основное значение, которое берется за единицу
+/// @return {Number}
+@function rem($pxval, $base: 16px) {
+	@if not unitless($pxval) {
+		$pxval: strip-units($pxval);
+	}
+	@if not unitless($base) {
+		$base: strip-units($base);
+	}
+	@return $pxval / $base * 1rem;
+}

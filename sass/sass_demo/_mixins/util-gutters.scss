@@ -1,0 +1,93 @@
+////
+/// @group _mixins/util-gutters.scss
+////
+
+/// Хелперы отступов - `margin` и `padding`
+/// @param {Boolean} $in-rems [true] - значения в `rem'ax`
+@mixin util-gutters($in-rems: true) {
+	$sides: (t: top, r: right, b: bottom, l: left);
+	$property: (m: margin, p: padding);
+	$gutter: $gutter;
+
+	@if $in-rems {
+		$gutter: rem($gutter);
+	}
+
+	@each $prop-name, $prop in $property {
+		@each $factor-name, $factor in $gutter-factor {
+			._#{$prop-name}#{$factor-name} {
+				#{$prop}: $gutter*$factor !important;
+			}
+		}
+		@each $short-side, $side in $sides {
+			@each $factor-name, $factor in $gutter-factor {
+				._#{$prop-name}#{$short-side}#{$factor-name} {
+					#{$prop}-#{$side}: $gutter*$factor !important;
+				}
+			}
+			._#{$prop-name}#{$short-side}#{$delimiter}none {
+				#{$prop}-#{$side}: 0 !important;
+			}
+		}
+		._#{$prop-name}#{$delimiter}none {
+			#{$prop}: 0 !important;
+		}
+	}
+
+	._m#{$delimiter}auto {
+		margin: auto !important;
+	}
+	._ml#{$delimiter}auto {
+		margin-left: auto !important;
+	}
+	._mr#{$delimiter}auto {
+		margin-right: auto !important;
+	}
+}
+
+/// Хелперы отступов - `margin` и `padding` - для медиа запросов
+/// @param {Boolean} $in-rems [true] - значения в `rem'ax`
+/// @param {Map} $points [$breakpoints] - карта брейкпоинтов
+@mixin util-gutters-mq($in-rems: true, $points: $breakpoints) {
+	$sides: (t: top, r: right, b: bottom, l: left);
+	$property: (m: margin, p: padding);
+	$gutter: $gutter;
+	@if $in-rems {
+		$gutter: rem($gutter);
+	}
+	@each $point-name, $point in $points {
+		@include media($point-name) {
+			@each $short-prop, $prop in $property {
+				@each $k,
+				$point in $gutter-factor {
+					._#{$point-name}#{$delimiter}#{$short-prop}#{$k} {
+						#{$prop}: $gutter*$point !important;
+					}
+				}
+				@each $short-side, $side in $sides {
+					@each $k,
+					$point in $gutter-factor {
+						._#{$point-name}#{$delimiter}#{$short-prop}#{$short-side}#{$k} {
+							#{$prop}-#{$side}: $gutter*$point !important;
+						}
+					}
+					._#{$point-name}#{$delimiter}#{$short-prop}#{$short-side}#{$delimiter}none {
+						#{$prop}-#{$side}: 0 !important;
+					}
+				}
+				._#{$point-name}#{$delimiter}#{$short-prop}#{$delimiter}none {
+					#{$prop}: 0 !important;
+				}
+			}
+			._#{$point-name}#{$delimiter}m#{$delimiter}auto {
+				margin: auto !important;
+			}
+			._#{$point-name}#{$delimiter}ml#{$delimiter}auto {
+				margin-left: auto !important;
+			}
+			._#{$point-name}#{$delimiter}mr#{$delimiter}auto {
+				margin-right: auto !important;
+			}
+		}
+	}
+}

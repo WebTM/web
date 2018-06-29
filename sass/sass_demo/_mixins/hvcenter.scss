@@ -1,0 +1,26 @@
+////
+/// @group _mixins/hvcenter.scss
+////
+
+/// Выравнивание элемента по центру, при помощи абсолютного позиционирования
+///
+/// @param {Number} $max-width [100%] - максимальная ширина элемента
+/// @param {Number} $max-height [100%] - максимальная высота элемента
+/// @param {Number} width [false] - ширина элемента, если `false` - не применяется
+/// @param {Number} height [false] - высота элемента, если `false` - не применяется
+@mixin hvcenter($max-width: 100%, $max-height: 100%, $width: false, $height: false) {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	max-width: $max-width;
+	max-height: $max-height;
+	@if $width != false {
+		width: $width;
+	}
+	@if $height != false {
+		height: $height;
+	}
+}

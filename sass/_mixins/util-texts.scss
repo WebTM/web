@@ -1,0 +1,43 @@
+////
+/// @group _mixin/util-texts.scss
+////
+
+/// Хелперы для быстрого управления текстом
+@mixin util-texts() {
+	._text-left {
+		text-align: left;
+	}
+	._text-right {
+		text-align: right;
+	}
+	._text-center {
+		text-align: center;
+	}
+	._ellipsis {
+		max-width: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+}
+
+/// Хелперы для быстрого управления текстом - для медиа запросов
+/// @param {Map} $points [$breakpoints] - карта брейкпоинтов
+@mixin util-texts-mq($points: $breakpoints) {
+	@each $point-name, $point in $points {
+		@include media($point-name) {
+
+			$point-alias: $point-name + $delimiter;
+
+			._#{$point-alias}text-left {
+				text-align: left;
+			}
+			._#{$point-alias}text-right {
+				text-align: right;
+			}
+			._#{$point-alias}text-center {
+				text-align: center;
+			}
+		}
+	}
+}

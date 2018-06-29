@@ -1,0 +1,50 @@
+////
+/// @group _partials/hidden-wrapper.scss
+////
+
+
+// scss
+// ================================
+
+.hidden-wrapper {
+	position: relative;
+	padding: 2rem;
+	margin: 1.2rem auto;
+	background-color: #fff;
+	width: 96%;
+	max-width: 1024px;
+}
+
+// размеры
+.hidden-wrapper {
+	&--lg {
+		max-width: 1280px;
+	}
+
+	&--md {
+		max-width: 768px;
+	}
+
+	&--sm {
+		max-width: 480px;
+	}
+}
+
+// отображение
+.hidden-wrapper {
+	&--strip {
+		background: none;
+		padding: 0;
+	}
+
+	&--no-gap {
+		padding: 0;
+	}
+}
+
+// показать элементы только внутри
+.hidden-wrapper {
+	._show-in--hidden-wrapper {
+		display: block;
+	}
+}

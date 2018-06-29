@@ -1,0 +1,150 @@
+////
+/// @group _blocks/
+////
+
+/// Description
+.form,
+.form-group,
+.form-controller {
+	position: relative;
+}
+
+.form-control {
+	border: 1px solid map-get($colors, border);
+	padding: 0.75rem 1rem;
+	width: 100%;
+	font-family: map-get($font-family, default);
+	font-size: 16px;
+	line-height: 1.4em;
+	transition: border-color 0.2s ease-in-out;
+
+	&:hover {
+		border-color: darken(map-get($colors, border), 25%);
+	}
+
+	&.has-error {
+		border-color: map-get($colors, danger);
+
+		@at-root {
+			input[type="file"]#{&} { // sass-lint:disable-line force-attribute-nesting
+				~ label {
+					&.has-error {
+						visibility: visible;
+						position: relative;
+					}
+				}
+			}
+		}
+	}
+
+	@at-root {
+		textarea#{&} {
+			max-width: 100%;
+			min-width: 100%;
+		}
+	}
+
+	&--transparent {
+		background: transparent;
+		border: 1px solid rgba(map-get($colors, white), 0.2);
+		color: map-get($colors, white);
+	}
+
+	&--arrow {
+		background: rgb(255, 255, 255) url("/Media/assets/images/down.svg") calc(100% - 15px) 50% no-repeat;
+		background-size: 1.5625rem;
+	}
+}
+
+.form-flag {
+	&__input {
+		&.has-error ~ .form-flag__value {
+			color: map-get($colors, danger);
+		}
+	}
+}
+
+.form-label {
+	display: inline-block;
+	vertical-align: top;
+	font: 700 1rem/1.4em map-get($font-family, default);
+}
+
+label {
+	&.has-error {
+		visibility: hidden;
+		position: absolute;
+		left: 0;
+		padding: 0.3rem 0.5rem;
+		font: 11px/1.3em map-get($font-family, default);
+		color: map-get($colors, white);
+		background: lighten(map-get($colors, danger), 1%);
+		letter-spacing: 0.5px;
+		width: 100%;
+		margin-top: 3px;
+		display: inline-block;
+		vertical-align: top;
+		z-index: 1;
+
+		&::after {
+			bottom: 100%;
+			left: 10%;
+			content: " ";
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+			border: 4px solid rgba(255, 51, 51, 0);
+			border-bottom-color: #f33;
+			margin-left: -4px;
+		}
+	}
+
+	.form-control:focus ~ & {
+		visibility: visible;
+		position: relative;
+	}
+
+}
+
+.form-error {
+	font-size: 12px;
+	color: map-get($colors, danger);
+	margin-bottom: rem(25);
+}
+
+.custom-file {
+	&__input {
+		overflow: hidden;
+		width: 1px;
+		height: 1px;
+		visibility: hidden;
+		position: absolute;
+		left: 0;
+	}
+
+	&__result {
+		display: block;
+		cursor: pointer;
+	}
+
+	&__clear {
+		display: none;
+		position: absolute;
+		width: 2rem;
+		height: 2rem;
+		background: map-get($colors, white);
+		top: 0.5rem;
+		right: 1px;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		fill: map-get($colors, danger);
+
+		@at-root {
+			.has-file & {
+				display: flex;
+			}
+		}
+	}
+}

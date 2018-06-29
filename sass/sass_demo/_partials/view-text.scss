@@ -1,0 +1,304 @@
+////
+/// @group _partials/view-text.scss
+////
+
+
+// scss
+// ================================
+
+.view-text {
+	color: inherit;
+	position: relative;
+	font-size: 16px;
+	line-height: 1.5;
+
+	blockquote, & {
+		> :first-child {
+			margin-top: 0;
+		}
+
+		> :last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+// заголовки
+.view-text {
+	h1, h2, h3, h4, h5, h6 {
+		clear: both;
+		line-height: 1.25;
+		font-weight: bold;
+		margin: 1.4em 0 1.5rem;
+		margin-bottom: 1.5rem !important;
+	}
+
+	h1 {
+		font-size: 2.3em;
+	}
+
+	h2 {
+		font-size: 2em;
+	}
+
+	h3 {
+		font-size: 1.8em;
+	}
+
+	h4 {
+		font-size: 1.5em;
+	}
+
+	h5 {
+		font-size: 1.4em;
+	}
+
+	h6 {
+		font-size: 1.2em;
+	}
+	&__slogan {
+		color: #000;
+		font-size: 16px;
+		line-height: 24px;
+		font-weight: 300;
+		margin-bottom: 25px;
+	}
+}
+
+// основные элементы
+.view-text {
+	p, ul, ol, hr, dl, pre, address, blockquote, table,
+	.table-wrapper, .media-wrapper {
+		margin: 1em 0;
+		font-weight: 300;
+	}
+
+	blockquote {
+		padding: 1em 1.5em;
+		background-color: #f7f8e2;
+	}
+
+	hr {
+		clear: both;
+		border-width: 0;
+		border-top-width: 1px;
+	}
+}
+
+// списки
+.view-text {
+	ul, ol {
+		padding-left: 1.5em;
+	}
+
+	dd {
+		margin-left: 1.5em;
+	}
+
+	dt {
+		font-weight: bold;
+	}
+
+	dd + dt {
+		margin: 1em 0 0;
+	}
+}
+
+// демонстрация кода
+.view-text {
+	pre, code, kbd, samp {
+		font-style: normal;
+		font-weight: normal;
+		font-family: $font-family--monospace;
+	}
+
+	pre {
+		tab-size: 4;
+		padding: 1em 1.5em;
+		background-color: #f5f5f5;
+	}
+
+	code, kbd, samp {
+		padding: 0 .4em;
+	}
+
+	code {
+		background-color: #f5f5f5;
+	}
+
+	kbd {
+		background-color: #e1f0fa;
+	}
+
+	samp {
+		background-color: #f7f8e2;
+	}
+}
+
+// media элементы
+.view-text {
+	iframe {
+		border-width: 0;
+	}
+
+	audio {
+		width: 100%;
+	}
+
+	audio[controls] {
+		display: block;
+	}
+
+	.media-wrapper {
+		&__holder {
+			background-color: #f5f5f5;
+			position: relative;
+			iframe, video {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+			}
+		}
+	}
+}
+
+// таблицы
+.view-text {
+	table  {
+		width: 100%;
+		background-color: transparent;
+		border-collapse: collapse;
+		border-spacing: 0;
+		border: 1px solid #ddd;
+	}
+
+	caption {
+		margin-bottom: .5em;
+		caption-side: top;
+	}
+
+	tbody, tfoot, thead, tr, th, td {
+		border: inherit;
+	}
+
+	th, td {
+	   padding: .5em;
+	   text-align: left;
+	   vertical-align: top;
+	}
+
+	th {
+		font-weight: bold;
+		text-align: center;
+		background-color: #f5f5f5;
+	}
+}
+
+// таблица "без границ"
+.view-text .table-null {
+	&, th, td {
+		border-color: transparent;
+	}
+
+	th {
+		background: transparent;
+	}
+}
+
+// таблица "зеброй"
+.view-text .table-zebra {
+	&, th, td {
+		border-color: transparent;
+	}
+
+	th {
+		background: transparent;
+	}
+
+	tr:nth-child(odd) {
+		background-color: #f5f5f5;
+	}
+}
+
+// ссылки
+.view-text {
+	a {
+		color: #417599;
+		transition: all 0.2s easew;
+		&:visited {
+			color: #7e2aa9;
+		}
+		&:hover {
+			color: #7e2aa9;
+		}
+		&:active {
+			color: #7e2aa9;
+		}
+	}
+}
+
+// форматирование и акцентирование
+.view-text {
+	b, strong {
+		font-weight: bold;
+	}
+
+	i, cite, em, var, address, dfn, caption {
+		font-style: italic;
+	}
+
+	abbr[title], dfn[title] {
+		text-decoration: none;
+		border-bottom: 1px dotted;
+		cursor: help;
+	}
+}
+
+// выход элементов за границы
+// отступы должны совпадать с отступами .view-size
+.view-text {
+	@include media( $def, max ) {
+		> blockquote,
+		> pre,
+		> .media-wrapper,
+		> video,
+		> iframe
+		{
+			margin-left: -1.5rem;
+			margin-right: -1.5rem;
+		}
+
+		> blockquote,
+		> pre
+		{
+			padding-left: 1.5rem;
+			padding-right: 1.5rem;
+		}
+	}
+}
+
+// текст с короткой длиной строки
+.view-text--article {
+	> p,
+	> h1,
+	> h2,
+	> h3,
+	> h4,
+	> h5,
+	> h6,
+	//> blockquote,
+	//> pre,
+	> hr,
+	> ul,
+	> ol,
+	> dl,
+	> audio,
+	> address
+	{
+		max-width: $def;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

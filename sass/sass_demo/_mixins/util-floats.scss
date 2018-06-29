@@ -1,0 +1,43 @@
+////
+/// @group _mixin/util-floats.scss
+////
+
+/// Хелперы флоатов
+@mixin util-floats() {
+	._left {
+		float: left;
+	}
+	._right {
+		float: right;
+	}
+	._overflow {
+		overflow: hidden;
+	}
+	._clear {
+		clear: both;
+	}
+	._clear-after {
+		@include clearfix;
+	}
+}
+
+/// Хелперы флоатов - для медиа запросов
+/// @param {Map} $points [$breakpoints] - карта брейкпоинтов
+@mixin util-floats-mq($points: $breakpoints) {
+	@each $point-name, $point in $points {
+		@include media($point-name) {
+
+			$point-alias: $point-name + $delimiter;
+
+			._#{$point-alias}left {
+				float: left;
+			}
+			._#{$point-alias}right {
+				float: right;
+			}
+			._#{$point-alias}overflow {
+				overflow: hidden;
+			}
+		}
+	}
+}

@@ -1,0 +1,346 @@
+////
+/// @group _partials/buttons-default.scss
+////
+
+
+// vars
+// ================================
+
+/// @type Size
+$button-border-radius: .25em !default;
+
+/// Зазор, на основе которого будет строиться геометрия кнопки
+/// @type Size
+$button-gap: .25em !default;
+
+/// Карта размеров текста для кнопок
+/// @type Map
+$button-sizes: (
+	sm: 12,
+	md: 14,
+	lg: 18,
+	xl: 20
+);
+
+
+// mixins
+// ================================
+
+/// Цветовые статусы
+///
+/// @param {Color} $bg-color - фоновый цвет
+/// @param {Color} $text-color [#000] - цвет текста
+/// @param {Number} $lighten [10%] - процент для осветления
+@mixin color-states( $bg-color, $text-color:#000, $lighten:10%, $shadow: $lighten * 2  ) {
+	background-color: $bg-color;
+	border-color: $bg-color;
+	color: $text-color;
+	fill: currentColor;
+
+	&:hover {
+		color: lighten( $text-color, $lighten );
+		fill: lighten( $text-color, $lighten );
+		background-color: lighten( $bg-color, $lighten / 2 );
+		border-color: $bg-color;
+	}
+
+	&-o {
+		@include color-states-o( $bg-color, $text-color, $lighten, $shadow );
+	}
+}
+
+/// Цветовые статусы, в обычном состоянии окраишается не фон а бордер
+@mixin color-states-o( $bg-color, $text-color:#000, $lighten:10%, $shadow: $lighten * 2  ) {
+	border-color: $bg-color;
+	color: $bg-color;
+	fill: currentColor;
+
+	&:hover {
+		color: lighten( $text-color, $lighten );
+		fill: lighten( $text-color, $lighten );
+		background-color: lighten( $bg-color, $lighten / 2 );
+		border-color: $bg-color;
+	}
+}
+
+
+
+// placeholder
+// ================================
+%buttonsGeometry {
+	position: relative;
+	vertical-align: top;
+	box-sizing: border-box;
+	font-size: 1rem;
+	min-height: ($button-gap * 9);
+	line-height: ($button-gap * 7);
+	padding: $button-gap ($button-gap * 3);
+	border: 1px solid $color-gray25;
+	border-radius: $button-border-radius;
+	background-color: transparent;
+	transition: .25s ease;
+	text-decoration: none;
+	user-select: none;
+	color: inherit;
+	max-width: 100%;
+}
+
+
+
+// scss
+// ================================
+
+// Основные стили кнопки
+.button {
+	@extend %buttonsGeometry;
+	// outline: none;
+	cursor: pointer;
+	display: inline-block;
+	vertical-align: top;
+	fill: $color-gray50;
+	line-height: calc( #{($button-gap * 7)} - 3px );
+
+	& > span {
+		height: 100%;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+
+
+
+
+		& > svg {
+			display: inline-block;
+			position: relative;
+			height: ($button-gap * 5);
+			width: ($button-gap * 5);
+			flex-shrink: 0;
+			fill:inherit;
+
+			&:first-child {
+				margin-right: ($button-gap * 2);
+			}
+
+			&:last-child {
+				margin-left: ($button-gap * 2);
+			}
+
+			&:only-child {
+				margin-left: 0;
+				margin-right: 0;
+			}
+
+		}
+
+		& > span {
+			display: inline-block;
+			text-align: center;
+			flex-grow: 1;
+			flex-shrink: 1;
+		}
+	}
+
+
+// .button:hover .button:active
+// =========================================
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 1;
+		background-color: rgba( #000, .2 );
+		border-radius: $button-border-radius;
+		opacity: 0;
+		transition: .25s ease;
+	}
+
+	&:hover {
+		fill: $color-gray75;
+		color: $color-gray75;
+		background-color: $color-gray10;
+		border-color: $color-gray10;
+	}
+
+	&:active {
+		transition-duration: .1s;
+		transform: translateY(3px);
+
+		&:before {
+			transition-duration: .1s;
+			opacity: 1;
+		}
+	}
+
+
+// Состояния
+// =========================================
+
+	&.is-active {
+		background-color: $color-primary;
+		border-color: $color-primary;
+		color: #fff;
+		fill: currentColor;
+		transform: none !important;
+		&:before {
+			display: none;
+		}
+	}
+
+	&.is-disabled,
+	&[disabled] {
+		cursor: default;
+		pointer-events: none;
+		color: $color-gray50;
+		fill: currentColor;
+		border-color: transparent;
+		background-color: $color-gray10;
+	}
+
+
+// Только иконки при медиа запросах
+// =========================================
+
+	/// @access private
+	@mixin onlyicon {
+		> span {
+			svg {
+				margin-left: 0 !important;
+				margin-right: 0 !important;
+			}
+			> span {
+				display: none;
+			}
+		}
+	}
+
+	&--only-icon {
+		@include onlyicon;
+	}
+
+	@each $point-name, $point in $breakpoints {
+
+		@include media($point-name, max) {
+			$point-alias: $point-name + $delimiter;
+
+			&--#{$point-alias}only-icon {
+				@include onlyicon;
+			}
+		}
+	}
+
+
+// Цветовые статусы
+// =========================================
+
+	&--primary {
+		@include color-states( $color-primary, #fff );
+	}
+
+	&--secondary {
+		@include color-states( $color-secondary, #fff );
+	}
+
+	&--success {
+		@include color-states( $color-success, #fff );
+	}
+
+	&--warning {
+		@include color-states( $color-warning, #fff );
+	}
+
+	&--danger {
+		@include color-states( $color-danger, #fff );
+	}
+
+	&--info {
+		@include color-states( $color-info, #fff );
+	}
+
+
+// Размеры
+// =========================================
+
+	@each $point-name, $point in $button-sizes {
+
+		$point-size: $point-name + $delimiter + 'size';
+		&--#{$point-size} {
+			font-size: $point;
+		}
+	}
+
+	&--expand-element,
+	&--expand-text {
+		display: block;
+		width: 100%;
+
+		& + .button {
+			margin-top: $button-gap;
+		}
+	}
+
+	&--expand-element {
+		text-align: center;
+		> span {
+			display: inline-flex;
+    		vertical-align: middle;
+			width: auto;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
+
+
+// В зависимости от расположения
+.buttons-group {
+	display: flex;
+
+	&--start {
+		justify-content: flex-start;
+	}
+
+	&--center {
+		justify-content: center;
+	}
+
+	&--end {
+		justify-content: flex-end;
+	}
+
+	.button {
+		border-radius: 0;
+		border-left-width: 0;
+
+		&:first-child {
+			border-left-width: 1px;
+			border-top-left-radius: $button-border-radius;
+			border-bottom-left-radius: $button-border-radius;
+		}
+
+		&:last-child {
+			border-top-right-radius: $button-border-radius;
+			border-bottom-right-radius: $button-border-radius;
+		}
+
+		&--disabled,
+		&[disabled] {
+
+			+ .button {
+				border-left-width: 1px;
+			}
+		}
+	}
+
+	@each $point-name, $point in $button-sizes {
+
+		$point-size: $point-name + $delimiter + 'size';
+		&--#{$point-size} .button {
+			font-size: $point;
+		}
+	}
+}

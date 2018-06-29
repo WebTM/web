@@ -1,0 +1,242 @@
+////
+/// @group _partials/form.scss
+////
+
+
+// scss
+// ================================
+
+
+
+// vars
+// ================================
+
+/// @type Size
+$button-border-radius: .25em !default;
+
+/// Зазор, на основе которого будет строиться геометрия кнопки
+/// @type Size
+$button-gap: .25em !default;
+
+/// Карта размеров текста для кнопок
+/// @type Map
+$button-sizes: (
+	sm: 12,
+	md: 14,
+	lg: 18,
+	xl: 20
+);
+
+// placeholder
+// ================================
+%buttonsGeometry {
+	position: relative;
+	vertical-align: top;
+	box-sizing: border-box;
+	font-size: 1rem;
+	min-height: ($button-gap * 9);
+	line-height: ($button-gap * 7);
+	padding: $button-gap ($button-gap * 3);
+	border: 1px solid $color-gray25;
+	border-radius: $button-border-radius;
+	background-color: transparent;
+	transition: .25s ease;
+	text-decoration: none;
+	color: inherit;
+	max-width: 100%;
+}
+
+.form {
+	position: relative;
+	font-size: 1rem;
+
+	&__group {
+		display: block;
+		position: relative;
+		margin: 0 0 1.6rem;
+		& & {
+			margin: 0 0 .8rem;
+		}
+	}
+
+	&__label {
+		cursor: default;
+		display: inline-block;
+		vertical-align: top;
+		user-select: none;
+		margin-bottom: .4rem;
+	}
+
+	&__caption {
+		font-size: .8em;
+		margin-bottom: .4em;
+	}
+
+	&__info {
+		display: none;
+		pointer-events: none;
+		position: absolute;
+		top: 0;
+		right: 0;
+		font-size: .7em;
+		background-color: #000;
+		color: #fff;
+		padding: .1em .3em;
+		input:focus ~ &,
+		textarea:focus ~ &,
+		select:focus ~ & {
+			display: block;
+		}
+	}
+}
+
+label.form__label {
+	cursor: pointer;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	font-size: 1.5rem;
+	line-height: 2rem;
+	margin-top: -1rem;
+	color: #fff;
+	font-weight: lighter;
+	transition: all 0.3s ease;
+}
+input:focus ~ label.form__label,
+input.show ~ label.form__label {
+	top: 0;
+	font-size: 1rem;
+	line-height: 1rem;
+}
+
+
+.control-holder {
+	position: relative;
+	margin-bottom: 20px;
+	label.has-error {
+		display: inline-block;
+		vertical-align: top;
+		user-select: none;
+		font-size: 1em;
+		line-height: 1.5em;
+		padding: .1em .5em;
+		background-color: #000;
+		color: #fff;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		background: #fff;
+		color: #000;
+	}
+	&--text {
+		input, textarea, select {
+			@extend %buttonsGeometry;
+			display: block;
+			width: 100%;
+			line-height: calc( #{($button-gap * 7)} - 2px );
+			border-radius: 0;
+			border: none;
+			border-bottom: 1px solid rgba(255,255,255,0.5);
+			box-sizing: border-box;
+			height: 50px;
+			padding: 0;
+			outline: none !important;
+			color: #fff;
+			font-weight: lighter;
+			font-size: 1.5rem;
+			transition: all 0.3s ease;
+			&:focus {
+				border-color: #fff;
+			}
+		}
+		textarea {
+			resize: vertical;
+			min-height: 7em;
+			max-height: 18em;
+		}
+
+		@each $point-name, $point in $button-sizes {
+
+			$point-size: $point-name + $delimiter + 'size';
+			&-#{$point-size} {
+				input, textarea, select {
+					font-size: $point;
+				}
+			}
+		}
+	}
+	&--flag {
+		label {
+			user-select: none;
+			margin-right: 1em;
+			&:only-child,
+			&.has-error {
+				cursor: default;
+				margin-right: 0;
+			}
+		}
+		ins {
+			position: relative;
+			display: inline-block;
+			vertical-align: text-bottom;
+			width: 1.2em;
+			height: 1.2em;
+			background-color: #fff;
+			border: 1px solid;
+		}
+		input {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 0;
+			height: 0;
+			&[type="radio"] {
+				~ ins {
+					border-radius: 50%;
+				}
+			}
+			&:checked {
+				~ ins {
+					background-color: #000;
+					box-shadow: inset 0 0 0 3px #fff;
+				}
+			}
+			&:disabled {
+				~ ins,
+				~ span {
+					opacity: .5;
+					cursor: not-allowed;
+				}
+			}
+		}
+	}
+
+	&--file {
+		label {
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+		}
+
+		input {
+			position: absolute;
+			outline: none;
+			top: 0;
+			left: 0;
+			width: 0;
+			height: 0;
+			opacity: 0;
+		}
+
+		._ellipsis {
+			max-width: 200px;
+			width: auto;
+			display: inline-block;
+			vertical-align: top;
+		}
+	}
+	&:last-child {
+		margin-top: 45px;
+		margin-bottom: 0;
+	}
+}

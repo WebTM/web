@@ -1,0 +1,73 @@
+////
+/// @group _partials/view-footer.scss
+////
+
+
+// scss
+// ================================
+
+.view-footer {
+	position: relative;
+	background: #000;
+}
+.footer {
+	&-top {
+		height: 300px;
+		line-height: 300px;
+		text-align: center;
+		&__text {
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+	&-bot {
+		border-top: 1px solid rgba(255,255,255,0.2);
+		box-sizing: border-box;
+		height: 5rem;
+		line-height: 5rem;
+		text-align: center;
+		a {
+			font-size: 0.9rem;
+			line-height: 1rem;
+			display: inline-block;
+			vertical-align: middle;
+			color: rgba(255,255,255,0.4);
+			font-weight: lighter;
+			text-decoration: underline;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
+.question {
+	display: block;
+	font-weight: lighter;
+	font-size: 1.5rem;
+	line-height: 2rem;
+	color: #fff;
+}
+.phone {
+	font-weight: lighter;
+	font-size: 4rem;
+	line-height: 5rem;
+	display: block;
+	color: #417599;
+	text-decoration: none;
+	transition: all 0.2s ease;
+	&:hover {
+		color: #fff;
+	}
+}
+.email {
+	display: block;
+	font-weight: lighter;
+	font-size: 1.5rem;
+	line-height: 3rem;
+	color: #417599;
+	text-decoration: none;
+	transition: all 0.2s ease;
+	&:hover {
+		color: #fff;
+	}
+}

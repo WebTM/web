@@ -1,0 +1,48 @@
+////
+/// @group _mixins/util-visibility.scss
+////
+
+/// хелперы скрытия элементов
+@mixin util-visibility {
+	._hide {
+		display: none;
+	}
+	._hide\! {
+		display: none !important;
+	}
+	@media print {
+		._noprint {
+			display: none !important;
+		}
+	}
+}
+
+/// хелперы скрытия элементов для медиа запросов
+/// @param {Map} $points [$breakpoints] - карта брейкпоинтов
+@mixin util-visibility-mq($points: $breakpoints) {
+	@each $point-name, $point in $points {
+		@include media($point-name) {
+
+			$point-alias: $point-name + $delimiter;
+
+			._#{$point-alias}hide {
+				display: none;
+			}
+			._#{$point-alias}hide\! {
+				display: none !important;
+			}
+		}
+
+		@include media($point-name, max) {
+
+			$point-alias: $point-name + $delimiter;
+
+			._#{$point-alias}show {
+				display: none;
+			}
+			._#{$point-alias}show\! {
+				display: none !important;
+			}
+		}
+	}
+}

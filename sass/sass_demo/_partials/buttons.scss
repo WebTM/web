@@ -1,0 +1,68 @@
+////
+/// @group _partials/button.scss
+////
+
+// scss
+// ================================
+
+.button {
+	padding: 0 4.4rem;
+	border: 2px solid #fff;
+	box-sizing: border-box;
+	line-height: 3.1rem;
+	text-align: center;
+	border-radius: 3.5rem;
+	height: 3.5rem;
+	transition: background 0.3s ease;
+	display: inline-block;
+	vertical-align: top;
+	text-decoration: none;
+	background: none;
+	outline: none !important;
+	span {
+		text-transform: uppercase;
+		color: #fff;
+		font-size: 0.9rem;
+		line-height: 1.5rem;
+		display: inline-block;
+		vertical-align: middle;
+		transition: color 0.3s ease;
+		font-weight: bold;
+	}
+	&--svg {
+		padding: 0 3rem;
+		svg {
+			display: inline-block;
+			vertical-align: middle;
+			fill: #fff;
+			margin-left: 25px;
+			transition: fill 0.3s ease;
+		}
+	}
+	&--lock {
+		svg {
+			height: 21px;
+			width: 17px;
+		}
+	}
+	&--arrow {
+		svg {
+			height: 29px;
+			width: 16px;
+		}
+	}
+	&--mb10 {margin-bottom: 10px;}
+	&:hover {
+		background: #fff;
+		span {
+			color: #360568;
+		}
+		svg {
+			fill: #360568;
+		}
+	}
+	&:active {
+		transform: translate(0,3px);
+		transition: transform 0.1s ease;
+	}
+}

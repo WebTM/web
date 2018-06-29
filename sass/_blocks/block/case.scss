@@ -1,0 +1,253 @@
+////
+/// @group _blocks/
+////
+
+/// case
+
+.case {
+	position: relative;
+	padding: rem(20) 0 rem(40);
+	text-align: center;
+	text-decoration: none;
+	overflow: hidden;
+
+	@include media(ms) {
+		padding: rem(20) 0 rem(90);
+	}
+
+	@include media(def) {
+		padding: 10vw 0 11vw;
+
+		&--roi {
+			padding: 7vw 0 8vw;
+		}
+	}
+
+	@include media(1920px) {
+		padding: 192px 0 211px;
+
+		&--roi {
+			padding: 134px 0 153px;
+		}
+	}
+
+	.no-touchevents &:hover &__image {
+		animation-play-state: running;
+	}
+
+	&__image {
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 0;
+		background-position: center;
+		background-size: cover;
+		transform: scale(1.01);
+
+		.no-moz & {
+			background-color: rgba(map-get($colors, black), 0.4);
+			background-blend-mode: multiply;
+		}
+
+		&.is-ready {
+			animation: case 10s infinite alternate cubic-bezier(0.46, 0.2, 0.44, 0.71);
+			animation-play-state: paused;
+		}
+
+		.no-backgroundblendmode &::before,
+		.moz &::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			content: '';
+			background: rgba(#000, 0.5);
+		}
+	}
+
+	&:nth-child(2) &__image {
+		transition-delay: 0.15s;
+	}
+
+	&:nth-child(3) &__image {
+		transition-delay: 0.3s;
+	}
+
+	&__inner {
+		position: relative;
+		z-index: 2;
+		margin: 0 auto;
+		padding: rem(20) 5% rem(50);
+		box-sizing: content-box;
+
+		.case--roi & {
+			padding: rem(20) 5% rem(80);
+		}
+
+		@include media(ms) {
+			padding: rem(96) 10% rem(70);
+
+			.case--roi & {
+				padding: rem(96) 10% rem(80);
+			}
+		}
+
+		@include media(def) {
+			padding: rem(96) 10% rem(101);
+
+			.case--roi & {
+				padding: rem(96) 10% rem(101);
+			}
+		}
+	}
+
+	&__text {
+		font-family: map-get($font-family, default);
+		color: rgba(map-get($colors, white), 0.7);
+		font-size: 1rem;
+		line-height: 1.5em;
+		letter-spacing: 0.5px;
+	}
+
+	&__btn {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+
+		.button {
+			opacity: 0;
+			transform: translateY(50%);
+			transition: 0.35s ease-out;
+			will-change: transform;
+
+			.case:hover &,
+			.touchevents & {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+	}
+
+	&-video {
+		position: relative;
+		overflow: hidden;
+		padding-top: 43.1%;
+		line-height: 0;
+		background-size: cover;
+		background-position: center;
+
+		&__poster {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				background: rgba(map-get($colors, black), 0.4);
+				z-index: 2;
+			}
+
+			.is-play & {
+				visibility: hidden;
+			}
+		}
+
+		&__btn {
+			position: relative;
+			z-index: 2;
+			font-family: map-get($font-family, wzm);
+			font-weight: 700;
+			font-size: rem(40);
+			line-height: 0.5em;
+			color: map-get($colors, white);
+			cursor: pointer;
+			transition: 0.2s ease-in-out;
+
+			@include media(def) {
+				font-size: rem(70);
+			}
+
+			&:hover {
+				color: map-get($colors, link-hover);
+			}
+
+			.svg-icon {
+				fill: currentColor;
+			}
+
+			.is-play & {
+				transform: scale(0.2);
+			}
+		}
+
+		&__container {
+			position: absolute;
+			left: -4px;
+			top: -3px;
+			height: calc(100% + 6px);
+			width: calc(100% + 6px);
+			max-width: inherit;
+
+			.is-video-hide & {
+				visibility: hidden;
+			}
+		}
+	}
+
+	&-fix {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: rem(70);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: map-get($colors, white);
+		transition: transform 0.32s ease-out;
+		z-index: 3;
+
+		&.is-hidden {
+			transform: translateY(100%);
+		}
+
+		@include media(xl) {
+			height: rem(100);
+		}
+	}
+
+	&__image-container {
+		font-size: 0;
+		line-height: 0;
+
+		@include media(def, max) {
+			img {
+				margin: -1px 0;
+			}
+		}
+	}
+}
+
+@keyframes case {
+	from {
+		transform: scale(1.01) rotate(0deg);
+	}
+
+	to {
+		transform: scale(1.4) rotate(5deg);
+	}
+}

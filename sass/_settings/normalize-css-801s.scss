@@ -1,0 +1,501 @@
+////
+/// @group normalize-801s.scss
+////
+
+
+
+// vars
+// ================================
+
+/// @type Color
+$nmlz__bg-color__mark: #ff0 !default;
+
+/// @type Collection
+$nmlz__border__fieldset: 1px solid #c0c0c0;
+
+/// @type Color
+$nmlz__color: #000 !default;
+/// @type Color
+$nmlz__color__mark: $nmlz__color !default;
+
+/// @type Keyword
+$nmlz__font-family: sans-serif !default;
+/// @type Keyword
+$nmlz__font-family__code: monospace, monospace !default;
+/// @type Keyword
+$nmlz__font-family__form-elements: $nmlz__font-family !default;
+
+/// @type Size
+$nmlz__font-size__h1: 2em !default;
+/// @type Size
+$nmlz__font-size__code: 1em !default;
+/// @type Size
+$nmlz__font-size__form-elements: 100% !default;
+/// @type Size
+$nmlz__font-size__small: 80% !default;
+/// @type Size
+$nmlz__font-size__sup-sub: 75% !default;
+
+/// @type Keyword
+$nmlz__font-weight: bolder !default;
+
+/// @type Size
+$nmlz__line-height: 1.15 !default;
+/// @type Size
+$nmlz__line-height__form-elements: $nmlz__line-height !default;
+
+/// @type Size
+$nmlz__margin__fieldset: 0 2px;
+/// @type Size
+$nmlz__margin__figure: 1em 40px !default;
+/// @type Size
+$nmlz__margin__h1: 0.67em 0 !default;
+
+/// @type Size
+$nmlz__padding__fieldset: 0.35em 0.625em 0.75em;
+
+/// @type Size
+$nmlz__sub__botom: -0.25em !default;
+/// @type Size
+$nmlz__sup__top: -0.5em !default;
+
+/// @type Bool
+$nmlz__support-ie9-and-less: true !default;
+
+
+
+
+
+// mixins
+// ================================
+
+/// Document
+/// - html
+@mixin normalize__document {
+	// 1. Change the default font family in all browsers (opinionated).
+	// 2. Correct the line height in all browsers.
+	// 3. Prevent adjustments of font size after orientation changes in
+	//    IE on Windows Phone and in iOS.
+	// 4. Corrects text resizing oddly in IE6/7 when body font-size is set using em units
+	//    http://clagnut.com/blog/348/#c790 (addon)
+	html {
+		font-family: $nmlz__font-family; // 1
+		line-height: $nmlz__line-height; // 2
+		-ms-text-size-adjust: 100%; // 3
+		-webkit-text-size-adjust: 100%; // 3
+		@if $nmlz__support-ie9-and-less {
+			font-size: 100%; // 4
+		}
+	}
+}
+
+
+/// Sections
+/// - body
+/// - article, aside, footer, header, nav, section
+/// - h1
+@mixin normalize__sections {
+	// Remove the margin in all browsers (opinionated)
+	body {
+		margin: 0;
+	}
+
+	// Add the correct display in IE 9-.
+	article, aside, footer, header, nav, section {
+		@if $nmlz__support-ie9-and-less {
+			display: block;
+		}
+	}
+
+	// Correct the font size and margin on `h1` elements within `section` and
+	//    `article` contexts in Chrome, Firefox, and Safari.
+	h1 {
+		font-size: $nmlz__font-size__h1;
+		margin: $nmlz__margin__h1;
+	}
+}
+
+
+/// Grouping content
+/// - figcaption, figure
+/// - main
+/// - hr
+/// - pre
+@mixin normalize__grouping-content {
+
+	// Add the correct display in IE 9-.
+	figcaption,
+	figure {
+		@if $nmlz__support-ie9-and-less {
+			display: block;
+		}
+	}
+	figure {
+		@if $nmlz__support-ie9-and-less {
+			margin: $nmlz__margin__figure;
+		}
+	}
+
+	// Add the correct display in IE.
+	main {
+		display: block;
+	}
+
+	// 1. Add the correct box sizing in Firefox.
+	// 2. Show the overflow in Edge and IE.
+	hr {
+		box-sizing: content-box; // 1
+		height: 0; // 1
+		overflow: visible; // 2
+	}
+
+	// 1. Correct the inheritance and scaling of font size in all browsers.
+	// 2. Correct the odd `em` font sizing in all browsers.
+	pre {
+		font-family: $nmlz__font-family__code; // 1
+		font-size: $nmlz__font-size__code; // 2
+	}
+}
+
+
+/// Text-level semantics
+/// - a
+/// - abbr[title]
+/// - b, strong
+/// - code, kbd, samp
+/// - dfn
+/// - mark
+/// - small
+/// - sub, sup
+@mixin normalize__text-level-semantics {
+	// 1. Remove the gray background on active links in IE 10.
+	// 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+	a {
+		background-color: transparent; // 1
+		-webkit-text-decoration-skip: objects; // 2
+	}
+
+	// 1. Remove the bottom border in Firefox 39-.
+	// 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+	abbr[title] {
+		border-bottom: none; // 1
+		text-decoration: underline; // 2
+		text-decoration: underline dotted; // 2
+	}
+
+	// Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+	b, strong {
+		font-weight: inherit;
+	}
+
+	// Add the correct font weight in Chrome, Edge, and Safari.
+	b, strong {
+		font-weight: $nmlz__font-weight;
+	}
+
+	// 1. Correct the inheritance and scaling of font size in all browsers.
+	// 2. Correct the odd `em` font sizing in all browsers.
+	code, kbd, samp {
+		font-family: $nmlz__font-family__code; // 1
+		font-size: $nmlz__font-size__code; // 2
+	}
+
+	// Add the correct font style in Android 4.3-.
+	dfn {
+		font-style: italic;
+	}
+
+	// Add the correct background and color in IE 9-.
+	mark {
+		@if $nmlz__support-ie9-and-less {
+			background-color: $nmlz__bg-color__mark;
+			color: $nmlz__color__mark;
+		}
+	}
+
+	// Add the correct font size in all browsers.
+	small {
+		font-size: $nmlz__font-size__small;
+	}
+
+	// Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+	sub, sup {
+		font-size: $nmlz__font-size__sup-sub;
+		line-height: 0;
+		position: relative;
+		vertical-align: baseline;
+	}
+	sub {
+		bottom: $nmlz__sub__botom;
+	}
+	sup {
+		top: $nmlz__sup__top;
+	}
+}
+
+
+
+/// Text-level semantics :psevdo-classes
+/// - a:active, a:hover
+@mixin normalize__text-level-semantics__psevdo-classes {
+	// Remove the outline on focused links when they are also active or hovered
+	//   in all browsers (opinionated).
+	a:active, a:hover {
+		outline-width: 0;
+	}
+}
+
+
+
+/// Embedded content
+/// - audio, video
+/// - img
+/// - svg
+@mixin normalize__embedded-content {
+	// Add the correct display in IE 9-.
+	audio, video {
+		@if $nmlz__support-ie9-and-less {
+			display: inline-block;
+		}
+	}
+
+	// Add the correct display in iOS 4-7.
+	audio:not([controls]) {
+		display: none;
+		height: 0;
+	}
+
+	// Remove the border on images inside links in IE 10-.
+	img {
+		border-style: none;
+	}
+
+	// Hide the overflow in IE.
+	svg:not(:root) {
+		overflow: hidden;
+	}
+}
+
+
+
+/// Forms
+/// - button, input, optgroup, select, textarea
+/// - fieldset
+/// - legend
+/// - progress
+@mixin normalize__forms {
+	// 1. Change the font styles in all browsers (opinionated).
+	// 2. Remove the margin in Firefox and Safari.
+	button, input, optgroup, select, textarea {
+		font-family: $nmlz__font-family__form-elements; // 1
+		font-size: $nmlz__font-size__form-elements; // 1
+		line-height: $nmlz__line-height__form-elements; // 1
+		margin: 0; // 2
+	}
+
+	// Show the overflow in IE.
+	// 1. Show the overflow in Edge.
+	button,
+	input { // 1
+		overflow: visible;
+	}
+
+	// Remove the inheritance of text transform in Edge, Firefox, and IE.
+	// 1. Remove the inheritance of text transform in Firefox.
+	button,
+	select { // 1
+		text-transform: none;
+	}
+
+	// 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+	//    controls in Android 4.
+	// Correct the inability to style clickable types in iOS and Safari.
+	button,
+	html [type="button"], // 1
+	[type="reset"],
+	[type="submit"] {
+		-webkit-appearance: button; // 2
+	}
+
+	// Change the border, margin, and padding in all browsers (opinionated).
+	fieldset {
+		border: $nmlz__border__fieldset;
+		margin: $nmlz__margin__fieldset;
+		padding: $nmlz__padding__fieldset;
+	}
+
+	// 1. Correct the text wrapping in Edge and IE.
+	// 2. Correct the color inheritance from `fieldset` elements in IE.
+	// 3. Remove the padding so developers are not caught out when they zero out
+	//    `fieldset` elements in all browsers.
+	legend {
+		box-sizing: border-box; // 1
+		color: inherit; // 2
+		display: table; // 1
+		max-width: 100%; // 1
+		padding: 0; // 3
+		white-space: normal; // 1
+	}
+
+	// 1. Add the correct display in IE 9-.
+	// 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+	progress {
+		@if $nmlz__support-ie9-and-less {
+			display: inline-block;
+		}
+		vertical-align: baseline;
+	}
+
+	// Remove the default vertical scrollbar in IE.
+	textarea {
+		overflow: auto;
+	}
+
+	// 1. Add the correct box sizing in IE 10-.
+	// 2. Remove the padding in IE 10-.
+	[type="checkbox"],
+	[type="radio"] {
+		box-sizing: border-box; // 1
+		padding: 0; // 2
+	}
+
+	// 1. Correct the odd appearance in Chrome and Safari.
+	// 2. Correct the outline style in Safari.
+	[type="search"] {
+		-webkit-appearance: textfield; // 1
+		outline-offset: -2px; // 2
+	}
+
+	// 1. Correct the inability to style clickable types in iOS and Safari.
+	// 2. Change font properties to `inherit` in Safari.
+	::-webkit-file-upload-button {
+		-webkit-appearance: button;
+		font: inherit;
+	}
+}
+
+
+
+/// Forms :psevdo-classes
+/// - button, input
+@mixin normalize__forms__psevdo-classes {
+	// Remove the inner border and padding in Firefox.
+	button::-moz-focus-inner,
+	[type="button"]::-moz-focus-inner,
+	[type="reset"]::-moz-focus-inner,
+	[type="submit"]::-moz-focus-inner {
+		border-style: none;
+		padding: 0;
+	}
+
+	// Restore the focus styles unset by the previous rule.
+	button:-moz-focusring,
+	[type="button"]:-moz-focusring,
+	[type="reset"]:-moz-focusring,
+	[type="submit"]:-moz-focusring {
+		outline: 1px dotted ButtonText;
+	}
+
+	// Correct the cursor style of increment and decrement buttons in Chrome.
+	[type="number"]::-webkit-inner-spin-button,
+	[type="number"]::-webkit-outer-spin-button {
+		height: auto;
+	}
+
+	// Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+	[type="search"]::-webkit-search-cancel-button,
+	[type="search"]::-webkit-search-decoration {
+		-webkit-appearance: none;
+	}
+}
+
+
+
+/// Interactive
+/// - details, menu
+/// - summary
+@mixin normalize__interactive {
+	// Add the correct display in IE 9-.
+	// 1. Add the correct display in Edge, IE, and Firefox.
+	details, // 1
+	menu {
+		display: block;
+	}
+
+	// Add the correct display in all browsers.
+	summary {
+		display: list-item;
+	}
+}
+
+
+
+/// Scripting
+/// - canvas
+/// - template
+@mixin normalize__scripting {
+	// Add the correct display in IE 9-.
+	canvas {
+		@if $nmlz__support-ie9-and-less {
+			display: inline-block;
+		}
+	}
+
+	// Add the correct display in IE.
+	template {
+		display: none;
+	}
+}
+
+
+
+/// Hidden
+/// - [hidden]
+@mixin normalize__hidden {
+	[hidden] {
+		display: none;
+	}
+}
+
+
+
+/// Addons
+/// - abbr[title], dfn[title]
+/// - button
+/// - input
+@mixin normalize__addons {
+	// Set cursor (addon)
+	abbr, dfn {
+		&[title] {
+			cursor: help;
+		}
+	}
+
+	// Set cursor (addon)
+	button {
+		cursor: pointer;
+		&:disabled {
+			cursor: not-allowed;
+		}
+	}
+
+	// Set cursor and fix IE (addon)
+	input {
+		&::-ms-clear {
+			display: none;
+			width: 0;
+			height: 0;
+		}
+    	&::-ms-reveal {
+			display: none;
+			width: 0;
+			height: 0;
+		}
+		&[readonly] {
+			cursor: default;
+		}
+		&:disabled {
+			cursor: not-allowed;
+		}
+	}
+}

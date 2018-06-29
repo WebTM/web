@@ -1,0 +1,111 @@
+////
+/// @group _blocks/
+////
+
+// scss
+// ================================
+
+// общие правила
+.sitemap {
+	padding: 1rem;
+	position: relative;
+	font-size: rem(16);
+	margin-bottom: 1.5rem;
+
+	@include media(md) {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+
+	ul {
+		list-style: none;
+		padding: 0 0 0 2em;
+		margin: 0;
+	}
+
+	li {
+		list-style: none;
+		line-height: 1.4em;
+	}
+
+	a {
+		padding: .5em 1em .5em .5em;
+		display: block;
+		color: map-get($colors, black);
+		text-decoration: none;
+		background: #f9f9f9;
+
+		&:hover {
+			background-color: rgba(map-get($colors, link-hover), 0.1);
+		}
+
+		&:active {
+			color: #000;
+			background-color: rgba(map-get($colors, link-hover), 0.1);
+		}
+	}
+
+	& > ul {
+		padding: 0;
+		margin: 1em 0;
+		position: relative;
+		overflow: hidden;
+
+		& > li > ul {
+			padding-left: 0;
+
+			li {
+
+				position: relative;
+				margin: .1em 0;
+
+				&:hover {
+					background-color: rgba(map-get($colors, link-hover), 0.1);
+				}
+
+				a {
+					position: relative;
+					padding-left: 2.5em;
+
+					&::before,
+					&::after {
+						content: '';
+						position: absolute;
+						top: .4em;
+						width: 1600px;
+						height: 1.4em;
+						text-align: right;
+						background: transparent repeat-x center right;
+					}
+
+					&::before {
+						left: 0;
+						width: 2em;
+						background-image: url(static/pic/sitemap-start.svg);
+					}
+
+					&::after {
+						right: 100%;
+						background-image: url(static/pic/sitemap-middle.svg);
+					}
+
+				}
+
+				&:last-child {
+					> a:only-child {
+						&::before {
+							background-image: url(static/pic/sitemap-end.svg);
+						}
+					}
+				}
+			}
+		}
+
+		ul {
+			list-style: none;
+			padding: 0 0 0 2em;
+			margin: 0;
+		}
+	}
+
+}

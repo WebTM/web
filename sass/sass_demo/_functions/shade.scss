@@ -1,0 +1,26 @@
+////
+/// @group _functions/shade.scss
+////
+
+/// Смешивание цвета с чёрным.
+///
+/// @param {Color} $color
+///
+/// @param {Number (Percentage)} $percent
+///   Количество чёрного цвета для смешивания в процентах.
+///
+/// @example scss - Usage
+///   .element {
+///     background-color: shade(#ffbb52, 60%);
+///   }
+///
+/// @example css - CSS Output
+///   .element {
+///     background-color: #664a20;
+///   }
+///
+/// @return {Color}
+
+@function shade($color, $percent) {
+	@return mix(#000, $color, $percent);
+}

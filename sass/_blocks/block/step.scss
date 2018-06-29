@@ -1,0 +1,33 @@
+////
+/// @group _blocks/block/
+////
+
+/// step
+
+.step {
+	position: relative;
+	min-height: 32rem;
+
+	@include media(def) {
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 8%;
+			content: attr(data-step);
+			font-size: 31.25vw;
+			font-family: map-get($font-family, wzm);
+			font-weight: 700;
+			color: rgba(map-get($colors, black), 0.05);
+			line-height: 0.8em;
+			z-index: -1;
+
+			@include media(1920px) {
+				font-size: 600px;
+			}
+		}
+
+		&:nth-child(odd)::before {
+			left: 41%;
+		}
+	}
+}

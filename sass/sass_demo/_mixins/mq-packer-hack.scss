@@ -1,0 +1,36 @@
+////
+/// @group _mixin/mq-packer-hack.scss
+////
+
+
+/// брейкпоинты фикс точек
+$mqPackerPoints: (
+	$st,
+	$xs,
+	$sm,
+	$ms,
+	$md,
+	$def,
+	$lg,
+	$xl,
+	$mg
+);
+
+/// Фикс mqpacker
+/// @link https://github.com/hail2u/node-css-mqpacker/issues/16
+@mixin mqPacker() {
+	$list: ();
+	@for $i from 1 through length( $mqPackerPoints ) {
+		$point: nth( $mqPackerPoints, $i );
+		$list: append( $list, $point );
+		@include media( $point ) {
+			/*! $mqpacker hack */
+		}
+	}
+	@for $i from length( $list ) through 1 {
+		$point: nth( $mqPackerPoints, $i );
+		@include media( $point, max ) {
+			/*! $mqpacker hack */
+		}
+	}
+}

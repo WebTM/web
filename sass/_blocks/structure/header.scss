@@ -1,0 +1,56 @@
+////
+/// @group _blocks/
+////
+
+/// Описание
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: map-get($colors, white);
+	z-index: 9;
+	transition: transform 0.32s ease-out;
+	font-size: 0;
+
+	@include media(def) {
+		left: 4.5vw;
+		right: 4.5vw;
+	}
+
+	@include media(xl) {
+		left: rem(100px);
+		right: rem(100px);
+	}
+
+	&.is-hidden {
+		transform: translateY(-101%);
+	}
+
+	&__inner {
+		height: rem(50px);
+
+		@include media(def) {
+			height: rem(70px);
+		}
+
+		@include media(xl) {
+			height: rem(100px);
+		}
+	}
+}
+
+._head-hide {
+	display: none;
+	@include media(1600px) {
+		display: block;
+	}
+}
+
+.promocode-mobile {
+	font-size: 10px;
+	line-height: 11px;
+	text-transform: none;
+	text-align: center;
+}
+

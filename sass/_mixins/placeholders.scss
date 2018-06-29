@@ -1,0 +1,33 @@
+////
+/// @group _mixins/placeholders.scss
+////
+
+/// Установка цвета `placeholder` с учетом вендорных префиксов
+/// 
+/// @param {Color} $color - цвет текста
+/// @param {Boolean} $changeOpacity [false] - указать прозрачность для `::-moz-`
+@mixin placeholder($color, $changeOpacity: false) {
+	&::-webkit-input-placeholder {
+		color: $color;
+	}
+	&::-moz-placeholder {
+		color: $color;
+		@if $changeOpacity {
+			opacity: .5;
+		}
+	}
+	&:-ms-input-placeholder {
+		color: $color;
+	}
+}
+
+
+
+/// установка цвета `placeholder` при фокусе
+/// 
+/// @param {Color} $color [transparent] - цвет текста
+@mixin placeholder-on-focus($color: transparent) {
+	&:focus {
+		@include placeholder($color);
+	}
+}

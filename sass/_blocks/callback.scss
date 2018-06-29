@@ -1,0 +1,20 @@
+////
+/// @group _blocks/
+////
+
+/// callback
+.callback {
+	&--bg {
+		background: #272937;
+	}
+}
+
+.messenger {
+	&__image {
+		display: inline-block;
+		vertical-align: top;
+		width: rem(26px);
+		height: rem(26px);
+		margin-bottom: 0.25rem;
+	}
+}

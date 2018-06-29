@@ -1,0 +1,58 @@
+////
+/// @group _blocks/block/
+////
+
+/// compare
+
+.compare {
+	&--border {
+		position: relative;
+
+		&::after {
+			position: absolute;
+			content: '';
+			top: 0;
+			left: 8.33%;
+			right: 8.33%;
+			border-top: 1px solid rgba(map-get($colors, black), 0.1);
+		}
+
+		@include media(def) {
+			&-top {
+				&::before {
+					position: absolute;
+					content: '';
+					left: 8.33%;
+					right: 8.33%;
+					border-top: 1px solid #e5e5e5;
+					margin-top: -1rem;
+				}
+			}
+		}
+	}
+
+	&__title {
+		font-weight: 700;
+		text-transform: uppercase;
+		position: relative;
+
+		@include media(def, max) {
+			&::after {
+				content: '';
+				position: absolute;
+				top: 100%;
+				left: 50%;
+				width: rem(50);
+				margin-left: rem(-25);
+				margin-top: 0.5rem;
+				height: 1px;
+				background: map-get($colors, black);
+			}
+		}
+
+		@include media(def) {
+			font-weight: 400;
+			text-transform: none;
+		}
+	}
+}
