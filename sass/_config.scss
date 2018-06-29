@@ -112,7 +112,29 @@ $breakpoints: (
 	// xl: $xl,
 	// mg: $mg,
 );
+$devices: (
+	// st: $st,
+	xs: $xs,
+	sm: $sm,
+	ms: $ms,
+	md: $md,
+	def: $def,
+	lg: $lg,
+	// xl: $xl,
+	// mg: $mg,
+);
 
+$orientations: (
+	// st: $st,
+	xs: $xs,
+	sm: $sm,
+	ms: $ms,
+	md: $md,
+	def: $def,
+	lg: $lg,
+	// xl: $xl,
+	// mg: $mg,
+);
 
 
 
@@ -319,11 +341,6 @@ $nmlz__margin__figure: 1em 0;
 
 
 
-// ==================================
-//  Пользовательский конфиг
-// ==================================
-@import 'custom-config';
-
 
 
 // ================================
@@ -331,7 +348,7 @@ $nmlz__margin__figure: 1em 0;
 // ================================
 
 // Normalize
-@import 'normalize-css-801s/dist/normalize-css-801s';
+@import '_settings/normalize-css-801s';
 
 
 // Functions

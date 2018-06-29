@@ -1,39 +1,0 @@
-12/29/15 7:46:28: style.scss - parse error: failed at `.alt-font; color: @color-text; .transition-500; padding-bottom: 40px; display: inline-block; line-height: 14px; }` C:\Winginx\home\ui\public_html/wp-content/themes/web/sass/web/menu/_menu.scss on line 26
-12/29/15 7:51:56: style.scss - parse error: failed at `.alt-font; color: @color-text; .transition-500; padding-bottom: 40px; display: inline-block; line-height: 14px; }` C:\Winginx\home\ui\public_html/wp-content/themes/web/sass/web/menu/_menu.scss on line 26
-12/29/15 8:12:25: style.scss - parse error: failed at `.alt-font; color: $color-text; @extend .transition-500; padding-bottom: 40px; display: inline-block; line-height: 14px; }` C:\Winginx\home\ui\public_html/wp-content/themes/web/sass/web/menu/_menu.scss on line 26
-12/29/15 8:15:30: style.scss - parse error: failed at `.alt-font; color: $color-text; @extend .transition-500; padding-bottom: 40px; display: inline-block; line-height: 14px; }` C:\Winginx\home\ui\public_html/wp-content/themes/web/sass/web/menu/_menu.scss on line 26
-12/29/15 8:19:16: style.scss - parse error: failed at `.alt-font; color: $color-text; @extend .transition-500; padding-bottom: 40px; display: inline-block; line-height: 14px; }` C:\Winginx\home\ui\public_html/wp-content/themes/web/sass/web/menu/_menu.scss on line 26
-12/29/15 8:19:36: style.scss - parse error: failed at `.alt-font; color: $color-text; @extend .transition-500; padding-bottom: 40px; display: inline-block; line-height: 14px; }` C:\Winginx\home\ui\public_html/wp-content/themes/web/sass/web/menu/_menu.scss on line 26
-12/29/15 8:19:48: style.scss - parse error: failed at `.alt-font; color: $color-text; @extend .transition-500; padding-bottom: 40px; display: inline-block; line-height: 14px; }` C:\Winginx\home\ui\public_html/wp-content/themes/web/sass/web/menu/_menu.scss on line 26
-11/29/16 2:41:12: style.scss - unexpected }: failed at `` C:\Winginx\home\ui\public_html/wp-content/themes/web/sass/web/_footer.scss on line 158
-11/29/16 2:41:16: style.scss - unexpected }: failed at `` C:\Winginx\home\ui\public_html/wp-content/themes/web/sass/web/_footer.scss on line 158
-11/29/16 2:41:18: style.scss - unexpected }: failed at `` C:\Winginx\home\ui\public_html/wp-content/themes/web/sass/web/_footer.scss on line 158
-11/29/16 2:42:10: style.scss - unexpected }: failed at `` C:\Winginx\home\ui\public_html/wp-content/themes/web/sass/web/_footer.scss on line 158
-11/29/16 2:42:17: style.scss - unexpected }: failed at `` C:\Winginx\home\ui\public_html/wp-content/themes/web/sass/web/_footer.scss on line 158
-11/29/16 2:42:19: style.scss - unexpected }: failed at `` C:\Winginx\home\ui\public_html/wp-content/themes/web/sass/web/_footer.scss on line 158
-11/29/16 2:50:19: style.scss - unexpected }: failed at `` C:\Winginx\home\ui\public_html/wp-content/themes/web/sass/web/_footer.scss on line 158
-11/29/16 2:50:23: style.scss - unexpected }: failed at `` C:\Winginx\home\ui\public_html/wp-content/themes/web/sass/web/_footer.scss on line 158
-11/29/16 2:50:25: style.scss - unexpected }: failed at `` C:\Winginx\home\ui\public_html/wp-content/themes/web/sass/web/_footer.scss on line 158
-11/29/16 2:51:31: style.scss - unexpected }: failed at `` C:\Winginx\home\ui\public_html/wp-content/themes/web/sass/web/_footer.scss on line 158
-11/29/16 2:51:35: style.scss - unexpected }: failed at `` C:\Winginx\home\ui\public_html/wp-content/themes/web/sass/web/_footer.scss on line 158
-11/29/16 2:51:37: style.scss - unexpected }: failed at `` C:\Winginx\home\ui\public_html/wp-content/themes/web/sass/web/_footer.scss on line 158
-11/29/16 2:51:52: style.scss - unexpected }: failed at `` C:\Winginx\home\ui\public_html/wp-content/themes/web/sass/web/_footer.scss on line 158
-11/29/16 2:53:13: style.scss - unexpected }: failed at `` C:\Winginx\home\ui\public_html/wp-content/themes/web/sass/web/_footer.scss on line 158
-11/29/16 2:53:17: style.scss - unexpected }: failed at `` C:\Winginx\home\ui\public_html/wp-content/themes/web/sass/web/_footer.scss on line 158
-11/29/16 2:53:19: style.scss - unexpected }: failed at `` C:\Winginx\home\ui\public_html/wp-content/themes/web/sass/web/_footer.scss on line 158
-11/29/16 3:00:56: style.scss - unexpected }: failed at `` C:\Winginx\home\ui\public_html/wp-content/themes/web/sass/web/_footer.scss on line 158
-11/29/16 3:01:01: style.scss - unexpected }: failed at `` C:\Winginx\home\ui\public_html/wp-content/themes/web/sass/web/_footer.scss on line 158
-11/29/16 3:01:03: style.scss - unexpected }: failed at `` C:\Winginx\home\ui\public_html/wp-content/themes/web/sass/web/_footer.scss on line 158
-11/29/16 3:02:30: style.scss - unexpected }: failed at `` C:\Winginx\home\ui\public_html/wp-content/themes/web/sass/web/_footer.scss on line 158
-11/29/16 3:02:34: style.scss - unexpected }: failed at `` C:\Winginx\home\ui\public_html/wp-content/themes/web/sass/web/_footer.scss on line 158
-11/29/16 3:02:36: style.scss - unexpected }: failed at `` C:\Winginx\home\ui\public_html/wp-content/themes/web/sass/web/_footer.scss on line 158
-11/29/16 3:02:51: style.scss - unexpected }: failed at `` C:\Winginx\home\ui\public_html/wp-content/themes/web/sass/web/_footer.scss on line 158
-11/29/16 3:02:54: style.scss - unexpected }: failed at `` C:\Winginx\home\ui\public_html/wp-content/themes/web/sass/web/_footer.scss on line 158
-11/29/16 3:03:12: style.scss - unexpected }: failed at `` C:\Winginx\home\ui\public_html/wp-content/themes/web/sass/web/_footer.scss on line 158
-11/29/16 3:03:16: style.scss - unexpected }: failed at `` C:\Winginx\home\ui\public_html/wp-content/themes/web/sass/web/_footer.scss on line 158
-11/29/16 3:03:19: style.scss - unexpected }: failed at `` C:\Winginx\home\ui\public_html/wp-content/themes/web/sass/web/_footer.scss on line 158
-11/29/16 3:03:22: style.scss - unexpected }: failed at `` C:\Winginx\home\ui\public_html/wp-content/themes/web/sass/web/_footer.scss on line 158
-11/29/16 3:03:29: style.scss - unexpected }: failed at `` C:\Winginx\home\ui\public_html/wp-content/themes/web/sass/web/_footer.scss on line 158
-11/29/16 3:03:33: style.scss - unexpected }: failed at `` C:\Winginx\home\ui\public_html/wp-content/themes/web/sass/web/_footer.scss on line 158
-11/29/16 3:03:45: style.scss - unexpected }: failed at `` C:\Winginx\home\ui\public_html/wp-content/themes/web/sass/web/_footer.scss on line 158
-11/29/16 3:03:49: style.scss - unexpected }: failed at `` C:\Winginx\home\ui\public_html/wp-content/themes/web/sass/web/_footer.scss on line 158
