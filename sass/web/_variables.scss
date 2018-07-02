@@ -17,7 +17,7 @@ $color-secondary-1:  #2c3e50;
 $color-secondary-2:   #3498db;
 .text-white { color: #fff; }
 
-.font-body {  font-family: $Fira-Sans-Hair-Italic;}
+.font-body {  font-family: $webpro-reg;}
 .font-heading {  font-family: $webpro-reg;}
 .alt-font {
   font-family: $webpro;
@@ -70,23 +70,3 @@ $color-secondary-2:   #3498db;
         letter-spacing: 0.21em;
         color: #fdbb07;
     }
-
-
-@mixin font-face($style-name, $file, $family, $weight:"", $style:"") {
-            $filepath: "../fonts/" + $family + "/" + $file;
-            @font-face {
-                font-family: "#{$style-name}";
-                src: url($filepath + ".eot");
-                src: local("#{$style-name}");
-                src: url($filepath + ".eot?#iefix") format('embedded-opentype'),
-                     url($filepath + ".woff") format('woff'),
-                     url($filepath + ".ttf")  format('truetype'),
-                     url($filepath + ".svg#" + $style-name + "") format('svg');
-                     @if $weight != "" {
-                font-weight: #{$weight};
-                     }
-                     @if $style != "" {
-                font-style: #{$style};
-                     }
-            }
-        }
