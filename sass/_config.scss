@@ -359,6 +359,7 @@ $nmlz__margin__figure: 1em 0;
 
 
 // Mixins
+@import '_mixins/fonts';
 @import '_mixins/mq-packer-hack';
 @import '_mixins/media';
 @import '_mixins/placeholders';
