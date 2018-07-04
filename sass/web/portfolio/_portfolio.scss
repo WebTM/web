@@ -4,7 +4,6 @@
 .projects-gallery {
   h2 {
     @include h2-index;
-    font-size: 8.4rem;
     color: #00a7e7;
     &:before {
       @include divider;
