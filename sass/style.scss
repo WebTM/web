@@ -8,6 +8,14 @@
 // -------------------------------------------------
 
 @import "_settings/all";
+@import "_settings/mixins/helpers-color";
+@import "_settings/mixins/helpers-cols";
+@import "_settings/mixins/helpers-flex";
+@import "_settings/mixins/helpers-float";
+@import "_settings/mixins/helpers-grid";
+@import "_settings/mixins/helpers-gutter";
+@import "_settings/mixins/helpers-show-hide";
+@import "_settings/mixins/helpers-text";
 
 // structure
 @import "_system/html-tags";
