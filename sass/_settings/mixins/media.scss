@@ -7,10 +7,10 @@
 /// @param {Keyword} $direction [min] - "направление" медиа запроса
 /// @param {Keyword} $dimension [width] - величина
 @mixin media($value, $direction: min, $dimension: width) {
-	$corrector: 0;
+	$corrector: 1;
 
 	@if $direction == max {
-		$corrector: -1;
+		$corrector: 0;
 	}
 
 	@if map-has-key($breakpoints, $value) {

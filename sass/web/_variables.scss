@@ -15,12 +15,13 @@ $color-heading: #333333;
 $color-primary: #000;
 $color-secondary-1:  #2c3e50;
 $color-secondary-2:   #3498db;
+$color-text: #333333;
 .text-white { color: #fff; }
 
-.font-body {  font-family: $webpro-reg;}
-.font-heading {  font-family: $webpro-reg;}
+.font-body {  font-family: webpro-reg;}
+.font-heading {  font-family: webpro-reg;}
 .alt-font {
-  font-family: $webpro;
+  font-family: webpro;
   font-weight: bold;
   font-size: 11px;
   text-transform: uppercase;
@@ -29,6 +30,31 @@ $color-secondary-2:   #3498db;
 
 .divide60 {padding-top:60px}
 .divi50 {padding:50px 0}
+
+.cover-div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+}
+
+.transition-500{
+    -webkit-transition: all $medium-transition ease;
+    -moz-transition: all $medium-transition ease;
+    transition: all $medium-transition ease;
+}
+
+.transition-2000{
+    -webkit-transition: all $long-transition ease;
+    -moz-transition: all $long-transition ease;
+    transition: all $long-transition ease;
+}
+
+.transition-300{
+    -webkit-transition: all $short-transition ease;
+    -moz-transition: all $short-transition ease;
+    transition: all $short-transition ease;
+}
 
 @mixin standard-radius{ border-radius: $standard-radius; }
 @mixin background-opacity {

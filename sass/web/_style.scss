@@ -2,10 +2,10 @@
 /*--------------------------------------------------------------
 ## Template Mixins
 --------------------------------------------------------------*/
-@import "variables";
 @import "mixins/mixins";
-@import "elements/buttons";
 @import "elements/fonts";
+@import "variables";
+@import "elements/buttons";
 @import "elements/link-block";
 /*--------------------------------------------------------------
 ## Main

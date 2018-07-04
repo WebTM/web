@@ -121,7 +121,7 @@
     }
   }
   .hover-state {
-    @include cover-div;
+    @extend .cover-div;
     background-color: rgba($color-secondary-1, .9);
     text-align: center;
     @include transition(all, 500ms, ease);

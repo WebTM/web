@@ -37,24 +37,6 @@
 }
 
 
-.transition-500{
-	-webkit-transition: all $medium-transition ease;
-	-moz-transition: all $medium-transition ease;
-	transition: all $medium-transition ease;
-}
-
-.transition-2000{
-	-webkit-transition: all $long-transition ease;
-	-moz-transition: all $long-transition ease;
-	transition: all $long-transition ease;
-}
-
-.transition-300{
-	-webkit-transition: all $short-transition ease;
-	-moz-transition: all $short-transition ease;
-	transition: all $short-transition ease;
-}
-
 @mixin cover-div {
 	position: absolute;
 	width: 100%;
@@ -101,4 +83,33 @@
 	textarea::-webkit-input-placeholder { color: $color; }
 	textarea:-moz-placeholder { color: $color; }
 }
-
+@mixin font-face($font-family, $file-path, $font-weight, $font-style) {
+  @font-face {
+    font-family: $font-family;
+      src: url('#{$file-path}.eot');
+      src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+           url('#{$file-path}.woff') format('woff'),
+           url('#{$file-path}.ttf') format('truetype'),
+           url('#{$file-path}.svg##{$font-family}') format('svg');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+}
+@mixin font-face($style-name, $file, $family, $weight:"", $style:"") {
+            $filepath: "../fonts/" + $family + "/" + $file;
+            @font-face {
+                font-family: "#{$style-name}";
+                src: url($filepath + ".eot");
+                src: local("#{$style-name}");
+                src: url($filepath + ".eot?#iefix") format('embedded-opentype'),
+                     url($filepath + ".woff") format('woff'),
+                     url($filepath + ".ttf")  format('truetype'),
+                     url($filepath + ".svg#" + $style-name + "") format('svg');
+                     @if $weight != "" {
+                font-weight: #{$weight};
+                     }
+                     @if $style != "" {
+                font-style: #{$style};
+                     }
+            }
+        }

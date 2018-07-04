@@ -7,18 +7,18 @@
 /// @param {Map} $points [()] - карта брейкпоинтов, для которых нужно сделать хелперы
 @mixin helpers-show-hide ($points: ()) {
 	._hide {
-		display: none;
+		display: none !important; // sass-lint:disable-line no-important
 	}
 
 	.touchevents {
 		._hide-touch {
-			display: none;
+			display: none !important; // sass-lint:disable-line no-important
 		}
 	}
 
 	.no-touchevents {
 		._hide-notouch {
-			display: none;
+			display: none !important; // sass-lint:disable-line no-important
 		}
 	}
 
@@ -28,7 +28,7 @@
 
 	@media print {
 		._noprint {
-			display: none;
+			display: none !important; // sass-lint:disable-line no-important
 		}
 	}
 
@@ -37,13 +37,13 @@
 
 		@include media($size) {
 			._#{$mod}hide {
-				display: none;
+				display: none !important; // sass-lint:disable-line no-important
 			}
 		}
 
 		@include media($size, max) {
 			._#{$mod}show {
-				display: none;
+				display: none !important; // sass-lint:disable-line no-important
 			}
 		}
 	}

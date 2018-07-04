@@ -9,6 +9,10 @@
 
 	// $mod [""] - название брейкпоинта с разделителем
 	@mixin generate($mod: "") {
+		._#{$mod}flex {
+			display: flex;
+		}
+
 		._#{$mod}items-start {
 			align-items: flex-start;
 		}

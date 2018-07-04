@@ -4,9 +4,9 @@
 
 /// Flex сетка
 /// @requires {mixin} media
-/// @param {Size} $columns [12] - количество колонок
+/// @param {Size} $columns [5] - количество колонок
 /// @param {Map} $points [()] - карта брейкпоинтов, для которых нужно сделать хелперы
-@mixin helpers-cols($columns: 12, $points: ()) {
+@mixin helpers-cols($columns: 5, $points: ()) {
 	// $width - разме ячейки
 	@mixin width($width) {
 		flex-basis: $width;
@@ -20,18 +20,9 @@
 			@include width(auto);
 		}
 
-		// с медиа-запросами по схеме ._col-lg-auto
-		@each $point, $size in $points {
-			@include media($size) {
-				&-#{$point}-auto {
-					@include width(auto);
-				}
-			}
-		}
-
 		// Создаем классы по схеме ._col-3
 		@for $i from 1 through $columns {
-			$width: percentage($i / $columns);
+			$width: percentage(1 / $i);
 
 			&-#{$i} {
 				@include width($width);
@@ -39,9 +30,18 @@
 		}
 	}
 
+	// с медиа-запросами по схеме ._lg-col-auto
+	@each $point, $size in $points {
+		@include media($size) {
+			._#{$point}-col-auto {
+				@include width(auto);
+			}
+		}
+	}
+
+	// Создаем классы по схеме ._lg-col-3
 	@for $i from 1 through $columns {
-		$width: percentage($i / $columns);
-		// с медиа-запросами по схеме ._lg-col-3
+		$width: percentage(1 / $i);
 		@each $point, $size in $points {
 			@include media($size) {
 				._#{$point}-col-#{$i} {
