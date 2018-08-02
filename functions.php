@@ -18,12 +18,12 @@ function ui_setup() {
 	/**
 	 * Grab all VC Functions
 	 */
-	require_once('admin/vc_functions.php');
+	//require_once('admin/vc_functions.php');
 
 	/**
 	 * Grab all VC Base layouts
 	 */
-	require_once('admin/vc_layouts.php');
+	//require_once('admin/vc_layouts.php');
 
 	load_theme_textdomain( 'ui', get_template_directory() . '/languages' );
 
