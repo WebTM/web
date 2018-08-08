@@ -26,4 +26,21 @@ $colors: (
 	warning: #c89600,
 	danger: #f00
 );
-
+/// Карта цветов для использования в хелперах
+/// @type Map
+$helpers-colors: (
+	// back: map-get($colors, back),
+	// bg: map-get($colors, bg),
+	// text: map-get($colors, text),
+	// link: map-get($colors, link),
+	// link-visited: map-get($colors, link-visited),
+	// link-hover: map-get($colors, link-hover),
+	// link-active: map-get($colors, link-active),
+	primary: map-get($colors, primary),
+	secondary: map-get($colors, secondary),
+	accent: map-get($colors, accent),
+	success: map-get($colors, success),
+	info: map-get($colors, info),
+	warning: map-get($colors, warning),
+	danger: map-get($colors, danger)
+);

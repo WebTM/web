@@ -15,3 +15,16 @@ $gutters: (
 	mg: rem(40px),
 	dt: rem(50px)
 );
+/// Карта отступов для использования в хелперах
+/// @type Map
+$helpers-gutters: (
+	none: map-get($gutters, none),
+	sm: map-get($gutters, sm),
+	ms: map-get($gutters, ms),
+	md: map-get($gutters, md),
+	def: map-get($gutters, def),
+	lg: map-get($gutters, lg),
+	xl: map-get($gutters, xl)
+	// mg: map-get($gutters, mg),
+	// dt: map-get($gutters, dt)
+);

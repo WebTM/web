@@ -21,3 +21,20 @@ $breakpoints: (
 	mg: 1440px,
 	dt: 1980px
 );
+
+/// Карта брейкпоинтов для использования в хелперах
+/// @type Map
+$helpers-breakpoints: (
+	// st: map-get($breakpoints, st),
+	xs: map-get($breakpoints, xs),
+	// psw: map-get($breakpoints, psw),
+	sm: map-get($breakpoints, sm),
+	ms: map-get($breakpoints, ms),
+	// psh: map-get($breakpoints, psh),
+	md: map-get($breakpoints, md),
+	def: map-get($breakpoints, def),
+	lg: map-get($breakpoints, lg)
+	// xl: map-get($breakpoints, xl),
+	// mg: map-get($breakpoints, mg),
+	// dt: map-get($breakpoints, dt)
+);

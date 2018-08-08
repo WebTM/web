@@ -39,4 +39,18 @@
 // text
 @import "_blocks/title";
 //@import "_blocks/horizontal-scroll";
+
+
 @import "web/style";
+
+
+
+@include helpers-cols(5, $helpers-breakpoints);
+@include helpers-flex($helpers-breakpoints);
+@include helpers-float(/*$helpers-breakpoints*/); // sass-lint:disable-line no-css-comments
+@include helpers-gutter($helpers-breakpoints, $helpers-gutters);
+@include helpers-text(/*$helpers-breakpoints*/); // sass-lint:disable-line no-css-comments
+@include helpers-show-hide($helpers-breakpoints);
+
+// стили для печати
+@import "_system/print";
